@@ -4,7 +4,7 @@ Agentic Earned Value (AEV): Earned Value Management for human–agent software d
 
 **Earned Value Management for software programs where AI agents do part of the work.**
 
-AEV was first defined by Gunpreet [Surname] (ORCID [0009-0000-5434-7382](https://orcid.org/0009-0000-5434-7382)), 2026.
+AEV was first defined by Gunpreet Sabharwall (ORCID [0009-0000-5434-7382](https://orcid.org/0009-0000-5434-7382)), 2026.
 
 Classic EVM assumes people do the work. When AI agents write code, new costs (model usage, compute, human review) and new risks (work that gets reverted) appear. AEV keeps CPI, SPI and EAC, and adds:
 
