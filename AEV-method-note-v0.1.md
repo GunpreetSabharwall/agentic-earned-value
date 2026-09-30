@@ -1,4 +1,5 @@
 # Agentic Earned Value (AEV)
+[![DOI](https://zenodo.org/badge/1398771857.svg)](https://doi.org/10.5281/zenodo.23071416)
 ## Extending Earned Value Management to Human–Agent Software Delivery
 
 **Author:** Gunpreet Sabharwall · ORCID [0009-0000-5434-7382](https://orcid.org/0009-0000-5434-7382)
