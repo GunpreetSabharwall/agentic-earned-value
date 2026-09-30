@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use Agentic Earned Value (AEV), please cite it as below."
+title: "Agentic Earned Value (AEV): Extending Earned Value Management to Human–Agent Software Delivery"
+authors:
+  - family-names: "Sabharwall"
+    given-names: "Gunpreet"
+    orcid: "https://orcid.org/0009-0000-5434-7382"
+version: 0.1.0
+date-released: 2026-MM-DD
+license: CC-BY-4.0
+repository-code: "https://github.com/GunpreetSabharwall/agentic-earned-value"
+keywords:
+  - earned value management
+  - AI agents
+  - agentic software delivery
+  - project management
