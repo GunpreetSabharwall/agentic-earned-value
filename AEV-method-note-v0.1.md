@@ -2,10 +2,10 @@
 ## Extending Earned Value Management to Human–Agent Software Delivery
 
 **Author:** Gunpreet Sabharwall · ORCID [0009-0000-5434-7382](https://orcid.org/0009-0000-5434-7382)
-**Version:** 0.1 (draft, not yet published)
+**Version:** 0.1.1
 **Date:** 09-30-2026
 **License:** CC BY 4.0
-**Cite as:** Sabharwall, G. (2026). *Agentic Earned Value (AEV): Extending Earned Value Management to Human–Agent Software Delivery* (v0.1). Zenodo. DOI: [to be assigned]
+**Cite as:** Sabharwall, G. (2026). *Agentic Earned Value (AEV): Extending Earned Value Management to Human–Agent Software Delivery* (v0.1.1). Zenodo. DOI: 10.5281/zenodo.23071416
 
 ---
 
