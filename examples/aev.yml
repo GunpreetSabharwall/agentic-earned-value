@@ -1,0 +1,21 @@
+# Copy this file into your repository as:  .github/workflows/aev.yml
+# It updates AEV-REPORT.md every Monday, and whenever you press "Run workflow".
+
+name: AEV report
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # every Monday at 06:17 UTC
+  workflow_dispatch:        # adds a "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write           # to commit AEV-REPORT.md and .aev/badge.json
+  issues: read              # to read issue labels and history
+  pull-requests: read       # to read linked pull requests
+
+jobs:
+  aev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: GunpreetSabharwall/agentic-earned-value@v0.2.0

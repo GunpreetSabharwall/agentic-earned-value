@@ -1,0 +1,16 @@
+# AEV demo configuration.
+# These numbers reproduce the worked example in section 5 of the method note:
+# a $100,000 program over 10 weeks, measured at the end of week 5.
+
+budget_at_completion: 100000   # BAC: total planned budget (money)
+value_per_point: 1000          # each "aev-points:1" label is worth this much
+start_date: 2026-01-05         # planned value starts at 0 on this date...
+end_date: 2026-03-16           # ...and grows in a straight line to BAC on this date
+hourly_rate: 100               # cost of one hour of human time (money)
+stabilization_window_days: 14  # reopen/revert within this many days = clawback
+agent_accounts:                # GitHub logins whose pull requests count as agent work
+  - aev-agent-bot
+
+# Only used for the demo, so it always shows the same result.
+# Leave this out in a real project; today's date is used instead.
+as_of_date: 2026-02-09

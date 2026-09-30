@@ -1,0 +1,14 @@
+# Agentic Earned Value (AEV) settings.
+# Copy this folder (.aev) into the top of your repository and edit the numbers.
+
+budget_at_completion: 100000   # total planned budget for the work (money)
+value_per_point: 1000          # an issue labelled "aev-points:3" is worth 3 x this
+start_date: 2026-01-05         # planned value starts at 0 on this date (YYYY-MM-DD)...
+end_date: 2026-03-16           # ...and reaches the full budget on this date
+hourly_rate: 100               # cost of one hour of human time (money)
+stabilization_window_days: 14  # work reopened or reverted within this many days is taken back
+
+# GitHub logins of your AI agents / bots. Pull requests opened by these
+# accounts count as agent work. Example:
+agent_accounts:
+  - my-coding-agent[bot]
