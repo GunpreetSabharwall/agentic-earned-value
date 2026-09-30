@@ -210,4 +210,4 @@ AEV differs from these by combining agent cost, review cost, rework clawback and
 
 | Version | Date | Change |
 |---|---|---|
-| 0.1 | [date] | First public definition of AEV |
+| 0.1 | 09-30-2026 | First public definition of AEV |
