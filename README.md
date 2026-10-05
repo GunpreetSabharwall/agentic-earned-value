@@ -18,7 +18,8 @@ Classic EVM assumes people do the work. When AI agents write code, new costs (mo
 ## Status
 
 - v0.1: method definition.
-- **v0.2.0: reference GitHub Action.** Add one workflow file to any public repository and get a weekly `AEV-REPORT.md` and a CPI badge. See [CHANGELOG.md](CHANGELOG.md).
+- v0.2.0: reference GitHub Action. Add one workflow file to any public repository and get a weekly `AEV-REPORT.md` and a CPI badge.
+- **v0.3.0: better authorship detection.** Agent work is recognised even when the agent opens pull requests under a person's account. See [How authorship is detected](#how-authorship-is-detected) and [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
@@ -62,8 +63,8 @@ jobs:
   aev:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: GunpreetSabharwall/agentic-earned-value@v0.2.0
+      - uses: actions/checkout@v5
+      - uses: GunpreetSabharwall/agentic-earned-value@v0.3.0
 ```
 
 No password or personal token is needed. GitHub gives the workflow a temporary token automatically.
@@ -83,7 +84,11 @@ hourly_rate: 100               # cost of one hour of human time (money)
 stabilization_window_days: 14  # work reopened or reverted within this many days is taken back
 agent_accounts:                # GitHub logins of your AI agents / bots
   - my-coding-agent[bot]
+  - claude
+# agent_label: aev-agent       # optional: pull requests with this label always count as agent work
 ```
+
+`agent_accounts` lists the GitHub logins of your AI agents. Upper/lower case and the `[bot]` ending do not matter. If you are not sure what login your agent uses, open one of its commits on GitHub and look at the author name shown there.
 
 **`.aev/hours.csv`**: human time. One line per entry. `item` is the issue number (or leave it blank). `type` is `build` (doing the work) or `review` (reviewing or correcting agent work).
 
@@ -157,11 +162,26 @@ The full definition is in the [method note](AEV-method-note-v0.1.md). In short:
 | **Rework Rate** | Clawback / Gross EV. |
 | **Agent Cost Share** | AC_agent / AC. |
 | **Review Load Ratio** | AC_review / AC_agent. |
-| **Authorship class** | **A** if all merged pull requests on the issue are by `agent_accounts`, **H** if none are, **M** if mixed. CPI is shown for each class. |
+| **Authorship class** | Each merged pull request is classed as agent, human or mixed (see [How authorship is detected](#how-authorship-is-detected)). An issue is **A** if all its pull requests are agent work, **H** if all are human work, **M** otherwise. CPI is shown for each class. |
 
 If a number cannot be calculated (for example, CPI when nothing has been spent yet), the report shows **n/a**.
 
 The report also shows a **Classic EVM** column (build labor only, no clawback) next to AEV, so you can see what classic EVM would have told you.
+
+### How authorship is detected
+
+Some coding agents open pull requests under the account of the person who started them, but write the commits under their own account (for example, the login `claude`). So AEV looks at more than the pull request's author. Each merged pull request linked to an issue is checked with these rules, in order:
+
+1. **The pull request has the label `aev-agent`** → agent work. This is a **manual override**: add the label on GitHub whenever an agent did the work but AEV would not otherwise see it. You can use a different label name with the optional `agent_label` setting in `.aev/config.yml`.
+2. **The pull request was opened by an account in `agent_accounts`** → agent work.
+3. **Otherwise, AEV looks at every commit** in the pull request, including co-authors (the `Co-authored-by:` lines that many agents add to commit messages):
+   - every commit has an agent author or co-author → **agent** work
+   - some commits do and some do not → **mixed** work
+   - no commit does → **human** work
+
+Matching ignores upper/lower case and the `[bot]` ending. A commit whose author is not linked to any GitHub account counts as agent work only if its author email or name is written exactly as in `agent_accounts`. Otherwise it counts as human.
+
+An issue is then **A** if all its pull requests are agent work, **H** if all are human work, and **M** in every other case (so a single mixed pull request makes the issue mixed).
 
 ### How the code is organised
 
@@ -187,6 +207,7 @@ To run the tests: `pip install -r requirements-dev.txt` then `python -m pytest`.
 - **"Required checks passed" is not checked separately.** A merged pull request is taken as having passed its checks. Use branch protection if you need that guarantee.
 - **Reverts are found by GitHub's standard "Revert" button text** (`Reverts owner/repo#123`). Reverts made by hand in other ways are not detected; reopening the issue still triggers a clawback.
 - **Planned value is a straight line** between the start and end dates.
+- **Only the first 100 commits of a pull request are checked for authorship.** Very large pull requests get a note in the report's "Data notes" section.
 - **Public repositories** are the target. Private repositories work too, as long as the workflow has the permissions shown above.
 - If your default branch is protected so that workflows cannot push, set `commit: "false"`. The report is still shown in each workflow run's summary.
 - The example numbers are illustrative. See section 7 of the method note for the method's own limitations.

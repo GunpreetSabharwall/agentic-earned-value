@@ -2,6 +2,20 @@
 
 All notable changes to this project are listed here.
 
+## [0.3.0] - 2026-10-05
+
+### Added
+
+- Better authorship detection. Each merged pull request is now classed as agent, human or mixed using, in order: the `aev-agent` label (a manual override), the pull request author, then the authors and co-authors of every commit. This recognises agents that open pull requests under a person's account but commit under their own login.
+- Optional `agent_label` setting in `.aev/config.yml` to use a different label name (default `aev-agent`).
+- A report note when a pull request has more than 100 commits (only the first 100 are checked).
+
+### Changed
+
+- An issue is now **M** (mixed) if any of its pull requests is mixed, as well as when it has both agent and human pull requests.
+- Updated `actions/checkout` to v5 and `actions/setup-python` to v6 (newer Node.js runtime).
+- The workflow file to copy now uses `@v0.3.0`.
+
 ## [0.2.0] - 2026-09-30
 
 First release of the AEV reference tool, implementing method note v0.1.

@@ -95,6 +95,7 @@ def run(argv: Optional[List[str]] = None) -> int:
         config.agent_accounts,
         config.stabilization_window_days,
         end_of_day(as_of),
+        agent_label=config.agent_label,
     )
     results = compute(
         config, as_of, items, hours, agent_costs,

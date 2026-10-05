@@ -142,3 +142,30 @@ def test_what_this_means_variants():
     # Before the start: nothing planned, nothing spent.
     r = compute(CONFIG, date(2026, 1, 1), [], [], [])
     assert what_this_means(r).endswith("and no work was planned to be done yet.")
+
+
+def test_pr_details_query_and_mapping():
+    from aev.github_data import pr_details_from_node, pr_details_query
+
+    query = pr_details_query([7, 12])
+    assert "pr7: pullRequest(number: 7)" in query and "pr12: pullRequest(number: 12)" in query
+    assert "authors(first: 10)" in query
+
+    node = {
+        "number": 7,
+        "labels": {"nodes": [{"name": "aev-agent"}]},
+        "commits": {"totalCount": 3, "nodes": [
+            {"commit": {"authors": {"nodes": [
+                {"name": "Claude", "email": "noreply@example.com", "user": {"login": "claude"}},
+                {"name": "Jane", "email": "jane@example.com", "user": None},
+            ]}}},
+        ]},
+    }
+    assert pr_details_from_node(node) == {
+        "labels": ["aev-agent"],
+        "commits": [{"authors": [
+            {"login": "claude", "name": "Claude", "email": "noreply@example.com"},
+            {"login": None, "name": "Jane", "email": "jane@example.com"},
+        ]}],
+        "commits_truncated": True,
+    }
