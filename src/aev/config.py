@@ -26,6 +26,8 @@ class Config:
     # Optional. Fixes the "as of" date (useful for demos and tests).
     # When not set, today's date is used.
     as_of_date: Optional[date] = None
+    # Optional. Pull requests with this label always count as agent work.
+    agent_label: str = "aev-agent"
     currency_symbol: str = "$"
 
 
@@ -92,6 +94,7 @@ def parse_config(raw: dict) -> Config:
         stabilization_window_days=window,
         agent_accounts=[str(a).strip() for a in accounts if str(a).strip()],
         as_of_date=_to_date(raw, "as_of_date", required=False),
+        agent_label=str(raw.get("agent_label") or "aev-agent").strip(),
         currency_symbol=str(raw.get("currency_symbol", "$")),
     )
 

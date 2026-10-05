@@ -12,3 +12,6 @@ stabilization_window_days: 14  # work reopened or reverted within this many days
 # accounts count as agent work. Example:
 agent_accounts:
   - my-coding-agent[bot]
+
+# Optional. Pull requests with this label always count as agent work.
+# agent_label: aev-agent

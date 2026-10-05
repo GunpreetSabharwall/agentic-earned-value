@@ -96,3 +96,9 @@ def test_load_agent_costs(tmp_path):
 def test_missing_cost_files_are_treated_as_empty(tmp_path):
     entries, warnings = load_hours(tmp_path / "hours.csv")
     assert entries == [] and len(warnings) == 1
+
+
+def test_config_agent_label_default_and_custom():
+    assert parse_config(dict(BASE)).agent_label == "aev-agent"
+    assert parse_config(dict(BASE, agent_label="ai-made")).agent_label == "ai-made"
+    assert parse_config(dict(BASE, agent_label=None)).agent_label == "aev-agent"

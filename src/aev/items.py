@@ -16,10 +16,17 @@ Snapshot format for one issue::
         {"type": "reopened", "at": "2026-01-20T09:00:00Z"}
       ],
       "linked_prs": [
-        {"number": 30, "author": "my-agent[bot]",
-         "merged_at": "2026-01-15T09:55:00Z", "reverted_at": null}
+        {"number": 30, "author": "jane-doe",
+         "merged_at": "2026-01-15T09:55:00Z", "reverted_at": null,
+         "labels": ["aev-agent"],
+         "commits": [
+           {"authors": [{"login": "claude", "name": "Claude", "email": "noreply@example.com"},
+                        {"login": "jane-doe", "name": "Jane", "email": "jane@example.com"}]}
+         ]}
       ]
     }
+
+``labels`` and ``commits`` are optional (older snapshots do not have them).
 """
 
 from __future__ import annotations
@@ -116,20 +123,77 @@ def _normalize_login(login: Optional[str]) -> str:
     return text
 
 
-def authorship_class(pr_authors: Iterable[Optional[str]], agent_accounts: Iterable[str]) -> Optional[str]:
-    """A if every merged PR is by an agent account, H if none are, M if mixed.
+DEFAULT_AGENT_LABEL = "aev-agent"
+
+
+def _is_agent_commit_author(author: dict, agent_logins: set, agent_names: set) -> bool:
+    """Is one commit author (or co-author) an agent?
+
+    Authors linked to a GitHub user are matched by login (any case, with or
+    without "[bot]"). Authors with no GitHub user count as an agent only when
+    their email or name is exactly one of the agent_accounts entries.
+    """
+    login = author.get("login")
+    if login:
+        return _normalize_login(login) in agent_logins
+    for key in ("email", "name"):
+        value = (author.get(key) or "").strip()
+        if value and value in agent_names:
+            return True
+    return False
+
+
+def pr_class(pr: dict, agent_accounts: Iterable[str], agent_label: str = DEFAULT_AGENT_LABEL) -> str:
+    """Classify one merged pull request as A (agent), H (human) or M (mixed).
+
+    1. The PR has the agent label (default "aev-agent")      -> A
+    2. The PR author is one of agent_accounts                -> A
+    3. Otherwise look at every commit's authors and co-authors:
+       every commit has an agent author -> A, some do -> M, none do -> H.
+       A PR with no commit information counts as H.
+    """
+    accounts = [str(a).strip() for a in agent_accounts if str(a).strip()]
+    agent_logins = {_normalize_login(a) for a in accounts}
+    agent_names = set(accounts)
+
+    labels = {str(label).strip().lower() for label in pr.get("labels") or []}
+    if agent_label and agent_label.strip().lower() in labels:
+        return AGENT
+
+    author = pr.get("author")
+    if author and _normalize_login(author) in agent_logins:
+        return AGENT
+
+    flags = [
+        any(_is_agent_commit_author(a, agent_logins, agent_names) for a in commit.get("authors") or [])
+        for commit in pr.get("commits") or []
+    ]
+    if flags and all(flags):
+        return AGENT
+    if any(flags):
+        return MIXED
+    return HUMAN
+
+
+def combine_classes(pr_classes: Iterable[str]) -> Optional[str]:
+    """Issue class: A if all PRs are A, H if all are H, otherwise M.
 
     Returns None when the item has no merged PR (class is unknown).
     """
-    agents = {_normalize_login(a) for a in agent_accounts}
-    flags = [_normalize_login(a) in agents for a in pr_authors]
-    if not flags:
+    classes = list(pr_classes)
+    if not classes:
         return None
-    if all(flags):
+    if all(c == AGENT for c in classes):
         return AGENT
-    if not any(flags):
+    if all(c == HUMAN for c in classes):
         return HUMAN
     return MIXED
+
+
+def authorship_class(pr_authors: Iterable[Optional[str]], agent_accounts: Iterable[str]) -> Optional[str]:
+    """Class from PR authors alone (kept for compatibility with v0.2)."""
+    accounts = list(agent_accounts)
+    return combine_classes(pr_class({"author": a}, accounts) for a in pr_authors)
 
 
 def _is_completed(reason: Optional[str]) -> bool:
@@ -199,6 +263,7 @@ def build_work_items(
     agent_accounts: List[str],
     window_days: int,
     as_of: datetime,
+    agent_label: str = DEFAULT_AGENT_LABEL,
 ) -> Tuple[List[WorkItem], List[str]]:
     items: List[WorkItem] = []
     warnings: List[str] = []
@@ -214,7 +279,13 @@ def build_work_items(
             if merged_at is not None and merged_at <= as_of:
                 merged_prs.append((pr, merged_at))
 
-        authorship = authorship_class([pr.get("author") for pr, _ in merged_prs], agent_accounts)
+        authorship = combine_classes(pr_class(pr, agent_accounts, agent_label) for pr, _ in merged_prs)
+        for pr, _ in merged_prs:
+            if pr.get("commits_truncated"):
+                warnings.append(
+                    f"PR #{pr.get('number')} (issue #{number}) has more than 100 commits; "
+                    f"only the first 100 were checked for authorship."
+                )
         value = float(points or 0) * float(value_per_point)
 
         episodes: List[Episode] = []

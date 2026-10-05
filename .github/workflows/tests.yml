@@ -12,9 +12,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -35,7 +35,7 @@ jobs:
     # but on the built-in sample data and without committing anything.
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./
         with:
           demo: "true"
@@ -49,8 +49,8 @@ jobs:
       issues: read
       pull-requests: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - run: python -m pip install -r requirements.txt
@@ -61,3 +61,17 @@ jobs:
         run: |
           python -m aev --config examples/demo/.aev/config.yml --repo "${{ github.repository }}" \
             --as-of "$(date -u +%F)" --output "$RUNNER_TEMP/AEV-REPORT.md" --badge "$RUNNER_TEMP/badge.json"
+      - name: Fetch labels and commit authors of a merged pull request
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
+        run: |
+          python - <<'PY'
+          import os
+          from aev.github_data import GitHubClient, fetch_pr_details
+          owner, name = os.environ["GITHUB_REPOSITORY"].split("/")
+          details = fetch_pr_details(GitHubClient(os.environ["GITHUB_TOKEN"]), owner, name, [1])
+          print(details)
+          assert details[1]["commits"], "expected commit authors for PR #1"
+          assert all(c["authors"] for c in details[1]["commits"])
+          PY

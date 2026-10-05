@@ -61,6 +61,34 @@ query($owner: String!, $name: String!, $cursor: String) {
 """
 
 
+# Labels and commit authors (including Co-authored-by trailers) of merged PRs,
+# used to decide whether a PR is agent, human or mixed work. Fetched in
+# batches, one aliased pullRequest field per PR.
+PR_DETAILS_FIELDS = """
+      number
+      labels(first: 50) { nodes { name } }
+      commits(first: 100) {
+        totalCount
+        nodes { commit { authors(first: 10) { nodes { name email user { login } } } } }
+      }
+"""
+
+PR_DETAILS_BATCH = 20
+
+
+def pr_details_query(numbers: List[int]) -> str:
+    fields = "\n".join(
+        f"    pr{n}: pullRequest(number: {int(n)}) {{{PR_DETAILS_FIELDS}    }}" for n in numbers
+    )
+    return (
+        "query($owner: String!, $name: String!) {\n"
+        "  repository(owner: $owner, name: $name) {\n"
+        f"{fields}\n"
+        "  }\n"
+        "}\n"
+    )
+
+
 class GitHubError(RuntimeError):
     pass
 
@@ -130,6 +158,40 @@ def fetch_reverts(client: GitHubClient, owner: str, name: str, since: datetime) 
     return reverts
 
 
+def pr_details_from_node(node: dict) -> dict:
+    """Turn one pullRequest node into {"labels", "commits", "commits_truncated"}."""
+    commits = []
+    for commit_node in node["commits"]["nodes"]:
+        authors = []
+        for author in commit_node["commit"]["authors"]["nodes"]:
+            user = author.get("user") or {}
+            authors.append({
+                "login": user.get("login"),
+                "name": author.get("name"),
+                "email": author.get("email"),
+            })
+        commits.append({"authors": authors})
+    return {
+        "labels": [label["name"] for label in node["labels"]["nodes"]],
+        "commits": commits,
+        "commits_truncated": node["commits"]["totalCount"] > len(commits),
+    }
+
+
+def fetch_pr_details(client: GitHubClient, owner: str, name: str, numbers: List[int]) -> Dict[int, dict]:
+    """Labels and commit authors for each PR number, fetched in batches."""
+    details: Dict[int, dict] = {}
+    numbers = sorted(set(numbers))
+    for start in range(0, len(numbers), PR_DETAILS_BATCH):
+        batch = numbers[start:start + PR_DETAILS_BATCH]
+        data = client.query(pr_details_query(batch), {"owner": owner, "name": name})
+        for n in batch:
+            node = data["repository"].get(f"pr{n}")
+            if node:
+                details[n] = pr_details_from_node(node)
+    return details
+
+
 def fetch_snapshot(repo: str, token: str, since: datetime) -> dict:
     """Return {"repo": ..., "fetched_at": ..., "issues": [...]}."""
     if "/" not in repo:
@@ -148,6 +210,12 @@ def fetch_snapshot(repo: str, token: str, since: datetime) -> dict:
         if not page["pageInfo"]["hasNextPage"]:
             break
         cursor = page["pageInfo"]["endCursor"]
+
+    merged = [pr["number"] for issue in issues for pr in issue["linked_prs"] if pr.get("merged_at")]
+    details = fetch_pr_details(client, owner, name, merged)
+    for issue in issues:
+        for pr in issue["linked_prs"]:
+            pr.update(details.get(pr["number"], {}))
 
     return {
         "repo": repo,
