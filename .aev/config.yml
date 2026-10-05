@@ -1,0 +1,8 @@
+budget_at_completion: 1600
+value_per_point: 100
+start_date: 2026-10-05
+end_date: 2026-10-30
+hourly_rate: 100
+stabilization_window_days: 14
+agent_accounts:
+  - placeholder-agent
