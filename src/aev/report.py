@@ -26,6 +26,16 @@ def money(value: Optional[float], symbol: str = "$") -> str:
     return f"{sign}{symbol}{abs(value):,.0f}"
 
 
+def money_exact(value: Optional[float], symbol: str = "$") -> str:
+    """Like money(), but keeps cents when there are any ($0.50, not $0)."""
+    if value is None:
+        return NA
+    if round(value, 2) == round(value):
+        return money(value, symbol)
+    sign = "-" if value < 0 else ""
+    return f"{sign}{symbol}{abs(value):,.2f}"
+
+
 def ratio(value: Optional[float]) -> str:
     return NA if value is None else f"{value:.2f}"
 
@@ -35,7 +45,7 @@ def percent(value: Optional[float]) -> str:
 
 
 def hours(value: float) -> str:
-    return f"{value:,.1f}".rstrip("0").rstrip(".")
+    return f"{value:,.2f}".rstrip("0").rstrip(".")
 
 
 def _budget_phrase(cpi: Optional[float]) -> Optional[str]:
@@ -79,6 +89,7 @@ def what_this_means(r: Results, symbol: str = "$") -> str:
 def render_report(r: Results, config, repo: str = "") -> str:
     s = config.currency_symbol
     m = lambda v: money(v, s)  # noqa: E731
+    mx = lambda v: money_exact(v, s)  # noqa: E731
     lines = []
     add = lines.append
 
@@ -154,11 +165,11 @@ def render_report(r: Results, config, repo: str = "") -> str:
     add(f"| Gross EV (all accepted items) | {m(r.gross_ev)} |")
     add(f"| Clawback (reverted or reopened within {config.stabilization_window_days} days) | {m(r.clawback)} |")
     add(f"| EV = Gross EV − Clawback | {m(r.ev)} |")
-    add(f"| AC_build ({hours(r.build_hours)} h × {m(config.hourly_rate)}) | {m(r.ac_build)} |")
-    add(f"| AC_review ({hours(r.review_hours)} h × {m(config.hourly_rate)}) | {m(r.ac_review)} |")
-    add(f"| AC_agent | {m(r.ac_agent)} |")
+    add(f"| AC_build ({hours(r.build_hours)} h × {mx(config.hourly_rate)}) | {mx(r.ac_build)} |")
+    add(f"| AC_review ({hours(r.review_hours)} h × {mx(config.hourly_rate)}) | {mx(r.ac_review)} |")
+    add(f"| AC_agent | {mx(r.ac_agent)} |")
     for category in sorted(r.agent_cost_by_category):
-        add(f"| &nbsp;&nbsp;agent: {category} | {m(r.agent_cost_by_category[category])} |")
+        add(f"| &nbsp;&nbsp;agent: {category} | {mx(r.agent_cost_by_category[category])} |")
     add(f"| Budgeted value of all `aev-points` issues | {m(r.labelled_value)} |")
     add("")
 
@@ -188,7 +199,7 @@ def render_report(r: Results, config, repo: str = "") -> str:
     add("")
     add(f"- Planned value grows in a straight line from {config.start_date.isoformat()} "
         f"to {config.end_date.isoformat()}.")
-    add(f"- Hourly rate: {m(config.hourly_rate)}. Stabilization window: "
+    add(f"- Hourly rate: {mx(config.hourly_rate)}. Stabilization window: "
         f"{config.stabilization_window_days} days.")
     accounts = ", ".join(f"`{a}`" for a in config.agent_accounts) or "none listed"
     add(f"- Agent accounts: {accounts}.")

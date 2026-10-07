@@ -2,6 +2,17 @@
 
 All notable changes to this project are listed here.
 
+## [0.3.1] - 2026-10-07
+
+### Fixed
+
+- Small costs are no longer rounded away in the report's "Where the numbers come from" table: amounts with cents now show them (for example $0.50 instead of $0). Headline figures are still shown in whole dollars.
+- Hours in that table now show up to two decimals (7.75 h instead of 7.8 h).
+
+### Changed
+
+- The workflow file to copy now uses `@v0.3.1`.
+
 ## [0.3.0] - 2026-10-05
 
 ### Added

@@ -169,3 +169,42 @@ def test_pr_details_query_and_mapping():
         ]}],
         "commits_truncated": True,
     }
+
+
+def test_money_exact_keeps_cents_only_when_present():
+    from aev.report import money_exact
+
+    assert money_exact(None) == "n/a"
+    assert money_exact(0.5) == "$0.50"
+    assert money_exact(26.8) == "$26.80"
+    assert money_exact(1234.567) == "$1,234.57"
+    assert money_exact(-0.25) == "-$0.25"
+    assert money_exact(100) == "$100"
+    assert money_exact(30000.0) == "$30,000"
+    assert money_exact(99.999) == "$100"  # rounds to whole dollars, so no cents
+
+
+def test_hours_shows_up_to_two_decimals():
+    from aev.report import hours
+
+    assert hours(7.75) == "7.75"
+    assert hours(1.5) == "1.5"
+    assert hours(300) == "300"
+    assert hours(0) == "0"
+    assert hours(1234.5) == "1,234.5"
+
+
+def test_small_costs_are_not_rounded_away_in_breakdown():
+    from aev.costs import AgentCostEntry, HoursEntry
+
+    d = date(2026, 1, 5)
+    r = compute(CONFIG, date(2026, 1, 15), [],
+                [HoursEntry(d, None, "build", 7.75)],
+                [AgentCostEntry(d, None, "ci", 0.5), AgentCostEntry(d, None, "model", 6.3)])
+    text = render_report(r, CONFIG)
+    assert "| AC_build (7.75 h × $50) | $387.50 |" in text
+    assert "| AC_agent | $6.80 |" in text
+    assert "| &nbsp;&nbsp;agent: ci | $0.50 |" in text
+    assert "| &nbsp;&nbsp;agent: model | $6.30 |" in text
+    # Headline figures stay rounded to whole dollars.
+    assert "| Actual Cost (AC) | $394 |" in text
