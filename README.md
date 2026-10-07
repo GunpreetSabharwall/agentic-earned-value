@@ -64,7 +64,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: GunpreetSabharwall/agentic-earned-value@v0.3.0
+      - uses: GunpreetSabharwall/agentic-earned-value@v0.3.1
 ```
 
 No password or personal token is needed. GitHub gives the workflow a temporary token automatically.
