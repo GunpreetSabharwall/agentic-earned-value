@@ -1,0 +1,340 @@
+{
+  "schema": "aev-results/1",
+  "tool_version": "0.4.0",
+  "method_note": "0.1",
+  "repo": "example/demo-project",
+  "as_of": "2026-02-09",
+  "config": {
+    "budget_at_completion": 100000.0,
+    "value_per_point": 1000.0,
+    "start_date": "2026-01-05",
+    "end_date": "2026-03-16",
+    "hourly_rate": 100.0,
+    "stabilization_window_days": 14,
+    "agent_accounts": [
+      "aev-agent-bot"
+    ],
+    "agent_label": "aev-agent",
+    "currency_symbol": "$",
+    "teams": {}
+  },
+  "summary": {
+    "bac": 100000.0,
+    "pv": 50000.0,
+    "ev": 40000.0,
+    "ac": 40000.0,
+    "cpi": 1.0,
+    "spi": 0.8,
+    "eac": 100000.0,
+    "health": "brightgreen",
+    "what_this_means": "For every $1 spent, the project has earned $1.00 of value; it is on budget and behind schedule. 11.1% of the work that was marked done did not stick and was taken back."
+  },
+  "classic": {
+    "ev": 45000.0,
+    "ac": 30000.0,
+    "cpi": 1.5,
+    "spi": 0.9,
+    "eac": 66666.67
+  },
+  "indicators": {
+    "rework_rate": 0.1111,
+    "agent_cost_share": 0.1,
+    "review_load_ratio": 1.5
+  },
+  "value": {
+    "gross_ev": 45000.0,
+    "clawback": 5000.0,
+    "ev": 40000.0,
+    "labelled_value": 60000.0
+  },
+  "cost": {
+    "build_hours": 300.0,
+    "review_hours": 60.0,
+    "ac_build": 30000.0,
+    "ac_review": 6000.0,
+    "ac_agent": 4000.0,
+    "agent_by_category": {
+      "ci": 300.0,
+      "compute": 300.0,
+      "model": 3200.0,
+      "tools": 200.0
+    }
+  },
+  "by_class": {
+    "A": {
+      "items_accepted": 2,
+      "ev": 20000.0,
+      "ac": 12000.0,
+      "ac_build": 2000.0,
+      "ac_review": 6000.0,
+      "ac_agent": 4000.0,
+      "cpi": 1.6667
+    },
+    "H": {
+      "items_accepted": 2,
+      "ev": 20000.0,
+      "ac": 28000.0,
+      "ac_build": 28000.0,
+      "ac_review": 0.0,
+      "ac_agent": 0.0,
+      "cpi": 0.7143
+    },
+    "M": {
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 0.0,
+      "ac_build": 0.0,
+      "ac_review": 0.0,
+      "ac_agent": 0.0,
+      "cpi": null
+    },
+    "Unassigned": {
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 0.0,
+      "ac_build": 0.0,
+      "ac_review": 0.0,
+      "ac_agent": 0.0,
+      "cpi": null
+    }
+  },
+  "by_team": [],
+  "activity": {
+    "merged_prs": 7,
+    "agent_prs": 4,
+    "mixed_prs": 0,
+    "human_prs": 3,
+    "agent_pr_share": 0.5714,
+    "ai_assisted_pr_share": 0.5714,
+    "items_closed": 6,
+    "items_that_stuck": 4,
+    "agent_spend": 4000.0,
+    "tokens": 0
+  },
+  "items": [
+    {
+      "number": 1,
+      "title": "Add sign-in page",
+      "points": 10.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": null,
+      "labels": [
+        "aev-points:10",
+        "feature"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-01-14T15:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 101,
+          "class": "A",
+          "merged_at": "2026-01-14T14:55:00Z"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Export report as CSV",
+      "points": 10.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": null,
+      "labels": [
+        "aev-points:10"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-01-21T11:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 102,
+          "class": "A",
+          "merged_at": "2026-01-21T10:58:00Z"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Fix date parsing in import",
+      "points": 3.0,
+      "value": 3000.0,
+      "authorship": "A",
+      "team": null,
+      "labels": [
+        "aev-points:3"
+      ],
+      "gross_ev": 3000.0,
+      "clawback": 3000.0,
+      "ev": 0.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-01-26T16:00:00Z",
+          "clawed_back_at": "2026-02-02T09:30:00Z",
+          "reason": "reopened"
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 103,
+          "class": "A",
+          "merged_at": "2026-01-26T15:58:00Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Add search filters",
+      "points": 2.0,
+      "value": 2000.0,
+      "authorship": "A",
+      "team": null,
+      "labels": [
+        "aev-points:2"
+      ],
+      "gross_ev": 2000.0,
+      "clawback": 2000.0,
+      "ev": 0.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-01-28T12:00:00Z",
+          "clawed_back_at": "2026-02-04T08:00:00Z",
+          "reason": "PR #104 reverted"
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 104,
+          "class": "A",
+          "merged_at": "2026-01-28T11:59:00Z"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Redesign settings screen",
+      "points": 8.0,
+      "value": 8000.0,
+      "authorship": "H",
+      "team": null,
+      "labels": [
+        "aev-points:8"
+      ],
+      "gross_ev": 8000.0,
+      "clawback": 0.0,
+      "ev": 8000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-01-20T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 105,
+          "class": "H",
+          "merged_at": "2026-01-20T16:55:00Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Build notifications service",
+      "points": 12.0,
+      "value": 12000.0,
+      "authorship": "H",
+      "team": null,
+      "labels": [
+        "aev-points:12"
+      ],
+      "gross_ev": 12000.0,
+      "clawback": 0.0,
+      "ev": 12000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-02-05T14:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 106,
+          "class": "H",
+          "merged_at": "2026-02-05T13:50:00Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Dark mode",
+      "points": 10.0,
+      "value": 10000.0,
+      "authorship": null,
+      "team": null,
+      "labels": [
+        "aev-points:10"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 8,
+      "title": "Legacy data import",
+      "points": 5.0,
+      "value": 5000.0,
+      "authorship": null,
+      "team": null,
+      "labels": [
+        "aev-points:5"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 9,
+      "title": "Fix typo in help text",
+      "points": null,
+      "value": 0.0,
+      "authorship": "H",
+      "team": null,
+      "labels": [
+        "documentation"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 107,
+          "class": "H",
+          "merged_at": "2026-01-16T09:59:00Z"
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

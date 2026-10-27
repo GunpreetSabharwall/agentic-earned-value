@@ -1,0 +1,927 @@
+{
+  "schema": "aev-results/1",
+  "tool_version": "0.4.0",
+  "method_note": "0.1",
+  "repo": "lakeshore-components/supplier-quality-portal",
+  "as_of": "2026-10-13",
+  "config": {
+    "budget_at_completion": 240000.0,
+    "value_per_point": 2000.0,
+    "start_date": "2026-09-29",
+    "end_date": "2026-12-22",
+    "hourly_rate": 100.0,
+    "stabilization_window_days": 14,
+    "agent_accounts": [
+      "coding-agent"
+    ],
+    "agent_label": "aev-agent",
+    "currency_symbol": "$",
+    "teams": {
+      "Portal": "pod-portal",
+      "Integrations": "pod-integrations"
+    }
+  },
+  "summary": {
+    "bac": 240000.0,
+    "pv": 40000.0,
+    "ev": 40000.0,
+    "ac": 43700.0,
+    "cpi": 0.9153,
+    "spi": 1.0,
+    "eac": 262200.0,
+    "health": "yellow",
+    "what_this_means": "For every $1 spent, the project has earned $0.92 of value; it is over budget and on schedule."
+  },
+  "classic": {
+    "ev": 40000.0,
+    "ac": 36200.0,
+    "cpi": 1.105,
+    "spi": 1.0,
+    "eac": 217200.0
+  },
+  "indicators": {
+    "rework_rate": 0.0,
+    "agent_cost_share": 0.0526,
+    "review_load_ratio": 2.2609
+  },
+  "value": {
+    "gross_ev": 40000.0,
+    "clawback": 0.0,
+    "ev": 40000.0,
+    "labelled_value": 240000.0
+  },
+  "cost": {
+    "build_hours": 362.0,
+    "review_hours": 52.0,
+    "ac_build": 36200.0,
+    "ac_review": 5200.0,
+    "ac_agent": 2300.0,
+    "agent_by_category": {
+      "ci": 231.0,
+      "compute": 294.0,
+      "model": 1575.0,
+      "tools": 200.0
+    }
+  },
+  "by_class": {
+    "A": {
+      "items_accepted": 5,
+      "ev": 32000.0,
+      "ac": 18130.0,
+      "ac_build": 11000.0,
+      "ac_review": 5200.0,
+      "ac_agent": 1930.0,
+      "cpi": 1.765
+    },
+    "H": {
+      "items_accepted": 1,
+      "ev": 8000.0,
+      "ac": 22400.0,
+      "ac_build": 22400.0,
+      "ac_review": 0.0,
+      "ac_agent": 0.0,
+      "cpi": 0.3571
+    },
+    "M": {
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 0.0,
+      "ac_build": 0.0,
+      "ac_review": 0.0,
+      "ac_agent": 0.0,
+      "cpi": null
+    },
+    "Unassigned": {
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 3170.0,
+      "ac_build": 2800.0,
+      "ac_review": 0.0,
+      "ac_agent": 370.0,
+      "cpi": 0.0
+    }
+  },
+  "by_team": [
+    {
+      "name": "Portal",
+      "label": "pod-portal",
+      "items_accepted": 3,
+      "ev": 16000.0,
+      "ac": 17520.0,
+      "cpi": 0.9132,
+      "by_class": {
+        "A": {
+          "items_accepted": 3,
+          "ev": 16000.0,
+          "ac": 10550.0,
+          "ac_build": 8200.0,
+          "ac_review": 1200.0,
+          "ac_agent": 1150.0,
+          "cpi": 1.5166
+        },
+        "H": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 5400.0,
+          "ac_build": 5400.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": 0.0
+        },
+        "M": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 1570.0,
+          "ac_build": 1400.0,
+          "ac_review": 0.0,
+          "ac_agent": 170.0,
+          "cpi": 0.0
+        }
+      }
+    },
+    {
+      "name": "Integrations",
+      "label": "pod-integrations",
+      "items_accepted": 3,
+      "ev": 24000.0,
+      "ac": 24580.0,
+      "cpi": 0.9764,
+      "by_class": {
+        "A": {
+          "items_accepted": 2,
+          "ev": 16000.0,
+          "ac": 7580.0,
+          "ac_build": 2800.0,
+          "ac_review": 4000.0,
+          "ac_agent": 780.0,
+          "cpi": 2.1108
+        },
+        "H": {
+          "items_accepted": 1,
+          "ev": 8000.0,
+          "ac": 17000.0,
+          "ac_build": 17000.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": 0.4706
+        },
+        "M": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        }
+      }
+    },
+    {
+      "name": "No team",
+      "label": null,
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 1600.0,
+      "cpi": 0.0,
+      "by_class": {
+        "A": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "H": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "M": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 1600.0,
+          "ac_build": 1400.0,
+          "ac_review": 0.0,
+          "ac_agent": 200.0,
+          "cpi": 0.0
+        }
+      }
+    }
+  ],
+  "activity": {
+    "merged_prs": 13,
+    "agent_prs": 9,
+    "mixed_prs": 0,
+    "human_prs": 4,
+    "agent_pr_share": 0.6923,
+    "ai_assisted_pr_share": 0.6923,
+    "items_closed": 6,
+    "items_that_stuck": 6,
+    "agent_spend": 2300.0,
+    "tokens": 14649000
+  },
+  "items": [
+    {
+      "number": 101,
+      "title": "Supplier login with single sign-on",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "A",
+      "team": "Portal",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 6000.0,
+      "clawback": 0.0,
+      "ev": 6000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-02T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 141,
+          "class": "A",
+          "merged_at": "2026-09-30T14:00:00Z"
+        },
+        {
+          "number": 142,
+          "class": "A",
+          "merged_at": "2026-10-02T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 102,
+      "title": "Supplier profile and certifications page",
+      "points": 2.0,
+      "value": 4000.0,
+      "authorship": "A",
+      "team": "Portal",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 4000.0,
+      "clawback": 0.0,
+      "ev": 4000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-07T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 145,
+          "class": "A",
+          "merged_at": "2026-10-07T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 103,
+      "title": "Upload certificate of analysis (PDF)",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "A",
+      "team": "Portal",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 6000.0,
+      "clawback": 0.0,
+      "ev": 6000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-09T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 146,
+          "class": "A",
+          "merged_at": "2026-10-07T14:00:00Z"
+        },
+        {
+          "number": 149,
+          "class": "A",
+          "merged_at": "2026-10-09T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 104,
+      "title": "PPAP submission form",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "A",
+      "team": "Portal",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 151,
+          "class": "A",
+          "merged_at": "2026-10-12T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 105,
+      "title": "Corrective action (8D) request list",
+      "points": 2.0,
+      "value": 4000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 106,
+      "title": "Shipment certificate search and filters",
+      "points": 2.0,
+      "value": 4000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 107,
+      "title": "Supplier scorecard dashboard",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 108,
+      "title": "Email reminders for overdue 8D responses",
+      "points": 2.0,
+      "value": 4000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 109,
+      "title": "Accessibility fixes (WCAG 2.1 AA)",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 110,
+      "title": "Supplier onboarding wizard",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "H",
+      "team": "Portal",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 152,
+          "class": "H",
+          "merged_at": "2026-10-12T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 111,
+      "title": "Role-based access for plant quality engineers",
+      "points": 4.0,
+      "value": 8000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:4",
+        "pod-portal",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 112,
+      "title": "Self-service password reset",
+      "points": 2.0,
+      "value": 4000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 113,
+      "title": "Bulk upload of inspection results",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 114,
+      "title": "Tablet layout for the plant floor",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 115,
+      "title": "Audit trail export",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 116,
+      "title": "Supplier messaging",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 117,
+      "title": "Spanish and French translations",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": null,
+      "team": "Portal",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 121,
+      "title": "Nightly sync of supplier master data from ERP",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": "Integrations",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-08T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 144,
+          "class": "A",
+          "merged_at": "2026-10-06T14:00:00Z"
+        },
+        {
+          "number": 147,
+          "class": "A",
+          "merged_at": "2026-10-08T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 122,
+      "title": "EDI 856 ship notice parser",
+      "points": 4.0,
+      "value": 8000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:4",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 123,
+      "title": "Map ERP defect codes to portal categories",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "A",
+      "team": "Integrations",
+      "labels": [
+        "aev-points:3",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "gross_ev": 6000.0,
+      "clawback": 0.0,
+      "ev": 6000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-09T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 148,
+          "class": "A",
+          "merged_at": "2026-10-09T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 124,
+      "title": "Sync PPAP approval status back to ERP",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:3",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 125,
+      "title": "Post nonconformance reports (NCR) to ERP",
+      "points": 4.0,
+      "value": 8000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:4",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 126,
+      "title": "ERP API service account and authentication",
+      "points": 4.0,
+      "value": 8000.0,
+      "authorship": "H",
+      "team": "Integrations",
+      "labels": [
+        "aev-points:4",
+        "pod-integrations",
+        "human-work"
+      ],
+      "gross_ev": 8000.0,
+      "clawback": 0.0,
+      "ev": 8000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-05T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 143,
+          "class": "H",
+          "merged_at": "2026-10-05T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 127,
+      "title": "Integration error queue with retry",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "H",
+      "team": "Integrations",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 150,
+          "class": "H",
+          "merged_at": "2026-10-11T14:00:00Z"
+        },
+        {
+          "number": 153,
+          "class": "H",
+          "merged_at": "2026-10-13T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 128,
+      "title": "EDI 861 receiving advice mapping",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:3",
+        "pod-integrations",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 129,
+      "title": "Two-way 8D status sync with ERP",
+      "points": 8.0,
+      "value": 16000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:8",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 130,
+      "title": "EDI 810 invoice matching",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 131,
+      "title": "Quality hold signal to MES",
+      "points": 8.0,
+      "value": 16000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:8",
+        "pod-integrations",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 132,
+      "title": "Data retention and archiving job",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:3",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 133,
+      "title": "Supplier master de-duplication",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 134,
+      "title": "Cutover rehearsal and data migration",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": null,
+      "team": "Integrations",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    }
+  ],
+  "warnings": []
+}

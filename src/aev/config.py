@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import date, datetime
 from pathlib import Path
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 import yaml
 
@@ -29,6 +29,9 @@ class Config:
     # Optional. Pull requests with this label always count as agent work.
     agent_label: str = "aev-agent"
     currency_symbol: str = "$"
+    # Optional. Team name -> issue label, for a breakdown by team. Use the same
+    # pod labels as Program Hub, for example {"Portal": "pod-portal"}.
+    teams: Dict[str, str] = field(default_factory=dict)
 
 
 def _to_number(raw: dict, key: str, allow_zero: bool = False) -> float:
@@ -85,6 +88,11 @@ def parse_config(raw: dict) -> Config:
     if not isinstance(accounts, list):
         raise ConfigError("'agent_accounts' must be a list of GitHub logins.")
 
+    teams = raw.get("teams") or {}
+    if not isinstance(teams, dict):
+        raise ConfigError("'teams' must be a list of 'Team name: issue-label' lines.")
+    teams = {str(k).strip(): str(v).strip() for k, v in teams.items() if str(k).strip() and v}
+
     return Config(
         budget_at_completion=_to_number(raw, "budget_at_completion"),
         value_per_point=_to_number(raw, "value_per_point"),
@@ -96,6 +104,7 @@ def parse_config(raw: dict) -> Config:
         as_of_date=_to_date(raw, "as_of_date", required=False),
         agent_label=str(raw.get("agent_label") or "aev-agent").strip(),
         currency_symbol=str(raw.get("currency_symbol", "$")),
+        teams=teams,
     )
 
 

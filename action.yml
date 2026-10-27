@@ -15,6 +15,9 @@ inputs:
   badge:
     description: "Where to write the shields.io badge JSON."
     default: ".aev/badge.json"
+  json:
+    description: "Where to write all results as JSON (read by Program Hub and dashboards)."
+    default: ".aev/aev.json"
   commit:
     description: "Commit the report and badge back to the repository ('true' or 'false')."
     default: "true"
@@ -45,13 +48,14 @@ runs:
         AEV_CONFIG: ${{ inputs.config }}
         AEV_OUTPUT: ${{ inputs.output }}
         AEV_BADGE: ${{ inputs.badge }}
+        AEV_JSON: ${{ inputs.json }}
         AEV_DEMO: ${{ inputs.demo }}
       run: |
         if [ "$AEV_DEMO" = "true" ]; then
-          python -m aev --demo --output "$RUNNER_TEMP/AEV-REPORT.md" --badge "$RUNNER_TEMP/badge.json" > /dev/null
+          python -m aev --demo --output "$RUNNER_TEMP/AEV-REPORT.md" --badge "$RUNNER_TEMP/badge.json" --json "$RUNNER_TEMP/aev.json" > /dev/null
           cat "$RUNNER_TEMP/AEV-REPORT.md" >> "$GITHUB_STEP_SUMMARY"
         else
-          python -m aev --config "$AEV_CONFIG" --output "$AEV_OUTPUT" --badge "$AEV_BADGE" > /dev/null
+          python -m aev --config "$AEV_CONFIG" --output "$AEV_OUTPUT" --badge "$AEV_BADGE" --json "$AEV_JSON" > /dev/null
           cat "$AEV_OUTPUT" >> "$GITHUB_STEP_SUMMARY"
         fi
 
@@ -61,10 +65,11 @@ runs:
       env:
         AEV_OUTPUT: ${{ inputs.output }}
         AEV_BADGE: ${{ inputs.badge }}
+        AEV_JSON: ${{ inputs.json }}
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add -- "$AEV_OUTPUT" "$AEV_BADGE"
+        git add -- "$AEV_OUTPUT" "$AEV_BADGE" "$AEV_JSON"
         if git diff --cached --quiet; then
           echo "AEV report unchanged; nothing to commit."
           exit 0

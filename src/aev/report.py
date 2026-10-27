@@ -86,6 +86,63 @@ def what_this_means(r: Results, symbol: str = "$") -> str:
     return sentence
 
 
+def tokens_text(tokens: float) -> str:
+    if tokens >= 1_000_000:
+        return f"{tokens / 1_000_000:.1f}M"
+    if tokens >= 1_000:
+        return f"{tokens / 1_000:.0f}k"
+    return f"{tokens:.0f}"
+
+
+def render_activity(r: Results, s: str) -> list:
+    """Side-by-side: what AI dashboards count vs. what the work was worth."""
+    a = r.activity
+    m = lambda v: money(v, s)  # noqa: E731
+    stuck = sum(1 for i in r.items if i.ev > 0)
+    spend = m(a.agent_spend) + (f" ({tokens_text(a.tokens)} tokens)" if a.tokens else "")
+    agent_cpi = r.by_class[AGENT].cpi
+    lines = [
+        "## AI activity vs. value",
+        "",
+        "Activity counts what the agents did. Value counts what it was worth.",
+        "",
+        "| Activity (what AI dashboards count) | | Value (what AEV counts) | |",
+        "|---|---:|---|---:|",
+        f"| Merged pull requests | {a.merged_prs} | Issues accepted that stuck | {stuck} |",
+        f"| Share of pull requests by agents | {percent(a.agent_pr_share)} | "
+        f"CPI of agent-authored work | {ratio(agent_cpi)} |",
+        f"| Issues closed | {a.items_closed} | Rework Rate (done work taken back) | {percent(r.rework_rate)} |",
+        f"| Agent spend | {spend} | Agent spend + human review of it | {m(r.ac_agent + r.ac_review)} |",
+        "",
+    ]
+    return lines
+
+
+def render_teams(r: Results, s: str) -> list:
+    m = lambda v: money(v, s)  # noqa: E731
+    lines = [
+        "## By team",
+        "",
+        "Teams come from issue labels (`teams` in `.aev/config.yml`), for example Program Hub pod labels.",
+        "",
+        "| Team | Who did the work | Items earning value | EV | AC | CPI |",
+        "|---|---|---:|---:|---:|---:|",
+    ]
+    for team in r.by_team.values():
+        rows = 0
+        for key in (AGENT, HUMAN, MIXED, UNASSIGNED):
+            c = team.by_class[key]
+            if c.ev or c.ac or c.items_accepted:
+                rows += 1
+                lines.append(f"| {team.name} | {CLASS_LABELS[key]} | {c.items_accepted} | "
+                             f"{m(c.ev)} | {m(c.ac)} | {ratio(c.cpi)} |")
+        if rows != 1:  # a single row is already the team total
+                lines.append(f"| **{team.name} total** | | **{team.items_accepted}** | **{m(team.ev)}** | "
+                         f"**{m(team.ac)}** | **{ratio(team.cpi)}** |")
+    lines.append("")
+    return lines
+
+
 def render_report(r: Results, config, repo: str = "") -> str:
     s = config.currency_symbol
     m = lambda v: money(v, s)  # noqa: E731
@@ -129,6 +186,8 @@ def render_report(r: Results, config, repo: str = "") -> str:
     add(f"| EAC | {m(r.classic_eac)} | {m(r.eac)} |")
     add("")
 
+    lines.extend(render_activity(r, s))
+
     add("## New AEV indicators")
     add("")
     add("| Indicator | Formula | Value | What it tells you |")
@@ -157,6 +216,9 @@ def render_report(r: Results, config, repo: str = "") -> str:
         add(f"| {CLASS_LABELS[key]} | {c.items_accepted} | {m(c.ev)} | {m(c.ac)} | {ratio(c.cpi)} |")
     add(f"| **Total** | **{total_items}** | **{m(r.ev)}** | **{m(r.ac)}** | **{ratio(r.cpi)}** |")
     add("")
+
+    if r.by_team:
+        lines.extend(render_teams(r, s))
 
     add("## Where the numbers come from")
     add("")

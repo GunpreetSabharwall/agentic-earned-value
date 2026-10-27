@@ -20,6 +20,7 @@ Classic EVM assumes people do the work. When AI agents write code, new costs (mo
 - v0.1: method definition.
 - v0.2.0: reference GitHub Action. Add one workflow file to any public repository and get a weekly `AEV-REPORT.md` and a CPI badge.
 - **v0.3.0: better authorship detection.** Agent work is recognised even when the agent opens pull requests under a person's account. See [How authorship is detected](#how-authorship-is-detected) and [CHANGELOG.md](CHANGELOG.md).
+- **v0.4.0: teams, activity and JSON.** Results by team (using the same pod labels as [Program Hub AI](https://github.com/GunpreetSabharwall/Program-Hub-AI)), an "AI activity vs. value" section, an optional token count, and every result in `.aev/aev.json` for other tools to read.
 
 ---
 
@@ -35,6 +36,8 @@ PYTHONPATH=src python -m aev --demo
 ```
 
 The report is printed and saved to `examples/demo/AEV-REPORT.md`. You can also just [read the saved demo report](examples/demo/AEV-REPORT.md).
+
+**A bigger example:** [`examples/lakeshore/`](examples/lakeshore/) is a fictional 12-week, two-team program (Lakeshore Components, Supplier Quality Portal) with weekly results. Rebuild it with `PYTHONPATH=src python examples/lakeshore/build_dataset.py`, or read its [week 6 report](examples/lakeshore/AEV-REPORT-after-revert.md).
 
 ---
 
@@ -64,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: GunpreetSabharwall/agentic-earned-value@v0.3.1
+      - uses: GunpreetSabharwall/agentic-earned-value@v0.4.0
 ```
 
 No password or personal token is needed. GitHub gives the workflow a temporary token automatically.
@@ -86,6 +89,9 @@ agent_accounts:                # GitHub logins of your AI agents / bots
   - my-coding-agent[bot]
   - claude
 # agent_label: aev-agent       # optional: pull requests with this label always count as agent work
+# teams:                       # optional: results by team, from issue labels
+#   Portal: pod-portal         #   Team name: label (use your Program Hub pod labels)
+#   Integrations: pod-integrations
 ```
 
 `agent_accounts` lists the GitHub logins of your AI agents. Upper/lower case and the `[bot]` ending do not matter. If you are not sure what login your agent uses, open one of its commits on GitHub and look at the author name shown there.
@@ -99,12 +105,12 @@ date,item,type,hours
 2026-01-13,,review,2
 ```
 
-**`.aev/agent-costs.csv`**: money spent on agents. `category` is one of `model`, `compute`, `ci`, `tools`.
+**`.aev/agent-costs.csv`**: money spent on agents. `category` is one of `model`, `compute`, `ci`, `tools`. The `tokens` column is optional: the number of model tokens used, shown in the report next to agent spend.
 
 ```csv
-date,item,category,amount
-2026-01-12,15,model,42.50
-2026-01-31,,ci,120
+date,item,category,amount,tokens
+2026-01-12,15,model,42.50,400000
+2026-01-31,,ci,120,
 ```
 
 You can edit these CSV files in the GitHub website or in any spreadsheet program (save as CSV).
@@ -141,6 +147,7 @@ All are optional.
 | `output` | `AEV-REPORT.md` | Where the report is written. |
 | `badge` | `.aev/badge.json` | Where the badge file is written. |
 | `commit` | `true` | Set to `false` to skip committing the report (it still appears in the workflow run summary). |
+| `json` | `.aev/aev.json` | Where all results are written as JSON, for Program Hub or a dashboard to read. |
 | `demo` | `false` | Set to `true` to run on the sample data instead of your repository. |
 
 Example: `with: { commit: "false" }` under the `uses:` line.
@@ -193,6 +200,7 @@ An issue is then **A** if all its pull requests are agent work, **H** if all are
 | `src/aev/calculator.py` | Puts the formulas together. |
 | `src/aev/github_data.py` | Reads issues and pull requests from GitHub (the only part that talks to GitHub). |
 | `src/aev/report.py` | Writes `AEV-REPORT.md` and the badge. |
+| `src/aev/export.py` | Writes `.aev/aev.json` (every result, machine-readable). |
 | `tests/` | Automated tests, including the method note's worked example. |
 | `examples/` | Demo data, starter settings and the workflow file to copy. |
 

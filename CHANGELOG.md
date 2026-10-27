@@ -2,6 +2,20 @@
 
 All notable changes to this project are listed here.
 
+## [0.4.0] - 2026-10-27
+
+### Added
+
+- **Results by team.** Optional `teams` setting in `.aev/config.yml` maps a team name to an issue label (for example the pod labels Program Hub uses). The report gets a "By team" table with EV, AC and CPI for each team, split by authorship class.
+- **AI activity vs. value.** A new report section puts what AI dashboards usually count (merged PRs, share by agents, issues closed, agent spend) next to what AEV counts (work that stuck, CPI of agent work, Rework Rate, agent plus review cost).
+- **Optional `tokens` column** in `.aev/agent-costs.csv`.
+- **JSON output.** Every result is written to `.aev/aev.json` (schema `aev-results/1`), so other tools such as Program Hub can read AEV without parsing the report. New `--json` option and `json` Action input; the Action commits the file with the report.
+- **Lakeshore example** in `examples/lakeshore/`: a fictional 12-week, two-team program with weekly results, built by `build_dataset.py`.
+
+### Changed
+
+- The workflow file to copy now uses `@v0.4.0`.
+
 ## [0.3.1] - 2026-10-07
 
 ### Fixed

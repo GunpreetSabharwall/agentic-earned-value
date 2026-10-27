@@ -29,6 +29,7 @@ class AgentCostEntry:
     item: Optional[int]
     category: str  # "model", "compute", "ci" or "tools"
     amount: float
+    tokens: float = 0.0  # optional "tokens" column: model tokens used
 
 
 def parse_item(value: str) -> Optional[int]:
@@ -95,12 +96,16 @@ def load_agent_costs(path: Path) -> Tuple[List[AgentCostEntry], List[str]]:
             amount = _parse_amount(row.get("amount", ""))
             if amount < 0:
                 raise ValueError("amount cannot be negative")
+            tokens = _parse_amount(row.get("tokens", "")) if row.get("tokens") else 0.0
+            if tokens < 0:
+                raise ValueError("tokens cannot be negative")
             entries.append(
                 AgentCostEntry(
                     day=date.fromisoformat(row.get("date", "")),
                     item=parse_item(row.get("item", "")),
                     category=category,
                     amount=amount,
+                    tokens=tokens,
                 )
             )
             if category not in AGENT_CATEGORIES:

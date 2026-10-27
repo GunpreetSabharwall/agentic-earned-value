@@ -50,6 +50,7 @@ def run_demo_inputs(tmp_path):
         "--repo", "example/demo-project",
         "--output", str(out),
         "--badge", str(badge),
+        "--json", str(tmp_path / "aev.json"),
     ])
     assert code == 0
     return out.read_text(encoding="utf-8"), badge.read_text(encoding="utf-8")
@@ -81,6 +82,8 @@ def test_committed_demo_outputs_are_up_to_date(tmp_path):
     demo = cli.DEMO_DIR
     assert (demo / "AEV-REPORT.md").read_text(encoding="utf-8") == text
     assert (demo / ".aev" / "badge.json").read_text(encoding="utf-8") == badge
+    assert (demo / ".aev" / "aev.json").read_text(encoding="utf-8") == \
+        (tmp_path / "aev.json").read_text(encoding="utf-8")
 
 
 def test_bad_config_returns_error_code(tmp_path):
