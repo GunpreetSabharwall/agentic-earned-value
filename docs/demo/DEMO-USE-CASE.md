@@ -107,7 +107,7 @@ In priority order. Items 1–5 are needed for 10 Nov; 6–7 are nice to have.
 | 1 | ✅ **Demo dataset**: about 24 issues, 2 pods, 12-week plan, weekly snapshots for weeks 1–6, tuned to the target numbers above | AEV | Current demo has 6 issues and no pods; too thin for a story |
 | 2 | ✅ **AEV JSON output** (`aev.json`) with every number in the report, plus a breakdown by pod (from Program Hub pod labels) | AEV | Program Hub and the presenter app need machine-readable results; pod × authorship is the decision view |
 | 3 | ✅ **Activity metrics** in the same output: agent PR share, PR count, model spend, tokens | AEV | View 1 must come from the same data, so the contrast is fair |
-| 4 | **Program Hub ⇄ AEV link**: dashboard adds CPI, Rework Rate and badge per initiative; AI PM briefing includes value and rework | Program-Hub-AI | This is what connects the two initiatives |
+| 4 | ✅ **Program Hub ⇄ AEV link** (Program-Hub-AI Feature 22): dashboard adds CPI, Rework Rate and badge per initiative; AI PM briefing includes value and rework | Program-Hub-AI | This is what connects the two initiatives |
 | 5 | **Presenter app**: one offline HTML page with the four views, a week slider, the drill-down, the "revert" step and the what-if | AEV (`demo/`) | Works with no Wi-Fi; also the fallback if live GitHub is slow |
 | 6 | **Live demo repo** seeded by a script: real issues, agent and human PRs, Program Hub + AEV workflows installed, one PR staged to revert on stage | new repo, e.g. `lakeshore-supplier-portal-demo` | Makes the live moment real, not a mock |
 | 7 | **Backup video** of the full 12-minute run | – | Standard insurance for any live demo |
