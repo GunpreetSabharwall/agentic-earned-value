@@ -4,6 +4,11 @@ Examples::
 
     python -m aev --demo                      # sample data, no GitHub needed
     python -m aev --repo owner/name           # real run (needs GITHUB_TOKEN)
+
+AEV can read ANY GitHub repository it has a token for: run it from anywhere
+(a central repo such as Program Hub, a laptop, CI) with --repo, and keep the
+settings and cost files wherever you like with --config, --hours and
+--agent-costs. What the measured repository needs is in docs/REPO-REQUIREMENTS.md.
 """
 
 from __future__ import annotations
@@ -31,9 +36,13 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--demo", action="store_true",
                    help="Run on the sample data in examples/demo (no GitHub access).")
     p.add_argument("--config", default=".aev/config.yml",
-                   help="Config file. hours.csv and agent-costs.csv are read from the same folder.")
+                   help="Config file. hours.csv and agent-costs.csv are read from the same folder "
+                        "unless --hours / --agent-costs say otherwise.")
+    p.add_argument("--hours", help="Human hours CSV (default: hours.csv next to the config file).")
+    p.add_argument("--agent-costs", help="Agent costs CSV (default: agent-costs.csv next to the config file).")
     p.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", ""),
-                   help="GitHub repository as owner/name (default: $GITHUB_REPOSITORY).")
+                   help="The repository to measure, as owner/name. Any repo the token can read "
+                        "(default: $GITHUB_REPOSITORY, the repo the workflow runs in).")
     p.add_argument("--snapshot", help="Read issue data from this JSON file instead of GitHub.")
     p.add_argument("--save-snapshot", help="Also save the issue data fetched from GitHub to this file.")
     p.add_argument("--output", help="Where to write the report (default: AEV-REPORT.md).")
@@ -89,8 +98,9 @@ def run(argv: Optional[List[str]] = None) -> int:
 
     # --- Costs ----------------------------------------------------------------
     folder = Path(args.config).parent
-    hours, hour_warnings = load_hours(folder / "hours.csv")
-    agent_costs, cost_warnings = load_agent_costs(folder / "agent-costs.csv")
+    hours, hour_warnings = load_hours(Path(args.hours) if args.hours else folder / "hours.csv")
+    agent_costs, cost_warnings = load_agent_costs(
+        Path(args.agent_costs) if args.agent_costs else folder / "agent-costs.csv")
 
     # --- Calculate ------------------------------------------------------------
     items, item_warnings = build_work_items(

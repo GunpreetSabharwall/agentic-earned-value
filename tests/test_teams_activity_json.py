@@ -182,3 +182,20 @@ def test_lakeshore_tells_the_talk_story(tmp_path):
     assert teams["Portal"]["A"]["cpi"] == pytest.approx(1.6)
     assert teams["Integrations"]["A"]["cpi"] == pytest.approx(0.6)
     assert after["activity"]["agent_pr_share"] == pytest.approx(0.644, abs=0.001)
+
+
+def test_cost_files_can_live_anywhere(tmp_path):
+    """Central mode: settings and cost files outside the measured repo."""
+    from aev import cli
+    settings, costs = tmp_path / "settings", tmp_path / "costs"
+    settings.mkdir(); costs.mkdir()
+    (settings / "config.yml").write_text((LAKESHORE / ".aev" / "config.yml").read_text(), encoding="utf-8")
+    (costs / "h.csv").write_text((LAKESHORE / ".aev" / "hours.csv").read_text(), encoding="utf-8")
+    (costs / "a.csv").write_text((LAKESHORE / ".aev" / "agent-costs.csv").read_text(), encoding="utf-8")
+    out = tmp_path / "aev.json"
+    code = cli.run(["--config", str(settings / "config.yml"), "--hours", str(costs / "h.csv"),
+                    "--agent-costs", str(costs / "a.csv"), "--snapshot", str(LAKESHORE / "issues-after-revert.json"),
+                    "--as-of", "2026-11-10", "--repo", "lakeshore-components/supplier-quality-portal",
+                    "--output", str(tmp_path / "r.md"), "--badge", str(tmp_path / "b.json"), "--json", str(out)])
+    assert code == 0
+    assert out.read_text(encoding="utf-8") == (LAKESHORE / "results" / "week-6-after-revert.json").read_text(encoding="utf-8")

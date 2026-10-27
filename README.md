@@ -41,6 +41,17 @@ The report is printed and saved to `examples/demo/AEV-REPORT.md`. You can also j
 
 ---
 
+## Two ways to run AEV
+
+| | In the repository it measures | From outside, on any repository |
+|---|---|---|
+| Set-up | One workflow file and a `.aev/` folder in that repository (below) | Run AEV from a central place (for example [Program Hub AI](https://github.com/GunpreetSabharwall/Program-Hub-AI)) with `--repo owner/name`; nothing is installed in the measured repository |
+| Settings and cost files | `.aev/` in the repository | Any folder: `--config`, `--hours`, `--agent-costs` |
+| Results | Committed to the repository | Written where AEV runs |
+| Token | Built in | One that can read the measured repository |
+
+Either way, the measured repository has to be kept in a certain way: issues sized with labels, PRs that name their issue, reverts done with GitHub's Revert button. **See [docs/REPO-REQUIREMENTS.md](docs/REPO-REQUIREMENTS.md).**
+
 ## Quick start: add AEV to your repository
 
 You do this once. It takes about 10 minutes and all of it can be done in the GitHub website.
@@ -143,7 +154,9 @@ All are optional.
 
 | Option | Default | What it does |
 |---|---|---|
-| `config` | `.aev/config.yml` | Where your settings file is. The CSV files are read from the same folder. |
+| `repo` | this repository | The repository to measure (`owner/name`). Another repository needs a `github-token` that can read it. |
+| `config` | `.aev/config.yml` | Where your settings file is. The CSV files are read from the same folder unless `hours` / `agent-costs` are set. |
+| `hours`, `agent-costs` | next to `config` | Paths of the two CSV files, when they live elsewhere. |
 | `output` | `AEV-REPORT.md` | Where the report is written. |
 | `badge` | `.aev/badge.json` | Where the badge file is written. |
 | `commit` | `true` | Set to `false` to skip committing the report (it still appears in the workflow run summary). |
