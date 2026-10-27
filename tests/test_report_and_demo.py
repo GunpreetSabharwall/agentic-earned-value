@@ -6,7 +6,7 @@ from datetime import date
 from aev import cli
 from aev.calculator import compute
 from aev.config import parse_config
-from aev.github_data import REVERT_BODY, _issue_from_node, part_of_issues
+from aev.github_data import REVERT_BODY, _issue_from_node, linked_issues, part_of_issues
 from aev.report import badge_color, money, percent, ratio, render_badge, render_report, what_this_means
 
 CONFIG = parse_config({
@@ -226,3 +226,18 @@ def test_part_of_links():
     assert issue["events"] == []
     assert issue["linked_prs"] == [{"number": 40, "author": "x", "merged_at": "2026-01-02T00:00:00Z",
                                     "reverted_at": "2026-01-05T00:00:00Z"}]
+
+
+def test_linked_issues_include_closing_keywords():
+    assert linked_issues("Fixes #4") == [4]
+    assert linked_issues("closes #1, Resolved #2 and part of #3") == [1, 2, 3]
+    assert linked_issues("Fix: #9") == [9]
+    assert linked_issues("Reverts owner/repo#5") == []
+    assert linked_issues("prefixes #6") == []
+    # A PR linked both by GitHub and by its description is listed once.
+    node = {"number": 4, "title": "t", "labels": {"nodes": []},
+            "closedByPullRequestsReferences": {"nodes": [{"number": 40, "mergedAt": "2026-01-02T00:00:00Z",
+                                                          "author": {"login": "x"}}]},
+            "timelineItems": {"nodes": []}}
+    issue = _issue_from_node(node, {}, [{"number": 40, "mergedAt": "2026-01-02T00:00:00Z", "author": {"login": "x"}}])
+    assert [p["number"] for p in issue["linked_prs"]] == [40]

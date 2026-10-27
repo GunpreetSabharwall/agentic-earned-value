@@ -24,6 +24,12 @@ REVERT_BODY = re.compile(r"Reverts\s+[\w.-]+/[\w.-]+#(\d+)", re.IGNORECASE)
 # such as "Fixes #12", which close the issue on merge.
 PART_OF_BODY = re.compile(r"\b(?:part\s+of|refs?)\s+#(\d+)\b", re.IGNORECASE)
 
+# GitHub's closing keywords. GitHub normally links these PRs to the issue itself,
+# but not always (for example PRs opened and merged by GitHub Actions), so AEV
+# also reads them from the PR description.
+CLOSES_BODY = re.compile(
+    r"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s*:?\s+#(\d+)\b", re.IGNORECASE)
+
 ISSUES_QUERY = """
 query($owner: String!, $name: String!, $cursor: String) {
   repository(owner: $owner, name: $name) {
@@ -143,11 +149,18 @@ def part_of_issues(body: Optional[str]) -> List[int]:
     return sorted({int(n) for n in PART_OF_BODY.findall(body or "")})
 
 
+def linked_issues(body: Optional[str]) -> List[int]:
+    """Every issue a PR body links to: partial work or a closing keyword ("Fixes #12")."""
+    text = body or ""
+    return sorted({int(n) for n in PART_OF_BODY.findall(text) + CLOSES_BODY.findall(text)})
+
+
 def fetch_merged_prs(client: GitHubClient, owner: str, name: str, since: datetime):
     """Scan merged PRs once. Returns (reverts, partial links).
 
     reverts:  'PR number that was reverted' -> 'time the revert PR was merged'
-    partial:  issue number -> [PR nodes that say "Part of #issue"]
+    partial:  issue number -> [PR nodes whose description links to it: "Part of #issue",
+              "Refs #issue", or a closing keyword such as "Fixes #issue"]
     """
     reverts: Dict[int, str] = {}
     partial: Dict[int, List[dict]] = {}
@@ -168,7 +181,7 @@ def fetch_merged_prs(client: GitHubClient, owner: str, name: str, since: datetim
                 if previous is None or pr["mergedAt"] < previous:
                     reverts[original] = pr["mergedAt"]
             elif pr.get("mergedAt"):
-                for issue in part_of_issues(pr.get("body")):
+                for issue in linked_issues(pr.get("body")):
                     partial.setdefault(issue, []).append(pr)
         if stop or not page["pageInfo"]["hasNextPage"]:
             break

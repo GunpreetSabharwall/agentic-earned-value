@@ -10,6 +10,7 @@ All notable changes to this project are listed here.
 - **AI activity vs. value.** A new report section puts what AI dashboards usually count (merged PRs, share by agents, issues closed, agent spend) next to what AEV counts (work that stuck, CPI of agent work, Rework Rate, agent plus review cost).
 - **Optional `tokens` column** in `.aev/agent-costs.csv`.
 - **JSON output.** Every result is written to `.aev/aev.json` (schema `aev-results/1`), so other tools such as Program Hub can read AEV without parsing the report. New `--json` option and `json` Action input; the Action commits the file with the report.
+- **Links read from PR descriptions.** AEV now also reads closing keywords (`Fixes #12`, `Closes #12`, `Resolves #12`) from merged PR descriptions, because GitHub does not always link such PRs to the issue (for example PRs opened and merged by GitHub Actions).
 - **Partial work is linked.** A merged pull request whose description says `Part of #12` (or `Refs #12`) now counts as work on issue 12 without closing it. Before, only pull requests with closing keywords (`Fixes #12`) were linked, so agent work on open issues was invisible.
 - **Lakeshore example** in `examples/lakeshore/`: a fictional 12-week, two-team program with weekly results, built by `build_dataset.py`. It also writes `seed-plan.json`, used to replay the same history into a real GitHub repository for live demos.
 
