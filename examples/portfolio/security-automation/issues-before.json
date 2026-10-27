@@ -1,0 +1,383 @@
+{
+  "repo": "GunpreetSabharwall/initiative-security-automation",
+  "issues": [
+    {
+      "number": 1,
+      "title": "SAST in every pipeline",
+      "labels": [
+        "aev-points:5",
+        "pod-appsec",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-13T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 20,
+          "author": "b-mensah",
+          "merged_at": "2026-10-11T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 21,
+          "author": "b-mensah",
+          "merged_at": "2026-10-13T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Secret scanning with push protection",
+      "labels": [
+        "aev-points:3",
+        "pod-appsec",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-15T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 22,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-15T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Dependency vulnerability SLA report",
+      "labels": [
+        "aev-points:5",
+        "pod-appsec",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-17T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 23,
+          "author": "d-kim",
+          "merged_at": "2026-10-15T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 24,
+          "author": "d-kim",
+          "merged_at": "2026-10-17T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Cloud posture baseline (CIS)",
+      "labels": [
+        "aev-points:5",
+        "pod-cloudsec",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-20T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 25,
+          "author": "e-haddad",
+          "merged_at": "2026-10-18T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 27,
+          "author": "e-haddad",
+          "merged_at": "2026-10-20T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "IAM least-privilege review",
+      "labels": [
+        "aev-points:5",
+        "pod-cloudsec",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-22T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 28,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Guardrail policies as code",
+      "labels": [
+        "aev-points:5",
+        "pod-cloudsec",
+        "mixed-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-24T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 29,
+          "author": "a-novak",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 34,
+          "author": "a-novak",
+          "merged_at": "2026-10-24T15:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Container image signing",
+      "labels": [
+        "aev-points:3",
+        "pod-appsec",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 26,
+          "author": "b-mensah",
+          "merged_at": "2026-10-20T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "SBOM for every release",
+      "labels": [
+        "aev-points:3",
+        "pod-appsec",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 32,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-23T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Alert routing to owners",
+      "labels": [
+        "aev-points:3",
+        "pod-cloudsec",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 30,
+          "author": "d-kim",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Pen test remediation tracker",
+      "labels": [
+        "aev-points:5",
+        "pod-appsec",
+        "human-work",
+        "blocked"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 11,
+      "title": "Network segmentation for plant OT",
+      "labels": [
+        "aev-points:8",
+        "pod-cloudsec",
+        "human-work",
+        "blocked"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 12,
+      "title": "Vendor access reviews",
+      "labels": [
+        "aev-points:5",
+        "pod-cloudsec",
+        "human-work",
+        "blocked"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 13,
+      "title": "Threat model templates",
+      "labels": [
+        "aev-points:3",
+        "pod-appsec",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 14,
+      "title": "DAST for public apps",
+      "labels": [
+        "aev-points:5",
+        "pod-appsec",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 33,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-23T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Key rotation automation",
+      "labels": [
+        "aev-points:5",
+        "pod-cloudsec",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 16,
+      "title": "Incident runbooks",
+      "labels": [
+        "aev-points:5",
+        "pod-cloudsec",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 17,
+      "title": "Security champions training",
+      "labels": [
+        "aev-points:3",
+        "pod-appsec",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 18,
+      "title": "Central logging to the SIEM",
+      "labels": [
+        "aev-points:5",
+        "pod-cloudsec",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 19,
+      "title": "WAF rules for the supplier portal",
+      "labels": [
+        "aev-points:3",
+        "pod-appsec",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    }
+  ]
+}

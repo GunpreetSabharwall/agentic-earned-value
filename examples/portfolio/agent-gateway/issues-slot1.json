@@ -1,0 +1,561 @@
+{
+  "repo": "GunpreetSabharwall/initiative-agent-gateway",
+  "issues": [
+    {
+      "number": 1,
+      "title": "Agent gateway API skeleton",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-09-29T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 21,
+          "author": "b-mensah",
+          "merged_at": "2026-09-27T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 23,
+          "author": "b-mensah",
+          "merged_at": "2026-09-29T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Token budget enforcement per team",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-01T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 22,
+          "author": "c-ortiz",
+          "merged_at": "2026-09-29T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 25,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-01T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Model routing by task type",
+      "labels": [
+        "aev-points:8",
+        "pod-platform",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-03T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 24,
+          "author": "d-kim",
+          "merged_at": "2026-10-01T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 26,
+          "author": "d-kim",
+          "merged_at": "2026-10-03T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Request and response audit log",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-05T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 27,
+          "author": "e-haddad",
+          "merged_at": "2026-10-05T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Prompt caching layer",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-07T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 28,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-05T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 30,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-07T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Rate limiting and quotas",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-09T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 29,
+          "author": "a-novak",
+          "merged_at": "2026-10-07T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        },
+        {
+          "number": 31,
+          "author": "a-novak",
+          "merged_at": "2026-10-09T15:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "SSO for the admin console",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-11T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 32,
+          "author": "b-mensah",
+          "merged_at": "2026-10-11T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Python SDK client",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-14T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 33,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-12T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 35,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-14T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "TypeScript SDK client",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-16T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 34,
+          "author": "d-kim",
+          "merged_at": "2026-10-14T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 36,
+          "author": "d-kim",
+          "merged_at": "2026-10-16T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "SDK retry and backoff",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-18T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 37,
+          "author": "e-haddad",
+          "merged_at": "2026-10-18T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Usage dashboard per team",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "mixed-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-20T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 38,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-18T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 40,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-20T15:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Developer docs site",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-22T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 42,
+          "author": "a-novak",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Sample apps: chat and RAG",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-24T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 43,
+          "author": "b-mensah",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 48,
+          "author": "b-mensah",
+          "merged_at": "2026-10-24T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Cost attribution headers",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-11-09T15:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 41,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-21T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 47,
+          "author": "c-ortiz",
+          "merged_at": "2026-11-09T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Streaming responses in the SDK",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 39,
+          "author": "d-kim",
+          "merged_at": "2026-10-20T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Gateway health checks",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 45,
+          "author": "e-haddad",
+          "merged_at": "2026-10-23T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Multi-region failover",
+      "labels": [
+        "aev-points:8",
+        "pod-platform",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 18,
+      "title": "Policy engine for PII",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 46,
+          "author": "a-novak",
+          "merged_at": "2026-10-23T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Go SDK client",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 20,
+      "title": "Load test at 10k requests per second",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    }
+  ]
+}

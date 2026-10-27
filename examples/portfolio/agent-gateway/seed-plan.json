@@ -1,0 +1,621 @@
+{
+  "repo_note": "Replay into an EMPTY GitHub repo; numbers then match this dataset.",
+  "initiative": "Agent Gateway",
+  "story": "Internal AI agent platform, mostly agent-written and well tested: agents clearly pay off.",
+  "slots": [
+    {
+      "slot": 1,
+      "pr": 47,
+      "issue": 14
+    },
+    {
+      "slot": 2,
+      "pr": 44,
+      "issue": 15
+    },
+    {
+      "slot": 3,
+      "pr": 49,
+      "issue": 16
+    }
+  ],
+  "steps": [
+    {
+      "step": "issue",
+      "number": 1,
+      "title": "Agent gateway API skeleton",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 2,
+      "title": "Token budget enforcement per team",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 3,
+      "title": "Model routing by task type",
+      "labels": [
+        "aev-points:8",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 8 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 4,
+      "title": "Request and response audit log",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 5,
+      "title": "Prompt caching layer",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 6,
+      "title": "Rate limiting and quotas",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "human-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 7,
+      "title": "SSO for the admin console",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "human-work"
+      ],
+      "body": "Team: Platform. Size: 3 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 8,
+      "title": "Python SDK client",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "body": "Team: SDK. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 9,
+      "title": "TypeScript SDK client",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "body": "Team: SDK. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 10,
+      "title": "SDK retry and backoff",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "body": "Team: SDK. Size: 3 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 11,
+      "title": "Usage dashboard per team",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "mixed-work"
+      ],
+      "body": "Team: SDK. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 12,
+      "title": "Developer docs site",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "body": "Team: SDK. Size: 3 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 13,
+      "title": "Sample apps: chat and RAG",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "body": "Team: SDK. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 14,
+      "title": "Cost attribution headers",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 3 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 15,
+      "title": "Streaming responses in the SDK",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "body": "Team: SDK. Size: 3 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 16,
+      "title": "Gateway health checks",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 3 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 17,
+      "title": "Multi-region failover",
+      "labels": [
+        "aev-points:8",
+        "pod-platform",
+        "human-work"
+      ],
+      "body": "Team: Platform. Size: 8 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 18,
+      "title": "Policy engine for PII",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 19,
+      "title": "Go SDK client",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "body": "Team: SDK. Size: 3 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 20,
+      "title": "Load test at 10k requests per second",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "human-work"
+      ],
+      "body": "Team: Platform. Size: 3 points. Agent Gateway initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "pr",
+      "number": 21,
+      "issue": 1,
+      "title": "Agent gateway API skeleton (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/platform/agent-gateway-api-skeleton/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-27T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 22,
+      "issue": 2,
+      "title": "Token budget enforcement per team (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/platform/token-budget-enforcement-per-team/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-29T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 23,
+      "issue": 1,
+      "title": "Agent gateway API skeleton (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/platform/agent-gateway-api-skeleton/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-29T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 24,
+      "issue": 3,
+      "title": "Model routing by task type (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/platform/model-routing-by-task-type/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-01T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 25,
+      "issue": 2,
+      "title": "Token budget enforcement per team (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/platform/token-budget-enforcement-per-team/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-01T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 26,
+      "issue": 3,
+      "title": "Model routing by task type (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/platform/model-routing-by-task-type/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-03T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 27,
+      "issue": 4,
+      "title": "Request and response audit log",
+      "link": "fixes",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/platform/request-and-response-audit-log/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-05T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 28,
+      "issue": 5,
+      "title": "Prompt caching layer (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "f-lindqvist",
+      "path": "src/platform/prompt-caching-layer/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-05T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 29,
+      "issue": 6,
+      "title": "Rate limiting and quotas (part 1 of 2)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "a-novak",
+      "path": "src/platform/rate-limiting-and-quotas/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-07T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 30,
+      "issue": 5,
+      "title": "Prompt caching layer (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "f-lindqvist",
+      "path": "src/platform/prompt-caching-layer/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-07T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 31,
+      "issue": 6,
+      "title": "Rate limiting and quotas (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "a-novak",
+      "path": "src/platform/rate-limiting-and-quotas/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-09T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 32,
+      "issue": 7,
+      "title": "SSO for the admin console",
+      "link": "fixes",
+      "agent": false,
+      "developer": "b-mensah",
+      "path": "src/platform/sso-for-the-admin-console/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-11T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 33,
+      "issue": 8,
+      "title": "Python SDK client (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/sdk/python-sdk-client/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-12T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 34,
+      "issue": 9,
+      "title": "TypeScript SDK client (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/sdk/typescript-sdk-client/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-14T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 35,
+      "issue": 8,
+      "title": "Python SDK client (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/sdk/python-sdk-client/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-14T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 36,
+      "issue": 9,
+      "title": "TypeScript SDK client (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/sdk/typescript-sdk-client/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-16T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 37,
+      "issue": 10,
+      "title": "SDK retry and backoff",
+      "link": "fixes",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/sdk/sdk-retry-and-backoff/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-18T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 38,
+      "issue": 11,
+      "title": "Usage dashboard per team (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "f-lindqvist",
+      "path": "src/sdk/usage-dashboard-per-team/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-18T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 39,
+      "issue": 15,
+      "title": "Streaming responses in the SDK (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/sdk/streaming-responses-in-the-sdk/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-20T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 40,
+      "issue": 11,
+      "title": "Usage dashboard per team (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "f-lindqvist",
+      "path": "src/sdk/usage-dashboard-per-team/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-20T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 41,
+      "issue": 14,
+      "title": "Cost attribution headers (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/platform/cost-attribution-headers/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-21T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 42,
+      "issue": 12,
+      "title": "Developer docs site",
+      "link": "fixes",
+      "agent": true,
+      "developer": "a-novak",
+      "path": "src/sdk/developer-docs-site/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-22T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 43,
+      "issue": 13,
+      "title": "Sample apps: chat and RAG (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/sdk/sample-apps-chat-and-rag/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-22T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 44,
+      "issue": 15,
+      "title": "Streaming responses in the SDK (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/sdk/streaming-responses-in-the-sdk/part-2.md",
+      "hold": true,
+      "slot": 2,
+      "planned_merge": "2026-10-22T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 45,
+      "issue": 16,
+      "title": "Gateway health checks (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/platform/gateway-health-checks/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-23T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 46,
+      "issue": 18,
+      "title": "Policy engine for PII",
+      "link": "part_of",
+      "agent": true,
+      "developer": "a-novak",
+      "path": "src/platform/policy-engine-for-pii/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-23T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 47,
+      "issue": 14,
+      "title": "Cost attribution headers (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/platform/cost-attribution-headers/part-2.md",
+      "hold": true,
+      "slot": 1,
+      "planned_merge": "2026-10-23T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 48,
+      "issue": 13,
+      "title": "Sample apps: chat and RAG (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/sdk/sample-apps-chat-and-rag/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-24T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 49,
+      "issue": 16,
+      "title": "Gateway health checks (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/platform/gateway-health-checks/part-2.md",
+      "hold": true,
+      "slot": 3,
+      "planned_merge": "2026-10-25T15:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,730 @@
+{
+  "schema": "aev-results/1",
+  "tool_version": "0.4.0",
+  "method_note": "0.1",
+  "repo": "developer-productivity",
+  "as_of": "2026-11-10",
+  "config": {
+    "budget_at_completion": 136500.0,
+    "value_per_point": 1500.0,
+    "start_date": "2026-09-21",
+    "end_date": "2026-12-14",
+    "hourly_rate": 100.0,
+    "stabilization_window_days": 14,
+    "agent_accounts": [
+      "coding-agent"
+    ],
+    "agent_label": "aev-agent",
+    "currency_symbol": "$",
+    "teams": {
+      "CI": "pod-ci",
+      "DevEx": "pod-devex"
+    }
+  },
+  "summary": {
+    "bac": 136500.0,
+    "pv": 81250.0,
+    "ev": 63000.0,
+    "ac": 58775.0,
+    "cpi": 1.0719,
+    "spi": 0.7754,
+    "eac": 127345.83,
+    "health": "brightgreen",
+    "what_this_means": "For every $1 spent, the project has earned $1.07 of value; it is under budget and behind schedule."
+  },
+  "classic": {
+    "ev": 63000.0,
+    "ac": 54000.0,
+    "cpi": 1.1667,
+    "spi": 0.7754,
+    "eac": 117000.0
+  },
+  "indicators": {
+    "rework_rate": 0.0,
+    "agent_cost_share": 0.0217,
+    "review_load_ratio": 2.7451
+  },
+  "value": {
+    "gross_ev": 63000.0,
+    "clawback": 0.0,
+    "ev": 63000.0,
+    "labelled_value": 136500.0
+  },
+  "cost": {
+    "build_hours": 540.0,
+    "review_hours": 35.0,
+    "ac_build": 54000.0,
+    "ac_review": 3500.0,
+    "ac_agent": 1275.0,
+    "agent_by_category": {
+      "ci": 247.5,
+      "model": 877.5,
+      "tools": 150.0
+    }
+  },
+  "by_class": {
+    "A": {
+      "items_accepted": 3,
+      "ev": 16500.0,
+      "ac": 14000.0,
+      "ac_build": 10000.0,
+      "ac_review": 3000.0,
+      "ac_agent": 1000.0,
+      "cpi": 1.1786
+    },
+    "H": {
+      "items_accepted": 4,
+      "ev": 39000.0,
+      "ac": 34100.0,
+      "ac_build": 34100.0,
+      "ac_review": 0.0,
+      "ac_agent": 0.0,
+      "cpi": 1.1437
+    },
+    "M": {
+      "items_accepted": 1,
+      "ev": 7500.0,
+      "ac": 4625.0,
+      "ac_build": 4000.0,
+      "ac_review": 500.0,
+      "ac_agent": 125.0,
+      "cpi": 1.6216
+    },
+    "Unassigned": {
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 6050.0,
+      "ac_build": 5900.0,
+      "ac_review": 0.0,
+      "ac_agent": 150.0,
+      "cpi": 0.0
+    }
+  },
+  "by_team": [
+    {
+      "name": "CI",
+      "label": "pod-ci",
+      "items_accepted": 4,
+      "ev": 31500.0,
+      "ac": 32925.0,
+      "cpi": 0.9567,
+      "by_class": {
+        "A": {
+          "items_accepted": 1,
+          "ev": 4500.0,
+          "ac": 6300.0,
+          "ac_build": 4500.0,
+          "ac_review": 1350.0,
+          "ac_agent": 450.0,
+          "cpi": 0.7143
+        },
+        "H": {
+          "items_accepted": 2,
+          "ev": 19500.0,
+          "ac": 19800.0,
+          "ac_build": 19800.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": 0.9848
+        },
+        "M": {
+          "items_accepted": 1,
+          "ev": 7500.0,
+          "ac": 4625.0,
+          "ac_build": 4000.0,
+          "ac_review": 500.0,
+          "ac_agent": 125.0,
+          "cpi": 1.6216
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 2200.0,
+          "ac_build": 2200.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": 0.0
+        }
+      }
+    },
+    {
+      "name": "DevEx",
+      "label": "pod-devex",
+      "items_accepted": 4,
+      "ev": 31500.0,
+      "ac": 24200.0,
+      "cpi": 1.3017,
+      "by_class": {
+        "A": {
+          "items_accepted": 2,
+          "ev": 12000.0,
+          "ac": 7700.0,
+          "ac_build": 5500.0,
+          "ac_review": 1650.0,
+          "ac_agent": 550.0,
+          "cpi": 1.5584
+        },
+        "H": {
+          "items_accepted": 2,
+          "ev": 19500.0,
+          "ac": 14300.0,
+          "ac_build": 14300.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": 1.3636
+        },
+        "M": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 2200.0,
+          "ac_build": 2200.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": 0.0
+        }
+      }
+    },
+    {
+      "name": "No team",
+      "label": null,
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 1650.0,
+      "cpi": 0.0,
+      "by_class": {
+        "A": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "H": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "M": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 1650.0,
+          "ac_build": 1500.0,
+          "ac_review": 0.0,
+          "ac_agent": 150.0,
+          "cpi": 0.0
+        }
+      }
+    }
+  ],
+  "activity": {
+    "merged_prs": 17,
+    "agent_prs": 8,
+    "mixed_prs": 0,
+    "human_prs": 9,
+    "agent_pr_share": 0.4706,
+    "ai_assisted_pr_share": 0.4706,
+    "items_closed": 8,
+    "items_that_stuck": 8,
+    "agent_spend": 1275.0,
+    "tokens": 7898000
+  },
+  "items": [
+    {
+      "number": 1,
+      "title": "Build cache for the monorepo",
+      "points": 8.0,
+      "value": 12000.0,
+      "authorship": "H",
+      "team": "CI",
+      "labels": [
+        "aev-points:8",
+        "pod-ci",
+        "human-work"
+      ],
+      "gross_ev": 12000.0,
+      "clawback": 0.0,
+      "ev": 12000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-09-30T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 19,
+          "class": "H",
+          "merged_at": "2026-09-28T14:00:00Z"
+        },
+        {
+          "number": 20,
+          "class": "H",
+          "merged_at": "2026-09-30T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Flaky test quarantine report",
+      "points": 5.0,
+      "value": 7500.0,
+      "authorship": "H",
+      "team": "CI",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "human-work"
+      ],
+      "gross_ev": 7500.0,
+      "clawback": 0.0,
+      "ev": 7500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-03T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 21,
+          "class": "H",
+          "merged_at": "2026-10-03T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Parallel test runners",
+      "points": 5.0,
+      "value": 7500.0,
+      "authorship": "H",
+      "team": "CI",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 32,
+          "class": "H",
+          "merged_at": "2026-10-22T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Merge queue rollout",
+      "points": 5.0,
+      "value": 7500.0,
+      "authorship": "M",
+      "team": "CI",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "mixed-work"
+      ],
+      "gross_ev": 7500.0,
+      "clawback": 0.0,
+      "ev": 7500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-07T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 22,
+          "class": "A",
+          "merged_at": "2026-10-05T14:00:00Z"
+        },
+        {
+          "number": 23,
+          "class": "H",
+          "merged_at": "2026-10-07T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Golden path service template",
+      "points": 8.0,
+      "value": 12000.0,
+      "authorship": "H",
+      "team": "DevEx",
+      "labels": [
+        "aev-points:8",
+        "pod-devex",
+        "human-work"
+      ],
+      "gross_ev": 12000.0,
+      "clawback": 0.0,
+      "ev": 12000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-10T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 24,
+          "class": "H",
+          "merged_at": "2026-10-08T14:00:00Z"
+        },
+        {
+          "number": 25,
+          "class": "H",
+          "merged_at": "2026-10-10T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Local dev containers",
+      "points": 5.0,
+      "value": 7500.0,
+      "authorship": "H",
+      "team": "DevEx",
+      "labels": [
+        "aev-points:5",
+        "pod-devex",
+        "human-work"
+      ],
+      "gross_ev": 7500.0,
+      "clawback": 0.0,
+      "ev": 7500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-13T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 26,
+          "class": "H",
+          "merged_at": "2026-10-13T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "AI code review assistant pilot",
+      "points": 5.0,
+      "value": 7500.0,
+      "authorship": "A",
+      "team": "DevEx",
+      "labels": [
+        "aev-points:5",
+        "pod-devex",
+        "agent-work"
+      ],
+      "gross_ev": 7500.0,
+      "clawback": 0.0,
+      "ev": 7500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-16T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 27,
+          "class": "A",
+          "merged_at": "2026-10-14T14:00:00Z"
+        },
+        {
+          "number": 28,
+          "class": "A",
+          "merged_at": "2026-10-16T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Onboarding guide refresh",
+      "points": 3.0,
+      "value": 4500.0,
+      "authorship": "A",
+      "team": "DevEx",
+      "labels": [
+        "aev-points:3",
+        "pod-devex",
+        "agent-work"
+      ],
+      "gross_ev": 4500.0,
+      "clawback": 0.0,
+      "ev": 4500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-20T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 29,
+          "class": "A",
+          "merged_at": "2026-10-20T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "CI pipeline lint rules",
+      "points": 3.0,
+      "value": 4500.0,
+      "authorship": "A",
+      "team": "CI",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "gross_ev": 4500.0,
+      "clawback": 0.0,
+      "ev": 4500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-23T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 35,
+          "class": "A",
+          "merged_at": "2026-10-23T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Dependency update bot",
+      "points": 3.0,
+      "value": 4500.0,
+      "authorship": "A",
+      "team": "CI",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 31,
+          "class": "A",
+          "merged_at": "2026-10-21T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Pull request size linter",
+      "points": 3.0,
+      "value": 4500.0,
+      "authorship": "A",
+      "team": "CI",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 30,
+          "class": "A",
+          "merged_at": "2026-10-20T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Docs search",
+      "points": 3.0,
+      "value": 4500.0,
+      "authorship": "A",
+      "team": "DevEx",
+      "labels": [
+        "aev-points:3",
+        "pod-devex",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 36,
+          "class": "A",
+          "merged_at": "2026-10-23T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Remote build execution",
+      "points": 8.0,
+      "value": 12000.0,
+      "authorship": null,
+      "team": "CI",
+      "labels": [
+        "aev-points:8",
+        "pod-ci",
+        "human-work",
+        "blocked"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 14,
+      "title": "Self-service preview environments",
+      "points": 8.0,
+      "value": 12000.0,
+      "authorship": null,
+      "team": "DevEx",
+      "labels": [
+        "aev-points:8",
+        "pod-devex",
+        "human-work",
+        "blocked"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 15,
+      "title": "Test impact analysis",
+      "points": 5.0,
+      "value": 7500.0,
+      "authorship": "H",
+      "team": "CI",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 33,
+          "class": "H",
+          "merged_at": "2026-10-22T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Developer portal",
+      "points": 8.0,
+      "value": 12000.0,
+      "authorship": null,
+      "team": "DevEx",
+      "labels": [
+        "aev-points:8",
+        "pod-devex",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 17,
+      "title": "Inner-source catalog",
+      "points": 3.0,
+      "value": 4500.0,
+      "authorship": null,
+      "team": "DevEx",
+      "labels": [
+        "aev-points:3",
+        "pod-devex",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 18,
+      "title": "Build time SLOs",
+      "points": 3.0,
+      "value": 4500.0,
+      "authorship": null,
+      "team": "CI",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    }
+  ],
+  "warnings": []
+}
