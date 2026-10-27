@@ -6,7 +6,7 @@ from datetime import date
 from aev import cli
 from aev.calculator import compute
 from aev.config import parse_config
-from aev.github_data import REVERT_BODY, _issue_from_node
+from aev.github_data import REVERT_BODY, _issue_from_node, part_of_issues
 from aev.report import badge_color, money, percent, ratio, render_badge, render_report, what_this_means
 
 CONFIG = parse_config({
@@ -211,3 +211,18 @@ def test_small_costs_are_not_rounded_away_in_breakdown():
     assert "| &nbsp;&nbsp;agent: model | $6.30 |" in text
     # Headline figures stay rounded to whole dollars.
     assert "| Actual Cost (AC) | $394 |" in text
+
+
+def test_part_of_links():
+    assert part_of_issues("Part of #12. Refs #3, see also #99") == [3, 12]
+    assert part_of_issues("ref #7") == [7]
+    assert part_of_issues("Fixes #4") == []
+    assert part_of_issues("Reverts owner/repo#5") == []
+    assert part_of_issues(None) == []
+    node = {"number": 12, "title": "t", "labels": {"nodes": []},
+            "closedByPullRequestsReferences": {"nodes": []}, "timelineItems": {"nodes": []}}
+    partial = [{"number": 40, "mergedAt": "2026-01-02T00:00:00Z", "author": {"login": "x"}}]
+    issue = _issue_from_node(node, {40: "2026-01-05T00:00:00Z"}, partial)
+    assert issue["events"] == []
+    assert issue["linked_prs"] == [{"number": 40, "author": "x", "merged_at": "2026-01-02T00:00:00Z",
+                                    "reverted_at": "2026-01-05T00:00:00Z"}]

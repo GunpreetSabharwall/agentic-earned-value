@@ -3,7 +3,7 @@
   "note": "Lakeshore Components demo (fictional). Same format the AEV tool builds from GitHub.",
   "issues": [
     {
-      "number": 101,
+      "number": 1,
       "title": "Supplier login with single sign-on",
       "labels": [
         "aev-points:3",
@@ -19,7 +19,7 @@
       ],
       "linked_prs": [
         {
-          "number": 141,
+          "number": 32,
           "author": "s-reyes",
           "merged_at": "2026-09-30T14:00:00Z",
           "reverted_at": null,
@@ -28,7 +28,7 @@
           ]
         },
         {
-          "number": 142,
+          "number": 33,
           "author": "s-reyes",
           "merged_at": "2026-10-02T15:00:00Z",
           "reverted_at": null,
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "number": 102,
+      "number": 2,
       "title": "Supplier profile and certifications page",
       "labels": [
         "aev-points:2",
@@ -55,7 +55,7 @@
       ],
       "linked_prs": [
         {
-          "number": 145,
+          "number": 36,
           "author": "m-kowalski",
           "merged_at": "2026-10-07T14:00:00Z",
           "reverted_at": null,
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "number": 103,
+      "number": 3,
       "title": "Upload certificate of analysis (PDF)",
       "labels": [
         "aev-points:3",
@@ -82,7 +82,7 @@
       ],
       "linked_prs": [
         {
-          "number": 146,
+          "number": 37,
           "author": "s-reyes",
           "merged_at": "2026-10-07T14:00:00Z",
           "reverted_at": null,
@@ -91,7 +91,7 @@
           ]
         },
         {
-          "number": 149,
+          "number": 40,
           "author": "s-reyes",
           "merged_at": "2026-10-09T15:00:00Z",
           "reverted_at": null,
@@ -102,7 +102,7 @@
       ]
     },
     {
-      "number": 104,
+      "number": 4,
       "title": "PPAP submission form",
       "labels": [
         "aev-points:3",
@@ -118,7 +118,7 @@
       ],
       "linked_prs": [
         {
-          "number": 151,
+          "number": 42,
           "author": "m-kowalski",
           "merged_at": "2026-10-12T14:00:00Z",
           "reverted_at": null,
@@ -127,7 +127,7 @@
           ]
         },
         {
-          "number": 154,
+          "number": 45,
           "author": "m-kowalski",
           "merged_at": "2026-10-14T15:00:00Z",
           "reverted_at": null,
@@ -138,7 +138,7 @@
       ]
     },
     {
-      "number": 105,
+      "number": 5,
       "title": "Corrective action (8D) request list",
       "labels": [
         "aev-points:2",
@@ -154,7 +154,7 @@
       ],
       "linked_prs": [
         {
-          "number": 156,
+          "number": 47,
           "author": "s-reyes",
           "merged_at": "2026-10-15T14:00:00Z",
           "reverted_at": null,
@@ -165,7 +165,7 @@
       ]
     },
     {
-      "number": 106,
+      "number": 6,
       "title": "Shipment certificate search and filters",
       "labels": [
         "aev-points:2",
@@ -181,7 +181,7 @@
       ],
       "linked_prs": [
         {
-          "number": 162,
+          "number": 54,
           "author": "m-kowalski",
           "merged_at": "2026-10-21T14:00:00Z",
           "reverted_at": null,
@@ -192,7 +192,7 @@
       ]
     },
     {
-      "number": 107,
+      "number": 7,
       "title": "Supplier scorecard dashboard",
       "labels": [
         "aev-points:3",
@@ -208,7 +208,7 @@
       ],
       "linked_prs": [
         {
-          "number": 166,
+          "number": 58,
           "author": "s-reyes",
           "merged_at": "2026-10-26T14:00:00Z",
           "reverted_at": null,
@@ -217,7 +217,7 @@
           ]
         },
         {
-          "number": 169,
+          "number": 61,
           "author": "s-reyes",
           "merged_at": "2026-10-28T15:00:00Z",
           "reverted_at": null,
@@ -228,7 +228,7 @@
       ]
     },
     {
-      "number": 108,
+      "number": 8,
       "title": "Email reminders for overdue 8D responses",
       "labels": [
         "aev-points:2",
@@ -244,7 +244,7 @@
       ],
       "linked_prs": [
         {
-          "number": 174,
+          "number": 67,
           "author": "m-kowalski",
           "merged_at": "2026-11-04T14:00:00Z",
           "reverted_at": null,
@@ -255,7 +255,7 @@
       ]
     },
     {
-      "number": 109,
+      "number": 9,
       "title": "Accessibility fixes (WCAG 2.1 AA)",
       "labels": [
         "aev-points:3",
@@ -271,14 +271,14 @@
       ],
       "linked_prs": [
         {
-          "number": 168,
+          "number": 60,
           "author": "s-reyes",
           "merged_at": "2026-10-27T14:00:00Z",
           "reverted_at": null,
           "labels": []
         },
         {
-          "number": 171,
+          "number": 63,
           "author": "s-reyes",
           "merged_at": "2026-10-29T15:00:00Z",
           "reverted_at": null,
@@ -287,7 +287,7 @@
       ]
     },
     {
-      "number": 110,
+      "number": 10,
       "title": "Supplier onboarding wizard",
       "labels": [
         "aev-points:5",
@@ -303,21 +303,21 @@
       ],
       "linked_prs": [
         {
-          "number": 152,
+          "number": 43,
           "author": "m-kowalski",
           "merged_at": "2026-10-12T14:00:00Z",
           "reverted_at": null,
           "labels": []
         },
         {
-          "number": 155,
+          "number": 46,
           "author": "m-kowalski",
           "merged_at": "2026-10-14T15:00:00Z",
           "reverted_at": null,
           "labels": []
         },
         {
-          "number": 158,
+          "number": 50,
           "author": "m-kowalski",
           "merged_at": "2026-10-16T16:00:00Z",
           "reverted_at": null,
@@ -326,7 +326,7 @@
       ]
     },
     {
-      "number": 111,
+      "number": 11,
       "title": "Role-based access for plant quality engineers",
       "labels": [
         "aev-points:4",
@@ -342,14 +342,14 @@
       ],
       "linked_prs": [
         {
-          "number": 160,
+          "number": 52,
           "author": "s-reyes",
           "merged_at": "2026-10-20T14:00:00Z",
           "reverted_at": null,
           "labels": []
         },
         {
-          "number": 164,
+          "number": 56,
           "author": "s-reyes",
           "merged_at": "2026-10-22T15:00:00Z",
           "reverted_at": null,
@@ -358,7 +358,120 @@
       ]
     },
     {
-      "number": 121,
+      "number": 12,
+      "title": "Self-service password reset",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 77,
+          "author": "m-kowalski",
+          "merged_at": "2026-11-07T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Bulk upload of inspection results",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 68,
+          "author": "s-reyes",
+          "merged_at": "2026-11-04T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 75,
+          "author": "s-reyes",
+          "merged_at": "2026-11-06T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Tablet layout for the plant floor",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 72,
+          "author": "m-kowalski",
+          "merged_at": "2026-11-05T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Audit trail export",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 69,
+          "author": "s-reyes",
+          "merged_at": "2026-11-04T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Supplier messaging",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 17,
+      "title": "Spanish and French translations",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 18,
       "title": "Nightly sync of supplier master data from ERP",
       "labels": [
         "aev-points:5",
@@ -374,7 +487,7 @@
       ],
       "linked_prs": [
         {
-          "number": 144,
+          "number": 35,
           "author": "j-chen",
           "merged_at": "2026-10-06T14:00:00Z",
           "reverted_at": null,
@@ -383,7 +496,7 @@
           ]
         },
         {
-          "number": 147,
+          "number": 38,
           "author": "j-chen",
           "merged_at": "2026-10-08T15:00:00Z",
           "reverted_at": null,
@@ -394,7 +507,7 @@
       ]
     },
     {
-      "number": 122,
+      "number": 19,
       "title": "EDI 856 ship notice parser",
       "labels": [
         "aev-points:4",
@@ -410,7 +523,7 @@
       ],
       "linked_prs": [
         {
-          "number": 159,
+          "number": 51,
           "author": "d-okafor",
           "merged_at": "2026-10-19T14:00:00Z",
           "reverted_at": null,
@@ -419,7 +532,7 @@
           ]
         },
         {
-          "number": 163,
+          "number": 55,
           "author": "d-okafor",
           "merged_at": "2026-10-21T15:00:00Z",
           "reverted_at": null,
@@ -430,7 +543,7 @@
       ]
     },
     {
-      "number": 123,
+      "number": 20,
       "title": "Map ERP defect codes to portal categories",
       "labels": [
         "aev-points:3",
@@ -446,7 +559,7 @@
       ],
       "linked_prs": [
         {
-          "number": 148,
+          "number": 39,
           "author": "j-chen",
           "merged_at": "2026-10-09T14:00:00Z",
           "reverted_at": "2026-10-16T10:00:00Z",
@@ -457,7 +570,7 @@
       ]
     },
     {
-      "number": 124,
+      "number": 21,
       "title": "Sync PPAP approval status back to ERP",
       "labels": [
         "aev-points:3",
@@ -473,7 +586,7 @@
       ],
       "linked_prs": [
         {
-          "number": 161,
+          "number": 53,
           "author": "d-okafor",
           "merged_at": "2026-10-20T14:00:00Z",
           "reverted_at": null,
@@ -482,7 +595,7 @@
           ]
         },
         {
-          "number": 165,
+          "number": 57,
           "author": "d-okafor",
           "merged_at": "2026-10-22T15:00:00Z",
           "reverted_at": "2026-10-30T09:00:00Z",
@@ -493,7 +606,7 @@
       ]
     },
     {
-      "number": 125,
+      "number": 22,
       "title": "Post nonconformance reports (NCR) to ERP",
       "labels": [
         "aev-points:4",
@@ -509,7 +622,7 @@
       ],
       "linked_prs": [
         {
-          "number": 172,
+          "number": 65,
           "author": "j-chen",
           "merged_at": "2026-11-01T14:00:00Z",
           "reverted_at": null,
@@ -518,7 +631,7 @@
           ]
         },
         {
-          "number": 173,
+          "number": 66,
           "author": "j-chen",
           "merged_at": "2026-11-03T15:00:00Z",
           "reverted_at": null,
@@ -529,7 +642,7 @@
       ]
     },
     {
-      "number": 126,
+      "number": 23,
       "title": "ERP API service account and authentication",
       "labels": [
         "aev-points:4",
@@ -545,7 +658,7 @@
       ],
       "linked_prs": [
         {
-          "number": 143,
+          "number": 34,
           "author": "d-okafor",
           "merged_at": "2026-10-05T14:00:00Z",
           "reverted_at": null,
@@ -554,7 +667,7 @@
       ]
     },
     {
-      "number": 127,
+      "number": 24,
       "title": "Integration error queue with retry",
       "labels": [
         "aev-points:5",
@@ -570,21 +683,21 @@
       ],
       "linked_prs": [
         {
-          "number": 150,
+          "number": 41,
           "author": "j-chen",
           "merged_at": "2026-10-11T14:00:00Z",
           "reverted_at": null,
           "labels": []
         },
         {
-          "number": 153,
+          "number": 44,
           "author": "j-chen",
           "merged_at": "2026-10-13T15:00:00Z",
           "reverted_at": null,
           "labels": []
         },
         {
-          "number": 157,
+          "number": 48,
           "author": "j-chen",
           "merged_at": "2026-10-15T16:00:00Z",
           "reverted_at": null,
@@ -593,7 +706,7 @@
       ]
     },
     {
-      "number": 128,
+      "number": 25,
       "title": "EDI 861 receiving advice mapping",
       "labels": [
         "aev-points:3",
@@ -609,14 +722,14 @@
       ],
       "linked_prs": [
         {
-          "number": 167,
+          "number": 59,
           "author": "d-okafor",
           "merged_at": "2026-10-26T14:00:00Z",
           "reverted_at": null,
           "labels": []
         },
         {
-          "number": 170,
+          "number": 62,
           "author": "d-okafor",
           "merged_at": "2026-10-28T15:00:00Z",
           "reverted_at": null,
@@ -625,120 +738,7 @@
       ]
     },
     {
-      "number": 112,
-      "title": "Self-service password reset",
-      "labels": [
-        "aev-points:2",
-        "pod-portal",
-        "agent-work"
-      ],
-      "events": [],
-      "linked_prs": [
-        {
-          "number": 184,
-          "author": "m-kowalski",
-          "merged_at": "2026-11-07T14:00:00Z",
-          "reverted_at": null,
-          "labels": [
-            "aev-agent"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 113,
-      "title": "Bulk upload of inspection results",
-      "labels": [
-        "aev-points:5",
-        "pod-portal",
-        "agent-work"
-      ],
-      "events": [],
-      "linked_prs": [
-        {
-          "number": 175,
-          "author": "s-reyes",
-          "merged_at": "2026-11-04T14:00:00Z",
-          "reverted_at": null,
-          "labels": [
-            "aev-agent"
-          ]
-        },
-        {
-          "number": 182,
-          "author": "s-reyes",
-          "merged_at": "2026-11-06T15:00:00Z",
-          "reverted_at": null,
-          "labels": [
-            "aev-agent"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 114,
-      "title": "Tablet layout for the plant floor",
-      "labels": [
-        "aev-points:3",
-        "pod-portal",
-        "agent-work"
-      ],
-      "events": [],
-      "linked_prs": [
-        {
-          "number": 179,
-          "author": "m-kowalski",
-          "merged_at": "2026-11-05T14:00:00Z",
-          "reverted_at": null,
-          "labels": [
-            "aev-agent"
-          ]
-        }
-      ]
-    },
-    {
-      "number": 115,
-      "title": "Audit trail export",
-      "labels": [
-        "aev-points:3",
-        "pod-portal",
-        "human-work"
-      ],
-      "events": [],
-      "linked_prs": [
-        {
-          "number": 176,
-          "author": "s-reyes",
-          "merged_at": "2026-11-04T14:00:00Z",
-          "reverted_at": null,
-          "labels": []
-        }
-      ]
-    },
-    {
-      "number": 116,
-      "title": "Supplier messaging",
-      "labels": [
-        "aev-points:5",
-        "pod-portal",
-        "human-work"
-      ],
-      "events": [],
-      "linked_prs": []
-    },
-    {
-      "number": 117,
-      "title": "Spanish and French translations",
-      "labels": [
-        "aev-points:5",
-        "pod-portal",
-        "human-work"
-      ],
-      "events": [],
-      "linked_prs": []
-    },
-    {
-      "number": 129,
+      "number": 26,
       "title": "Two-way 8D status sync with ERP",
       "labels": [
         "aev-points:8",
@@ -748,7 +748,7 @@
       "events": [],
       "linked_prs": [
         {
-          "number": 177,
+          "number": 70,
           "author": "j-chen",
           "merged_at": "2026-11-04T14:00:00Z",
           "reverted_at": null,
@@ -757,7 +757,7 @@
           ]
         },
         {
-          "number": 183,
+          "number": 76,
           "author": "j-chen",
           "merged_at": "2026-11-06T15:00:00Z",
           "reverted_at": null,
@@ -768,7 +768,7 @@
       ]
     },
     {
-      "number": 130,
+      "number": 27,
       "title": "EDI 810 invoice matching",
       "labels": [
         "aev-points:5",
@@ -779,7 +779,7 @@
       "linked_prs": []
     },
     {
-      "number": 131,
+      "number": 28,
       "title": "Quality hold signal to MES",
       "labels": [
         "aev-points:8",
@@ -789,7 +789,7 @@
       "events": [],
       "linked_prs": [
         {
-          "number": 178,
+          "number": 71,
           "author": "j-chen",
           "merged_at": "2026-11-04T14:00:00Z",
           "reverted_at": null,
@@ -798,7 +798,7 @@
       ]
     },
     {
-      "number": 132,
+      "number": 29,
       "title": "Data retention and archiving job",
       "labels": [
         "aev-points:3",
@@ -808,7 +808,7 @@
       "events": [],
       "linked_prs": [
         {
-          "number": 185,
+          "number": 78,
           "author": "d-okafor",
           "merged_at": "2026-11-07T14:00:00Z",
           "reverted_at": null,
@@ -819,7 +819,7 @@
       ]
     },
     {
-      "number": 133,
+      "number": 30,
       "title": "Supplier master de-duplication",
       "labels": [
         "aev-points:5",
@@ -829,7 +829,7 @@
       "events": [],
       "linked_prs": [
         {
-          "number": 181,
+          "number": 74,
           "author": "j-chen",
           "merged_at": "2026-11-06T14:00:00Z",
           "reverted_at": null,
@@ -840,7 +840,7 @@
       ]
     },
     {
-      "number": 134,
+      "number": 31,
       "title": "Cutover rehearsal and data migration",
       "labels": [
         "aev-points:5",
@@ -850,7 +850,7 @@
       "events": [],
       "linked_prs": [
         {
-          "number": 180,
+          "number": 73,
           "author": "d-okafor",
           "merged_at": "2026-11-05T14:00:00Z",
           "reverted_at": null,

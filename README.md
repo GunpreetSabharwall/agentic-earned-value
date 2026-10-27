@@ -121,7 +121,7 @@ Give each issue a label **`aev-points:N`**, where N is its size in points. For e
 
 To create labels: go to your repository → **Issues** → **Labels** → **New label**, and create, for example, `aev-points:1`, `aev-points:2`, `aev-points:3`, `aev-points:5`, `aev-points:8`.
 
-Link each pull request to its issue, for example by writing `Fixes #14` in the pull request description.
+Link each pull request to its issue, for example by writing `Fixes #14` in the pull request description. For partial work that should not close the issue yet, write `Part of #14` instead.
 
 ### Step 4: Run it
 

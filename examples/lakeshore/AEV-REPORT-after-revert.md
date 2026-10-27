@@ -93,9 +93,9 @@ Teams come from issue labels (`teams` in `.aev/config.yml`), for example Program
 
 | Issue | Title | Value | Accepted | Clawed back | Reason |
 |---|---|---:|---|---|---|
-| #123 | Map ERP defect codes to portal categories | $6,000 | 2026-10-09 | 2026-10-16 | PR #148 reverted |
-| #124 | Sync PPAP approval status back to ERP | $6,000 | 2026-10-22 | 2026-10-30 | PR #165 reverted |
-| #125 | Post nonconformance reports (NCR) to ERP | $8,000 | 2026-11-03 | 2026-11-10 | PR #173 reverted |
+| #20 | Map ERP defect codes to portal categories | $6,000 | 2026-10-09 | 2026-10-16 | PR #39 reverted |
+| #21 | Sync PPAP approval status back to ERP | $6,000 | 2026-10-22 | 2026-10-30 | PR #57 reverted |
+| #22 | Post nonconformance reports (NCR) to ERP | $8,000 | 2026-11-03 | 2026-11-10 | PR #66 reverted |
 
 ## Assumptions
 

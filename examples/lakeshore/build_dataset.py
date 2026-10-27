@@ -13,11 +13,17 @@ It writes, inside examples/lakeshore/:
 
 * .aev/config.yml, .aev/hours.csv, .aev/agent-costs.csv   AEV inputs
 * issues.json                 issue history before the on-stage revert
-* issues-after-revert.json    the same, after one agent PR (issue #125) is reverted on stage
+* issues-after-revert.json    the same, after one agent PR (issue #22) is reverted on stage
+* seed-plan.json              step-by-step plan to recreate this history in a real GitHub repo
 * results/week-1.json ... week-6.json, week-6-after-revert.json   AEV results
 * AEV-REPORT.md, AEV-REPORT-after-revert.md                 week 6 reports
 
 Everything is deterministic: the same script always gives the same files.
+
+Numbers match what GitHub assigns when the plan is replayed into an empty repo:
+issues are #1-#31, then pull requests (and the two earlier revert PRs) are
+numbered in the order they are created. The ISSUES table below uses design keys
+(101-134); they are renumbered at the end.
 """
 
 from __future__ import annotations
@@ -184,21 +190,70 @@ def build():
     costs.append((date(2026, 10, 1), "", "tools", 200, ""))
     costs.append((date(2026, 11, 1), "", "tools", 200, ""))
 
-    # Number PRs in the order they were merged, as GitHub would.
-    all_prs = sorted((pr["merged_at"], issue["number"], pr) for issue in issues for pr in issue["linked_prs"])
-    for n, (_, _, pr) in enumerate(all_prs, start=141):
-        pr["number"] = n
+    # --- Renumber as GitHub would: issues first, then PRs in creation order.
+    new_number = {key: n for n, key in enumerate(sorted(i["number"] for i in issues), start=1)}
+    meta = {row[0]: row for row in ISSUES}
+    reasons = {row[0]: row[10]["revert"][2] for row in ISSUES if "revert" in row[10]}
+    stage_key = issues[live_revert_index[0]]["number"]
 
+    timeline = []  # (time, order, kind, issue key, pr)
+    for issue in issues:
+        for pr in issue["linked_prs"]:
+            timeline.append((pr["merged_at"], 0, "pr", issue["number"], pr))
+            if pr["reverted_at"]:
+                timeline.append((pr["reverted_at"], 1, "revert", issue["number"], pr))
+    timeline.sort(key=lambda t: (t[0], t[1], t[3]))
+
+    plan = []
+    for issue in sorted(issues, key=lambda i: new_number[i["number"]]):
+        key = issue["number"]
+        team = meta[key][2]
+        plan.append({
+            "step": "issue", "number": new_number[key], "title": issue["title"], "labels": issue["labels"],
+            "body": (f"Team: {'Portal' if team == PORTAL else 'Integrations'}. "
+                     f"Size: {meta[key][4]} points. Supplier Quality Portal modernization (demo, fictional)."),
+        })
+    next_number = len(issues) + 1
+    for when, _, kind, key, pr in timeline:
+        issue = next(i for i in issues if i["number"] == key)
+        if kind == "pr":
+            pr["number"] = next_number
+            prs_sorted = sorted(issue["linked_prs"], key=lambda p: p["merged_at"])
+            k = prs_sorted.index(pr)
+            done = bool(issue["events"])
+            last = k == len(prs_sorted) - 1
+            slug = "-".join(issue["title"].lower().replace("(", "").replace(")", "").split()[:6])
+            area = "portal" if meta[key][2] == PORTAL else "integrations"
+            plan.append({
+                "step": "pr", "number": next_number, "issue": new_number[key],
+                "title": issue["title"] + (f" (part {k + 1} of {len(prs_sorted)})" if len(prs_sorted) > 1 else ""),
+                "link": "fixes" if done and last else "part_of",
+                "agent": "aev-agent" in pr["labels"],
+                "developer": pr["author"],
+                "path": f"src/{area}/{slug}/part-{k + 1}.md",
+                "hold": key == stage_key and last,
+                "planned_merge": when,
+            })
+        else:
+            plan.append({"step": "revert", "number": next_number, "reverts": pr["number"],
+                         "issue": new_number[key], "reason": reasons[key], "planned_merge": when})
+        next_number += 1
+
+    for issue in issues:
+        issue["number"] = new_number[issue["number"]]
+    issues.sort(key=lambda i: i["number"])
+    hours = [(d, new_number.get(item, item) if item != "" else "", k, h) for d, item, k, h in hours]
+    costs = [(d, new_number.get(item, item) if item != "" else "", c, a, t) for d, item, c, a, t in costs]
     hours.sort(key=lambda r: (r[0], str(r[1])))
     costs.sort(key=lambda r: (r[0], str(r[1])))
 
     after = json.loads(json.dumps(issues))
-    i, k = live_revert_index
-    after[i]["linked_prs"][k]["reverted_at"] = LIVE_REVERT_AT
-    return issues, after, hours, costs
+    stage = next(i for i in after if i["number"] == new_number[stage_key])
+    stage["linked_prs"][live_revert_index[1]]["reverted_at"] = LIVE_REVERT_AT
+    return issues, after, hours, costs, plan
 
 
-def write_inputs(issues, after, hours, costs):
+def write_inputs(issues, after, hours, costs, plan):
     aev = HERE / ".aev"
     aev.mkdir(exist_ok=True)
     (aev / "config.yml").write_text(CONFIG, encoding="utf-8")
@@ -212,6 +267,11 @@ def write_inputs(issues, after, hours, costs):
         w.writerow(["date", "item", "category", "amount", "tokens"])
         for d, item, cat, amount, tokens in costs:
             w.writerow([d.isoformat(), item, cat, f"{amount:g}", tokens])
+    (HERE / "seed-plan.json").write_text(json.dumps({
+        "repo_note": "Replay into an EMPTY GitHub repo; numbers then match this dataset.",
+        "stage_issue": next(s["issue"] for s in plan if s["step"] == "pr" and s["hold"]),
+        "steps": plan,
+    }, indent=2) + "\n", encoding="utf-8")
     note = "Lakeshore Components demo (fictional). Same format the AEV tool builds from GitHub."
     for name, data in (("issues.json", issues), ("issues-after-revert.json", after)):
         (HERE / name).write_text(json.dumps({"repo": REPO, "note": note, "issues": data}, indent=2) + "\n",
@@ -237,8 +297,8 @@ def run_aev(snapshot: str, as_of: date, json_out: Path, report: Path = None) -> 
 
 
 def main():
-    issues, after, hours, costs = build()
-    write_inputs(issues, after, hours, costs)
+    issues, after, hours, costs, plan = build()
+    write_inputs(issues, after, hours, costs, plan)
     results = HERE / "results"
     results.mkdir(exist_ok=True)
     for n, week_end in enumerate(WEEK_ENDS, start=1):
