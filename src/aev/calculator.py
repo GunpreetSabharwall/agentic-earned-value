@@ -12,9 +12,10 @@ from typing import Dict, List, Optional
 from . import formulas as f
 from .config import Config
 from .costs import AgentCostEntry, HoursEntry
-from .items import CLASSES, WorkItem
+from .items import AGENT, CLASSES, MIXED, WorkItem
 
 UNASSIGNED = "Unassigned"
+NO_TEAM = "No team"
 
 
 @dataclass
@@ -33,6 +34,61 @@ class ClassResult:
     @property
     def cpi(self) -> Optional[float]:
         return f.cpi(self.ev, self.ac)
+
+
+@dataclass
+class TeamResult:
+    """One team's results, split by authorship class (A, H, M, Unassigned)."""
+
+    name: str
+    label: Optional[str]
+    by_class: Dict[str, ClassResult] = field(default_factory=dict)
+
+    @property
+    def ev(self) -> float:
+        return sum(c.ev for c in self.by_class.values())
+
+    @property
+    def ac(self) -> float:
+        return sum(c.ac for c in self.by_class.values())
+
+    @property
+    def cpi(self) -> Optional[float]:
+        return f.cpi(self.ev, self.ac)
+
+    @property
+    def items_accepted(self) -> int:
+        return sum(c.items_accepted for c in self.by_class.values())
+
+
+@dataclass
+class Activity:
+    """What AI-activity dashboards usually show. Counts, not value."""
+
+    merged_prs: int = 0
+    agent_prs: int = 0
+    mixed_prs: int = 0
+    human_prs: int = 0
+    items_closed: int = 0  # accepted at least once, whether or not it stuck
+    agent_spend: float = 0.0
+    tokens: float = 0.0
+
+    @property
+    def agent_pr_share(self) -> Optional[float]:
+        return f.safe_div(self.agent_prs, self.merged_prs)
+
+    @property
+    def ai_assisted_pr_share(self) -> Optional[float]:
+        return f.safe_div(self.agent_prs + self.mixed_prs, self.merged_prs)
+
+
+def team_of(item: WorkItem, teams: Dict[str, str]) -> str:
+    """The first team (in config order) whose label the item carries."""
+    labels = {label.strip().lower() for label in item.labels}
+    for name, label in teams.items():
+        if label.strip().lower() in labels:
+            return name
+    return NO_TEAM
 
 
 @dataclass
@@ -63,6 +119,8 @@ class Results:
     by_class: Dict[str, ClassResult]
     agent_cost_by_category: Dict[str, float]
     labelled_value: float
+    by_team: Dict[str, TeamResult] = field(default_factory=dict)
+    activity: Activity = field(default_factory=Activity)
     items: List[WorkItem] = field(default_factory=list)
     warnings: List[str] = field(default_factory=list)
 
@@ -110,27 +168,60 @@ def compute(
     classic_cpi = f.cpi(classic_ev, classic_ac)
 
     # --- Attribution by authorship class ------------------------------------
-    by_class = {name: ClassResult(name) for name in CLASSES + (UNASSIGNED,)}
+    # Each value or cost lands in one class bucket overall and, when teams are
+    # configured, in the same class bucket of its team.
+    class_names = CLASSES + (UNASSIGNED,)
+    by_class = {name: ClassResult(name) for name in class_names}
     class_of = {i.number: i.authorship for i in items}
 
-    def bucket(item_number: Optional[int]) -> ClassResult:
+    by_team: Dict[str, TeamResult] = {}
+    team_names = list(config.teams) + [NO_TEAM]
+    if config.teams:
+        for name in team_names:
+            by_team[name] = TeamResult(name, config.teams.get(name),
+                                       {c: ClassResult(c) for c in class_names})
+    team_by_item = {i.number: team_of(i, config.teams) for i in items}
+
+    def buckets(item_number: Optional[int]) -> List[ClassResult]:
         cls = class_of.get(item_number) if item_number is not None else None
-        return by_class[cls] if cls in CLASSES else by_class[UNASSIGNED]
+        key = cls if cls in CLASSES else UNASSIGNED
+        found = [by_class[key]]
+        if by_team:
+            found.append(by_team[team_by_item.get(item_number, NO_TEAM)].by_class[key])
+        return found
 
     for item in items:
         if item.episodes:
-            target = bucket(item.number)
-            target.ev += item.ev
-            if item.ev > 0:
-                target.items_accepted += 1
+            for target in buckets(item.number):
+                target.ev += item.ev
+                if item.ev > 0:
+                    target.items_accepted += 1
     for h in hours:
-        target = bucket(h.item)
-        if h.type == "build":
-            target.ac_build += f.labor_cost(h.hours, rate)
-        else:
-            target.ac_review += f.labor_cost(h.hours, rate)
+        for target in buckets(h.item):
+            if h.type == "build":
+                target.ac_build += f.labor_cost(h.hours, rate)
+            else:
+                target.ac_review += f.labor_cost(h.hours, rate)
     for c in agent_costs:
-        bucket(c.item).ac_agent += c.amount
+        for target in buckets(c.item):
+            target.ac_agent += c.amount
+
+    # Drop the "No team" row when nothing landed in it.
+    if by_team and not any(c.ev or c.ac for c in by_team[NO_TEAM].by_class.values()):
+        del by_team[NO_TEAM]
+
+    # --- Activity: what AI dashboards usually count -------------------------
+    activity = Activity(agent_spend=ac_agent, tokens=sum(c.tokens for c in agent_costs))
+    seen_prs = {}
+    for item in items:
+        if item.episodes:
+            activity.items_closed += 1
+        for pr in item.merged_prs:
+            seen_prs.setdefault(pr.get("number") or id(pr), pr["class"])
+    activity.merged_prs = len(seen_prs)
+    activity.agent_prs = sum(1 for c in seen_prs.values() if c == AGENT)
+    activity.mixed_prs = sum(1 for c in seen_prs.values() if c == MIXED)
+    activity.human_prs = activity.merged_prs - activity.agent_prs - activity.mixed_prs
 
     known = set(class_of)
     for number in sorted({e.item for e in list(hours) + list(agent_costs) if e.item is not None} - known):
@@ -163,6 +254,8 @@ def compute(
         by_class=by_class,
         agent_cost_by_category=by_category,
         labelled_value=sum(i.value for i in items),
+        by_team=by_team,
+        activity=activity,
         items=items,
         warnings=warnings,
     )

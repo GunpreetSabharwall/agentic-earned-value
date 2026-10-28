@@ -19,6 +19,17 @@ API_URL = "https://api.github.com/graphql"
 # GitHub's "Revert" button writes "Reverts owner/repo#123" in the PR body.
 REVERT_BODY = re.compile(r"Reverts\s+[\w.-]+/[\w.-]+#(\d+)", re.IGNORECASE)
 
+# Partial work: a merged PR that says "Part of #12" (or "Refs #12") is linked to
+# issue 12 without closing it. GitHub only links PRs that use closing keywords
+# such as "Fixes #12", which close the issue on merge.
+PART_OF_BODY = re.compile(r"\b(?:part\s+of|refs?)\s+#(\d+)\b", re.IGNORECASE)
+
+# GitHub's closing keywords. GitHub normally links these PRs to the issue itself,
+# but not always (for example PRs opened and merged by GitHub Actions), so AEV
+# also reads them from the PR description.
+CLOSES_BODY = re.compile(
+    r"\b(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?)\s*:?\s+#(\d+)\b", re.IGNORECASE)
+
 ISSUES_QUERY = """
 query($owner: String!, $name: String!, $cursor: String) {
   repository(owner: $owner, name: $name) {
@@ -54,7 +65,7 @@ query($owner: String!, $name: String!, $cursor: String) {
     pullRequests(states: MERGED, first: 100, after: $cursor,
                  orderBy: {field: UPDATED_AT, direction: DESC}) {
       pageInfo { hasNextPage endCursor }
-      nodes { number title body mergedAt updatedAt }
+      nodes { number title body mergedAt updatedAt author { login } }
     }
   }
 }
@@ -133,9 +144,26 @@ def _login(node: Optional[dict]) -> Optional[str]:
     return author.get("login")
 
 
-def fetch_reverts(client: GitHubClient, owner: str, name: str, since: datetime) -> Dict[int, str]:
-    """Map 'PR number that was reverted' -> 'time the revert PR was merged'."""
+def part_of_issues(body: Optional[str]) -> List[int]:
+    """Issue numbers a PR body links to as partial work ("Part of #12", "Refs #12")."""
+    return sorted({int(n) for n in PART_OF_BODY.findall(body or "")})
+
+
+def linked_issues(body: Optional[str]) -> List[int]:
+    """Every issue a PR body links to: partial work or a closing keyword ("Fixes #12")."""
+    text = body or ""
+    return sorted({int(n) for n in PART_OF_BODY.findall(text) + CLOSES_BODY.findall(text)})
+
+
+def fetch_merged_prs(client: GitHubClient, owner: str, name: str, since: datetime):
+    """Scan merged PRs once. Returns (reverts, partial links).
+
+    reverts:  'PR number that was reverted' -> 'time the revert PR was merged'
+    partial:  issue number -> [PR nodes whose description links to it: "Part of #issue",
+              "Refs #issue", or a closing keyword such as "Fixes #issue"]
+    """
     reverts: Dict[int, str] = {}
+    partial: Dict[int, List[dict]] = {}
     cursor = None
     while True:
         data = client.query(MERGED_PRS_QUERY, {"owner": owner, "name": name, "cursor": cursor})
@@ -152,10 +180,18 @@ def fetch_reverts(client: GitHubClient, owner: str, name: str, since: datetime) 
                 previous = reverts.get(original)
                 if previous is None or pr["mergedAt"] < previous:
                     reverts[original] = pr["mergedAt"]
+            elif pr.get("mergedAt"):
+                for issue in linked_issues(pr.get("body")):
+                    partial.setdefault(issue, []).append(pr)
         if stop or not page["pageInfo"]["hasNextPage"]:
             break
         cursor = page["pageInfo"]["endCursor"]
-    return reverts
+    return reverts, partial
+
+
+def fetch_reverts(client: GitHubClient, owner: str, name: str, since: datetime) -> Dict[int, str]:
+    """Map 'PR number that was reverted' -> 'time the revert PR was merged'."""
+    return fetch_merged_prs(client, owner, name, since)[0]
 
 
 def pr_details_from_node(node: dict) -> dict:
@@ -198,7 +234,7 @@ def fetch_snapshot(repo: str, token: str, since: datetime) -> dict:
         raise GitHubError(f"Repository must look like 'owner/name', got {repo!r}.")
     owner, name = repo.split("/", 1)
     client = GitHubClient(token)
-    reverts = fetch_reverts(client, owner, name, since)
+    reverts, partial = fetch_merged_prs(client, owner, name, since)
 
     issues: List[dict] = []
     cursor = None
@@ -206,7 +242,7 @@ def fetch_snapshot(repo: str, token: str, since: datetime) -> dict:
         data = client.query(ISSUES_QUERY, {"owner": owner, "name": name, "cursor": cursor})
         page = data["repository"]["issues"]
         for node in page["nodes"]:
-            issues.append(_issue_from_node(node, reverts))
+            issues.append(_issue_from_node(node, reverts, partial.get(node["number"], [])))
         if not page["pageInfo"]["hasNextPage"]:
             break
         cursor = page["pageInfo"]["endCursor"]
@@ -224,7 +260,7 @@ def fetch_snapshot(repo: str, token: str, since: datetime) -> dict:
     }
 
 
-def _issue_from_node(node: dict, reverts: Dict[int, str]) -> dict:
+def _issue_from_node(node: dict, reverts: Dict[int, str], partial: Optional[List[dict]] = None) -> dict:
     prs: Dict[int, dict] = {}
 
     def add_pr(pr: Optional[dict]) -> None:
@@ -238,6 +274,8 @@ def _issue_from_node(node: dict, reverts: Dict[int, str]) -> dict:
         }
 
     for pr in node["closedByPullRequestsReferences"]["nodes"]:
+        add_pr(pr)
+    for pr in partial or []:
         add_pr(pr)
 
     events = []

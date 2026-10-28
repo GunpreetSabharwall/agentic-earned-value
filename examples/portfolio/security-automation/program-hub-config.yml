@@ -1,0 +1,35 @@
+# Security Automation: Lakeshore Components demo portfolio (fictional company).
+# Story: Scanning and policy automation with three blockers: delivery risk that cost metrics alone would miss.
+name: Security Automation
+slug: security-automation
+source_repo: GunpreetSabharwall/initiative-security-automation
+source_repo_url: https://github.com/GunpreetSabharwall/initiative-security-automation
+owner: "@GunpreetSabharwall"
+status: active
+week_start: 2026-10-05
+duration_weeks: 14
+showcase_date: 2027-01-11
+github_project_id: ""
+labels:
+  blocked: blocked
+  dependency: dependency
+  adr: adr-required
+sync_cadence: weekly
+pods:
+  - slug: appsec
+    label: pod-appsec
+    name: AppSec
+  - slug: cloudsec
+    label: pod-cloudsec
+    name: CloudSec
+# Value signal (Feature 22): Program Hub runs AEV on source_repo. Costs are in aev/.
+aev:
+  enabled: true
+  mode: hub
+  budget_at_completion: 168000
+  value_per_point: 2000
+  hourly_rate: 100
+  stabilization_window_days: 14
+  agent_accounts:
+    - coding-agent
+  agent_label: aev-agent

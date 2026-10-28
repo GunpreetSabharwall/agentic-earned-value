@@ -1,0 +1,903 @@
+{
+  "repo_note": "Replay into an EMPTY GitHub repo; numbers then match this dataset.",
+  "stage_issue": 22,
+  "steps": [
+    {
+      "step": "issue",
+      "number": 1,
+      "title": "Supplier login with single sign-on",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 2,
+      "title": "Supplier profile and certifications page",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 2 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 3,
+      "title": "Upload certificate of analysis (PDF)",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 4,
+      "title": "PPAP submission form",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 5,
+      "title": "Corrective action (8D) request list",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 2 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 6,
+      "title": "Shipment certificate search and filters",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 2 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 7,
+      "title": "Supplier scorecard dashboard",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 8,
+      "title": "Email reminders for overdue 8D responses",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 2 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 9,
+      "title": "Accessibility fixes (WCAG 2.1 AA)",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "human-work"
+      ],
+      "body": "Team: Portal. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 10,
+      "title": "Supplier onboarding wizard",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "human-work"
+      ],
+      "body": "Team: Portal. Size: 5 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 11,
+      "title": "Role-based access for plant quality engineers",
+      "labels": [
+        "aev-points:4",
+        "pod-portal",
+        "human-work"
+      ],
+      "body": "Team: Portal. Size: 4 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 12,
+      "title": "Self-service password reset",
+      "labels": [
+        "aev-points:2",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 2 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 13,
+      "title": "Bulk upload of inspection results",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 5 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 14,
+      "title": "Tablet layout for the plant floor",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "agent-work"
+      ],
+      "body": "Team: Portal. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 15,
+      "title": "Audit trail export",
+      "labels": [
+        "aev-points:3",
+        "pod-portal",
+        "human-work"
+      ],
+      "body": "Team: Portal. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 16,
+      "title": "Supplier messaging",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "human-work"
+      ],
+      "body": "Team: Portal. Size: 5 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 17,
+      "title": "Spanish and French translations",
+      "labels": [
+        "aev-points:5",
+        "pod-portal",
+        "human-work"
+      ],
+      "body": "Team: Portal. Size: 5 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 18,
+      "title": "Nightly sync of supplier master data from ERP",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "body": "Team: Integrations. Size: 5 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 19,
+      "title": "EDI 856 ship notice parser",
+      "labels": [
+        "aev-points:4",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "body": "Team: Integrations. Size: 4 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 20,
+      "title": "Map ERP defect codes to portal categories",
+      "labels": [
+        "aev-points:3",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "body": "Team: Integrations. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 21,
+      "title": "Sync PPAP approval status back to ERP",
+      "labels": [
+        "aev-points:3",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "body": "Team: Integrations. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 22,
+      "title": "Post nonconformance reports (NCR) to ERP",
+      "labels": [
+        "aev-points:4",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "body": "Team: Integrations. Size: 4 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 23,
+      "title": "ERP API service account and authentication",
+      "labels": [
+        "aev-points:4",
+        "pod-integrations",
+        "human-work"
+      ],
+      "body": "Team: Integrations. Size: 4 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 24,
+      "title": "Integration error queue with retry",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "human-work"
+      ],
+      "body": "Team: Integrations. Size: 5 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 25,
+      "title": "EDI 861 receiving advice mapping",
+      "labels": [
+        "aev-points:3",
+        "pod-integrations",
+        "human-work"
+      ],
+      "body": "Team: Integrations. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 26,
+      "title": "Two-way 8D status sync with ERP",
+      "labels": [
+        "aev-points:8",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "body": "Team: Integrations. Size: 8 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 27,
+      "title": "EDI 810 invoice matching",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "human-work"
+      ],
+      "body": "Team: Integrations. Size: 5 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 28,
+      "title": "Quality hold signal to MES",
+      "labels": [
+        "aev-points:8",
+        "pod-integrations",
+        "human-work"
+      ],
+      "body": "Team: Integrations. Size: 8 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 29,
+      "title": "Data retention and archiving job",
+      "labels": [
+        "aev-points:3",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "body": "Team: Integrations. Size: 3 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 30,
+      "title": "Supplier master de-duplication",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "agent-work"
+      ],
+      "body": "Team: Integrations. Size: 5 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "issue",
+      "number": 31,
+      "title": "Cutover rehearsal and data migration",
+      "labels": [
+        "aev-points:5",
+        "pod-integrations",
+        "human-work"
+      ],
+      "body": "Team: Integrations. Size: 5 points. Supplier Quality Portal modernization (demo, fictional)."
+    },
+    {
+      "step": "pr",
+      "number": 32,
+      "issue": 1,
+      "title": "Supplier login with single sign-on (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "s-reyes",
+      "path": "src/portal/supplier-login-with-single-sign-on/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-09-30T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 33,
+      "issue": 1,
+      "title": "Supplier login with single sign-on (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "s-reyes",
+      "path": "src/portal/supplier-login-with-single-sign-on/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-02T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 34,
+      "issue": 23,
+      "title": "ERP API service account and authentication",
+      "link": "fixes",
+      "agent": false,
+      "developer": "d-okafor",
+      "path": "src/integrations/erp-api-service-account-and-authentication/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-05T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 35,
+      "issue": 18,
+      "title": "Nightly sync of supplier master data from ERP (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "j-chen",
+      "path": "src/integrations/nightly-sync-of-supplier-master-data/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-06T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 36,
+      "issue": 2,
+      "title": "Supplier profile and certifications page",
+      "link": "fixes",
+      "agent": true,
+      "developer": "m-kowalski",
+      "path": "src/portal/supplier-profile-and-certifications-page/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-07T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 37,
+      "issue": 3,
+      "title": "Upload certificate of analysis (PDF) (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "s-reyes",
+      "path": "src/portal/upload-certificate-of-analysis-pdf/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-07T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 38,
+      "issue": 18,
+      "title": "Nightly sync of supplier master data from ERP (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "j-chen",
+      "path": "src/integrations/nightly-sync-of-supplier-master-data/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-08T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 39,
+      "issue": 20,
+      "title": "Map ERP defect codes to portal categories",
+      "link": "fixes",
+      "agent": true,
+      "developer": "j-chen",
+      "path": "src/integrations/map-erp-defect-codes-to-portal/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-09T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 40,
+      "issue": 3,
+      "title": "Upload certificate of analysis (PDF) (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "s-reyes",
+      "path": "src/portal/upload-certificate-of-analysis-pdf/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-09T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 41,
+      "issue": 24,
+      "title": "Integration error queue with retry (part 1 of 3)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "j-chen",
+      "path": "src/integrations/integration-error-queue-with-retry/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-11T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 42,
+      "issue": 4,
+      "title": "PPAP submission form (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "m-kowalski",
+      "path": "src/portal/ppap-submission-form/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-12T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 43,
+      "issue": 10,
+      "title": "Supplier onboarding wizard (part 1 of 3)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "m-kowalski",
+      "path": "src/portal/supplier-onboarding-wizard/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-12T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 44,
+      "issue": 24,
+      "title": "Integration error queue with retry (part 2 of 3)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "j-chen",
+      "path": "src/integrations/integration-error-queue-with-retry/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-13T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 45,
+      "issue": 4,
+      "title": "PPAP submission form (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "m-kowalski",
+      "path": "src/portal/ppap-submission-form/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-14T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 46,
+      "issue": 10,
+      "title": "Supplier onboarding wizard (part 2 of 3)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "m-kowalski",
+      "path": "src/portal/supplier-onboarding-wizard/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-14T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 47,
+      "issue": 5,
+      "title": "Corrective action (8D) request list",
+      "link": "fixes",
+      "agent": true,
+      "developer": "s-reyes",
+      "path": "src/portal/corrective-action-8d-request-list/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-15T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 48,
+      "issue": 24,
+      "title": "Integration error queue with retry (part 3 of 3)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "j-chen",
+      "path": "src/integrations/integration-error-queue-with-retry/part-3.md",
+      "hold": false,
+      "planned_merge": "2026-10-15T16:00:00Z"
+    },
+    {
+      "step": "revert",
+      "number": 49,
+      "reverts": 39,
+      "issue": 20,
+      "reason": "8Ds routed to the wrong plant",
+      "planned_merge": "2026-10-16T10:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 50,
+      "issue": 10,
+      "title": "Supplier onboarding wizard (part 3 of 3)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "m-kowalski",
+      "path": "src/portal/supplier-onboarding-wizard/part-3.md",
+      "hold": false,
+      "planned_merge": "2026-10-16T16:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 51,
+      "issue": 19,
+      "title": "EDI 856 ship notice parser (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-okafor",
+      "path": "src/integrations/edi-856-ship-notice-parser/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-19T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 52,
+      "issue": 11,
+      "title": "Role-based access for plant quality engineers (part 1 of 2)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "s-reyes",
+      "path": "src/portal/role-based-access-for-plant-quality-engineers/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-20T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 53,
+      "issue": 21,
+      "title": "Sync PPAP approval status back to ERP (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-okafor",
+      "path": "src/integrations/sync-ppap-approval-status-back-to/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-20T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 54,
+      "issue": 6,
+      "title": "Shipment certificate search and filters",
+      "link": "fixes",
+      "agent": true,
+      "developer": "m-kowalski",
+      "path": "src/portal/shipment-certificate-search-and-filters/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-21T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 55,
+      "issue": 19,
+      "title": "EDI 856 ship notice parser (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-okafor",
+      "path": "src/integrations/edi-856-ship-notice-parser/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-21T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 56,
+      "issue": 11,
+      "title": "Role-based access for plant quality engineers (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "s-reyes",
+      "path": "src/portal/role-based-access-for-plant-quality-engineers/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-22T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 57,
+      "issue": 21,
+      "title": "Sync PPAP approval status back to ERP (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-okafor",
+      "path": "src/integrations/sync-ppap-approval-status-back-to/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-22T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 58,
+      "issue": 7,
+      "title": "Supplier scorecard dashboard (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "s-reyes",
+      "path": "src/portal/supplier-scorecard-dashboard/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-26T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 59,
+      "issue": 25,
+      "title": "EDI 861 receiving advice mapping (part 1 of 2)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "d-okafor",
+      "path": "src/integrations/edi-861-receiving-advice-mapping/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-26T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 60,
+      "issue": 9,
+      "title": "Accessibility fixes (WCAG 2.1 AA) (part 1 of 2)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "s-reyes",
+      "path": "src/portal/accessibility-fixes-wcag-2.1-aa/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-10-27T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 61,
+      "issue": 7,
+      "title": "Supplier scorecard dashboard (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "s-reyes",
+      "path": "src/portal/supplier-scorecard-dashboard/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-28T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 62,
+      "issue": 25,
+      "title": "EDI 861 receiving advice mapping (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "d-okafor",
+      "path": "src/integrations/edi-861-receiving-advice-mapping/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-28T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 63,
+      "issue": 9,
+      "title": "Accessibility fixes (WCAG 2.1 AA) (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "s-reyes",
+      "path": "src/portal/accessibility-fixes-wcag-2.1-aa/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-10-29T15:00:00Z"
+    },
+    {
+      "step": "revert",
+      "number": 64,
+      "reverts": 57,
+      "issue": 21,
+      "reason": "duplicate supplier records in ERP",
+      "planned_merge": "2026-10-30T09:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 65,
+      "issue": 22,
+      "title": "Post nonconformance reports (NCR) to ERP (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "j-chen",
+      "path": "src/integrations/post-nonconformance-reports-ncr-to-erp/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-01T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 66,
+      "issue": 22,
+      "title": "Post nonconformance reports (NCR) to ERP (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "j-chen",
+      "path": "src/integrations/post-nonconformance-reports-ncr-to-erp/part-2.md",
+      "hold": true,
+      "planned_merge": "2026-11-03T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 67,
+      "issue": 8,
+      "title": "Email reminders for overdue 8D responses",
+      "link": "fixes",
+      "agent": true,
+      "developer": "m-kowalski",
+      "path": "src/portal/email-reminders-for-overdue-8d-responses/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-04T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 68,
+      "issue": 13,
+      "title": "Bulk upload of inspection results (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "s-reyes",
+      "path": "src/portal/bulk-upload-of-inspection-results/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-04T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 69,
+      "issue": 15,
+      "title": "Audit trail export",
+      "link": "part_of",
+      "agent": false,
+      "developer": "s-reyes",
+      "path": "src/portal/audit-trail-export/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-04T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 70,
+      "issue": 26,
+      "title": "Two-way 8D status sync with ERP (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "j-chen",
+      "path": "src/integrations/two-way-8d-status-sync-with-erp/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-04T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 71,
+      "issue": 28,
+      "title": "Quality hold signal to MES",
+      "link": "part_of",
+      "agent": false,
+      "developer": "j-chen",
+      "path": "src/integrations/quality-hold-signal-to-mes/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-04T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 72,
+      "issue": 14,
+      "title": "Tablet layout for the plant floor",
+      "link": "part_of",
+      "agent": true,
+      "developer": "m-kowalski",
+      "path": "src/portal/tablet-layout-for-the-plant-floor/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-05T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 73,
+      "issue": 31,
+      "title": "Cutover rehearsal and data migration",
+      "link": "part_of",
+      "agent": false,
+      "developer": "d-okafor",
+      "path": "src/integrations/cutover-rehearsal-and-data-migration/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-05T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 74,
+      "issue": 30,
+      "title": "Supplier master de-duplication",
+      "link": "part_of",
+      "agent": true,
+      "developer": "j-chen",
+      "path": "src/integrations/supplier-master-de-duplication/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-06T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 75,
+      "issue": 13,
+      "title": "Bulk upload of inspection results (part 2 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "s-reyes",
+      "path": "src/portal/bulk-upload-of-inspection-results/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-11-06T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 76,
+      "issue": 26,
+      "title": "Two-way 8D status sync with ERP (part 2 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "j-chen",
+      "path": "src/integrations/two-way-8d-status-sync-with-erp/part-2.md",
+      "hold": false,
+      "planned_merge": "2026-11-06T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 77,
+      "issue": 12,
+      "title": "Self-service password reset",
+      "link": "part_of",
+      "agent": true,
+      "developer": "m-kowalski",
+      "path": "src/portal/self-service-password-reset/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-07T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 78,
+      "issue": 29,
+      "title": "Data retention and archiving job",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-okafor",
+      "path": "src/integrations/data-retention-and-archiving-job/part-1.md",
+      "hold": false,
+      "planned_merge": "2026-11-07T14:00:00Z"
+    }
+  ]
+}

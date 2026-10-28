@@ -1,0 +1,484 @@
+{
+  "repo_note": "Replay into an EMPTY GitHub repo; numbers then match this dataset.",
+  "initiative": "Developer Productivity",
+  "story": "CI and developer tooling, mostly human, two blockers: late but efficient, a schedule problem not a cost problem.",
+  "slots": [
+    {
+      "slot": 1,
+      "pr": 37,
+      "issue": 10
+    },
+    {
+      "slot": 2,
+      "pr": 34,
+      "issue": 11
+    },
+    {
+      "slot": 3,
+      "pr": 38,
+      "issue": 12
+    }
+  ],
+  "steps": [
+    {
+      "step": "issue",
+      "number": 1,
+      "title": "Build cache for the monorepo",
+      "labels": [
+        "aev-points:8",
+        "pod-ci",
+        "human-work"
+      ],
+      "body": "Team: CI. Size: 8 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 2,
+      "title": "Flaky test quarantine report",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "human-work"
+      ],
+      "body": "Team: CI. Size: 5 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 3,
+      "title": "Parallel test runners",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "human-work"
+      ],
+      "body": "Team: CI. Size: 5 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 4,
+      "title": "Merge queue rollout",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "mixed-work"
+      ],
+      "body": "Team: CI. Size: 5 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 5,
+      "title": "Golden path service template",
+      "labels": [
+        "aev-points:8",
+        "pod-devex",
+        "human-work"
+      ],
+      "body": "Team: DevEx. Size: 8 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 6,
+      "title": "Local dev containers",
+      "labels": [
+        "aev-points:5",
+        "pod-devex",
+        "human-work"
+      ],
+      "body": "Team: DevEx. Size: 5 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 7,
+      "title": "AI code review assistant pilot",
+      "labels": [
+        "aev-points:5",
+        "pod-devex",
+        "agent-work"
+      ],
+      "body": "Team: DevEx. Size: 5 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 8,
+      "title": "Onboarding guide refresh",
+      "labels": [
+        "aev-points:3",
+        "pod-devex",
+        "agent-work"
+      ],
+      "body": "Team: DevEx. Size: 3 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 9,
+      "title": "CI pipeline lint rules",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "body": "Team: CI. Size: 3 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 10,
+      "title": "Dependency update bot",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "body": "Team: CI. Size: 3 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 11,
+      "title": "Pull request size linter",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "body": "Team: CI. Size: 3 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 12,
+      "title": "Docs search",
+      "labels": [
+        "aev-points:3",
+        "pod-devex",
+        "agent-work"
+      ],
+      "body": "Team: DevEx. Size: 3 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 13,
+      "title": "Remote build execution",
+      "labels": [
+        "aev-points:8",
+        "pod-ci",
+        "human-work",
+        "blocked"
+      ],
+      "body": "Team: CI. Size: 8 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 14,
+      "title": "Self-service preview environments",
+      "labels": [
+        "aev-points:8",
+        "pod-devex",
+        "human-work",
+        "blocked"
+      ],
+      "body": "Team: DevEx. Size: 8 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 15,
+      "title": "Test impact analysis",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "human-work"
+      ],
+      "body": "Team: CI. Size: 5 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 16,
+      "title": "Developer portal",
+      "labels": [
+        "aev-points:8",
+        "pod-devex",
+        "human-work"
+      ],
+      "body": "Team: DevEx. Size: 8 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 17,
+      "title": "Inner-source catalog",
+      "labels": [
+        "aev-points:3",
+        "pod-devex",
+        "human-work"
+      ],
+      "body": "Team: DevEx. Size: 3 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 18,
+      "title": "Build time SLOs",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "body": "Team: CI. Size: 3 points. Developer Productivity initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "pr",
+      "number": 19,
+      "issue": 1,
+      "title": "Build cache for the monorepo (part 1 of 2)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "b-mensah",
+      "path": "src/ci/build-cache-for-the-monorepo/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-28T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 20,
+      "issue": 1,
+      "title": "Build cache for the monorepo (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "b-mensah",
+      "path": "src/ci/build-cache-for-the-monorepo/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-30T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 21,
+      "issue": 2,
+      "title": "Flaky test quarantine report",
+      "link": "fixes",
+      "agent": false,
+      "developer": "c-ortiz",
+      "path": "src/ci/flaky-test-quarantine-report/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-03T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 22,
+      "issue": 4,
+      "title": "Merge queue rollout (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/ci/merge-queue-rollout/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-05T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 23,
+      "issue": 4,
+      "title": "Merge queue rollout (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "e-haddad",
+      "path": "src/ci/merge-queue-rollout/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-07T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 24,
+      "issue": 5,
+      "title": "Golden path service template (part 1 of 2)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "f-lindqvist",
+      "path": "src/devex/golden-path-service-template/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-08T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 25,
+      "issue": 5,
+      "title": "Golden path service template (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "f-lindqvist",
+      "path": "src/devex/golden-path-service-template/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-10T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 26,
+      "issue": 6,
+      "title": "Local dev containers",
+      "link": "fixes",
+      "agent": false,
+      "developer": "a-novak",
+      "path": "src/devex/local-dev-containers/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-13T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 27,
+      "issue": 7,
+      "title": "AI code review assistant pilot (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/devex/ai-code-review-assistant-pilot/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-14T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 28,
+      "issue": 7,
+      "title": "AI code review assistant pilot (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/devex/ai-code-review-assistant-pilot/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-16T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 29,
+      "issue": 8,
+      "title": "Onboarding guide refresh",
+      "link": "fixes",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/devex/onboarding-guide-refresh/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-20T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 30,
+      "issue": 11,
+      "title": "Pull request size linter (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "f-lindqvist",
+      "path": "src/ci/pull-request-size-linter/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-20T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 31,
+      "issue": 10,
+      "title": "Dependency update bot (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/ci/dependency-update-bot/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-21T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 32,
+      "issue": 3,
+      "title": "Parallel test runners",
+      "link": "part_of",
+      "agent": false,
+      "developer": "d-kim",
+      "path": "src/ci/parallel-test-runners/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-22T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 33,
+      "issue": 15,
+      "title": "Test impact analysis",
+      "link": "part_of",
+      "agent": false,
+      "developer": "d-kim",
+      "path": "src/ci/test-impact-analysis/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-22T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 34,
+      "issue": 11,
+      "title": "Pull request size linter (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "f-lindqvist",
+      "path": "src/ci/pull-request-size-linter/part-2.md",
+      "hold": true,
+      "slot": 2,
+      "planned_merge": "2026-10-22T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 35,
+      "issue": 9,
+      "title": "CI pipeline lint rules",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/ci/ci-pipeline-lint-rules/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-23T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 36,
+      "issue": 12,
+      "title": "Docs search (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "a-novak",
+      "path": "src/devex/docs-search/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-23T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 37,
+      "issue": 10,
+      "title": "Dependency update bot (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/ci/dependency-update-bot/part-2.md",
+      "hold": true,
+      "slot": 1,
+      "planned_merge": "2026-10-23T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 38,
+      "issue": 12,
+      "title": "Docs search (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "a-novak",
+      "path": "src/devex/docs-search/part-2.md",
+      "hold": true,
+      "slot": 3,
+      "planned_merge": "2026-10-25T15:00:00Z"
+    }
+  ]
+}

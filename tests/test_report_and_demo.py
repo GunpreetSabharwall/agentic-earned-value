@@ -6,7 +6,7 @@ from datetime import date
 from aev import cli
 from aev.calculator import compute
 from aev.config import parse_config
-from aev.github_data import REVERT_BODY, _issue_from_node
+from aev.github_data import REVERT_BODY, _issue_from_node, linked_issues, part_of_issues
 from aev.report import badge_color, money, percent, ratio, render_badge, render_report, what_this_means
 
 CONFIG = parse_config({
@@ -50,6 +50,7 @@ def run_demo_inputs(tmp_path):
         "--repo", "example/demo-project",
         "--output", str(out),
         "--badge", str(badge),
+        "--json", str(tmp_path / "aev.json"),
     ])
     assert code == 0
     return out.read_text(encoding="utf-8"), badge.read_text(encoding="utf-8")
@@ -81,6 +82,8 @@ def test_committed_demo_outputs_are_up_to_date(tmp_path):
     demo = cli.DEMO_DIR
     assert (demo / "AEV-REPORT.md").read_text(encoding="utf-8") == text
     assert (demo / ".aev" / "badge.json").read_text(encoding="utf-8") == badge
+    assert (demo / ".aev" / "aev.json").read_text(encoding="utf-8") == \
+        (tmp_path / "aev.json").read_text(encoding="utf-8")
 
 
 def test_bad_config_returns_error_code(tmp_path):
@@ -208,3 +211,33 @@ def test_small_costs_are_not_rounded_away_in_breakdown():
     assert "| &nbsp;&nbsp;agent: model | $6.30 |" in text
     # Headline figures stay rounded to whole dollars.
     assert "| Actual Cost (AC) | $394 |" in text
+
+
+def test_part_of_links():
+    assert part_of_issues("Part of #12. Refs #3, see also #99") == [3, 12]
+    assert part_of_issues("ref #7") == [7]
+    assert part_of_issues("Fixes #4") == []
+    assert part_of_issues("Reverts owner/repo#5") == []
+    assert part_of_issues(None) == []
+    node = {"number": 12, "title": "t", "labels": {"nodes": []},
+            "closedByPullRequestsReferences": {"nodes": []}, "timelineItems": {"nodes": []}}
+    partial = [{"number": 40, "mergedAt": "2026-01-02T00:00:00Z", "author": {"login": "x"}}]
+    issue = _issue_from_node(node, {40: "2026-01-05T00:00:00Z"}, partial)
+    assert issue["events"] == []
+    assert issue["linked_prs"] == [{"number": 40, "author": "x", "merged_at": "2026-01-02T00:00:00Z",
+                                    "reverted_at": "2026-01-05T00:00:00Z"}]
+
+
+def test_linked_issues_include_closing_keywords():
+    assert linked_issues("Fixes #4") == [4]
+    assert linked_issues("closes #1, Resolved #2 and part of #3") == [1, 2, 3]
+    assert linked_issues("Fix: #9") == [9]
+    assert linked_issues("Reverts owner/repo#5") == []
+    assert linked_issues("prefixes #6") == []
+    # A PR linked both by GitHub and by its description is listed once.
+    node = {"number": 4, "title": "t", "labels": {"nodes": []},
+            "closedByPullRequestsReferences": {"nodes": [{"number": 40, "mergedAt": "2026-01-02T00:00:00Z",
+                                                          "author": {"login": "x"}}]},
+            "timelineItems": {"nodes": []}}
+    issue = _issue_from_node(node, {}, [{"number": 40, "mergedAt": "2026-01-02T00:00:00Z", "author": {"login": "x"}}])
+    assert [p["number"] for p in issue["linked_prs"]] == [40]

@@ -1,0 +1,843 @@
+{
+  "schema": "aev-results/1",
+  "tool_version": "0.4.0",
+  "method_note": "0.1",
+  "repo": "agent-gateway",
+  "as_of": "2026-11-10",
+  "config": {
+    "budget_at_completion": 180000.0,
+    "value_per_point": 2000.0,
+    "start_date": "2026-09-21",
+    "end_date": "2026-11-30",
+    "hourly_rate": 100.0,
+    "stabilization_window_days": 14,
+    "agent_accounts": [
+      "coding-agent"
+    ],
+    "agent_label": "aev-agent",
+    "currency_symbol": "$",
+    "teams": {
+      "Platform": "pod-platform",
+      "SDK": "pod-sdk"
+    }
+  },
+  "summary": {
+    "bac": 180000.0,
+    "pv": 128571.43,
+    "ev": 124000.0,
+    "ac": 94170.0,
+    "cpi": 1.3168,
+    "spi": 0.9644,
+    "eac": 136698.39,
+    "health": "brightgreen",
+    "what_this_means": "For every $1 spent, the project has earned $1.32 of value; it is under budget and behind schedule."
+  },
+  "classic": {
+    "ev": 124000.0,
+    "ac": 72480.0,
+    "cpi": 1.7108,
+    "spi": 0.9644,
+    "eac": 105212.9
+  },
+  "indicators": {
+    "rework_rate": 0.0,
+    "agent_cost_share": 0.0618,
+    "review_load_ratio": 2.7268
+  },
+  "value": {
+    "gross_ev": 124000.0,
+    "clawback": 0.0,
+    "ev": 124000.0,
+    "labelled_value": 180000.0
+  },
+  "cost": {
+    "build_hours": 724.8,
+    "review_hours": 158.7,
+    "ac_build": 72480.0,
+    "ac_review": 15870.0,
+    "ac_agent": 5820.0,
+    "agent_by_category": {
+      "ci": 1247.4,
+      "model": 4422.6,
+      "tools": 150.0
+    }
+  },
+  "by_class": {
+    "A": {
+      "items_accepted": 10,
+      "ev": 98000.0,
+      "ac": 65945.0,
+      "ac_build": 45380.0,
+      "ac_review": 15120.0,
+      "ac_agent": 5445.0,
+      "cpi": 1.4861
+    },
+    "H": {
+      "items_accepted": 2,
+      "ev": 16000.0,
+      "ac": 17600.0,
+      "ac_build": 17600.0,
+      "ac_review": 0.0,
+      "ac_agent": 0.0,
+      "cpi": 0.9091
+    },
+    "M": {
+      "items_accepted": 1,
+      "ev": 10000.0,
+      "ac": 7475.0,
+      "ac_build": 6500.0,
+      "ac_review": 750.0,
+      "ac_agent": 225.0,
+      "cpi": 1.3378
+    },
+    "Unassigned": {
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 3150.0,
+      "ac_build": 3000.0,
+      "ac_review": 0.0,
+      "ac_agent": 150.0,
+      "cpi": 0.0
+    }
+  },
+  "by_team": [
+    {
+      "name": "Platform",
+      "label": "pod-platform",
+      "items_accepted": 7,
+      "ev": 72000.0,
+      "ac": 57385.0,
+      "cpi": 1.2547,
+      "by_class": {
+        "A": {
+          "items_accepted": 5,
+          "ev": 56000.0,
+          "ac": 39785.0,
+          "ac_build": 27380.0,
+          "ac_review": 9120.0,
+          "ac_agent": 3285.0,
+          "cpi": 1.4076
+        },
+        "H": {
+          "items_accepted": 2,
+          "ev": 16000.0,
+          "ac": 17600.0,
+          "ac_build": 17600.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": 0.9091
+        },
+        "M": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        }
+      }
+    },
+    {
+      "name": "SDK",
+      "label": "pod-sdk",
+      "items_accepted": 6,
+      "ev": 52000.0,
+      "ac": 33635.0,
+      "cpi": 1.546,
+      "by_class": {
+        "A": {
+          "items_accepted": 5,
+          "ev": 42000.0,
+          "ac": 26160.0,
+          "ac_build": 18000.0,
+          "ac_review": 6000.0,
+          "ac_agent": 2160.0,
+          "cpi": 1.6055
+        },
+        "H": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "M": {
+          "items_accepted": 1,
+          "ev": 10000.0,
+          "ac": 7475.0,
+          "ac_build": 6500.0,
+          "ac_review": 750.0,
+          "ac_agent": 225.0,
+          "cpi": 1.3378
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        }
+      }
+    },
+    {
+      "name": "No team",
+      "label": null,
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 3150.0,
+      "cpi": 0.0,
+      "by_class": {
+        "A": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "H": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "M": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 3150.0,
+          "ac_build": 3000.0,
+          "ac_review": 0.0,
+          "ac_agent": 150.0,
+          "cpi": 0.0
+        }
+      }
+    }
+  ],
+  "activity": {
+    "merged_prs": 26,
+    "agent_prs": 22,
+    "mixed_prs": 0,
+    "human_prs": 4,
+    "agent_pr_share": 0.8462,
+    "ai_assisted_pr_share": 0.8462,
+    "items_closed": 13,
+    "items_that_stuck": 13,
+    "agent_spend": 5820.0,
+    "tokens": 39802000
+  },
+  "items": [
+    {
+      "number": 1,
+      "title": "Agent gateway API skeleton",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-09-29T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 21,
+          "class": "A",
+          "merged_at": "2026-09-27T14:00:00Z"
+        },
+        {
+          "number": 23,
+          "class": "A",
+          "merged_at": "2026-09-29T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Token budget enforcement per team",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-01T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 22,
+          "class": "A",
+          "merged_at": "2026-09-29T14:00:00Z"
+        },
+        {
+          "number": 25,
+          "class": "A",
+          "merged_at": "2026-10-01T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Model routing by task type",
+      "points": 8.0,
+      "value": 16000.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:8",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 16000.0,
+      "clawback": 0.0,
+      "ev": 16000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-03T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 24,
+          "class": "A",
+          "merged_at": "2026-10-01T14:00:00Z"
+        },
+        {
+          "number": 26,
+          "class": "A",
+          "merged_at": "2026-10-03T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Request and response audit log",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-05T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 27,
+          "class": "A",
+          "merged_at": "2026-10-05T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Prompt caching layer",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-07T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 28,
+          "class": "A",
+          "merged_at": "2026-10-05T14:00:00Z"
+        },
+        {
+          "number": 30,
+          "class": "A",
+          "merged_at": "2026-10-07T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Rate limiting and quotas",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "H",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "human-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-09T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 29,
+          "class": "H",
+          "merged_at": "2026-10-07T14:00:00Z"
+        },
+        {
+          "number": 31,
+          "class": "H",
+          "merged_at": "2026-10-09T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "SSO for the admin console",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "H",
+      "team": "Platform",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "human-work"
+      ],
+      "gross_ev": 6000.0,
+      "clawback": 0.0,
+      "ev": 6000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-11T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 32,
+          "class": "H",
+          "merged_at": "2026-10-11T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Python SDK client",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": "SDK",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-14T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 33,
+          "class": "A",
+          "merged_at": "2026-10-12T14:00:00Z"
+        },
+        {
+          "number": 35,
+          "class": "A",
+          "merged_at": "2026-10-14T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "TypeScript SDK client",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": "SDK",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-16T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 34,
+          "class": "A",
+          "merged_at": "2026-10-14T14:00:00Z"
+        },
+        {
+          "number": 36,
+          "class": "A",
+          "merged_at": "2026-10-16T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "SDK retry and backoff",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "A",
+      "team": "SDK",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "gross_ev": 6000.0,
+      "clawback": 0.0,
+      "ev": 6000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-18T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 37,
+          "class": "A",
+          "merged_at": "2026-10-18T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Usage dashboard per team",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "M",
+      "team": "SDK",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "mixed-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-20T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 38,
+          "class": "A",
+          "merged_at": "2026-10-18T14:00:00Z"
+        },
+        {
+          "number": 40,
+          "class": "H",
+          "merged_at": "2026-10-20T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Developer docs site",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "A",
+      "team": "SDK",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "gross_ev": 6000.0,
+      "clawback": 0.0,
+      "ev": 6000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-22T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 42,
+          "class": "A",
+          "merged_at": "2026-10-22T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Sample apps: chat and RAG",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": "SDK",
+      "labels": [
+        "aev-points:5",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "gross_ev": 10000.0,
+      "clawback": 0.0,
+      "ev": 10000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-24T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 43,
+          "class": "A",
+          "merged_at": "2026-10-22T14:00:00Z"
+        },
+        {
+          "number": 48,
+          "class": "A",
+          "merged_at": "2026-10-24T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Cost attribution headers",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 41,
+          "class": "A",
+          "merged_at": "2026-10-21T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Streaming responses in the SDK",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "A",
+      "team": "SDK",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 39,
+          "class": "A",
+          "merged_at": "2026-10-20T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Gateway health checks",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 45,
+          "class": "A",
+          "merged_at": "2026-10-23T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Multi-region failover",
+      "points": 8.0,
+      "value": 16000.0,
+      "authorship": null,
+      "team": "Platform",
+      "labels": [
+        "aev-points:8",
+        "pod-platform",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 18,
+      "title": "Policy engine for PII",
+      "points": 5.0,
+      "value": 10000.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 46,
+          "class": "A",
+          "merged_at": "2026-10-23T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Go SDK client",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": null,
+      "team": "SDK",
+      "labels": [
+        "aev-points:3",
+        "pod-sdk",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 20,
+      "title": "Load test at 10k requests per second",
+      "points": 3.0,
+      "value": 6000.0,
+      "authorship": null,
+      "team": "Platform",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    }
+  ],
+  "warnings": []
+}

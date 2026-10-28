@@ -1,0 +1,35 @@
+# Cloud Modernization: Lakeshore Components demo portfolio (fictional company).
+# Story: Plant and back-office apps moving to cloud, mixed human and agent work: review cost eats the agent savings.
+name: Cloud Modernization
+slug: cloud-modernization
+source_repo: GunpreetSabharwall/initiative-cloud-modernization
+source_repo_url: https://github.com/GunpreetSabharwall/initiative-cloud-modernization
+owner: "@GunpreetSabharwall"
+status: active
+week_start: 2026-09-14
+duration_weeks: 16
+showcase_date: 2027-01-04
+github_project_id: ""
+labels:
+  blocked: blocked
+  dependency: dependency
+  adr: adr-required
+sync_cadence: weekly
+pods:
+  - slug: migration
+    label: pod-migration
+    name: Migration
+  - slug: platform
+    label: pod-platform
+    name: Platform
+# Value signal (Feature 22): Program Hub runs AEV on source_repo. Costs are in aev/.
+aev:
+  enabled: true
+  mode: hub
+  budget_at_completion: 307500
+  value_per_point: 2500
+  hourly_rate: 100
+  stabilization_window_days: 14
+  agent_accounts:
+    - coding-agent
+  agent_label: aev-agent

@@ -1,0 +1,552 @@
+{
+  "repo": "GunpreetSabharwall/initiative-data-integration",
+  "issues": [
+    {
+      "number": 1,
+      "title": "Supplier master sync from SAP",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-06T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 23,
+          "author": "b-mensah",
+          "merged_at": "2026-10-04T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 25,
+          "author": "b-mensah",
+          "merged_at": "2026-10-06T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Purchase order feed",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-08T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 24,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-06T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 26,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-08T15:00:00Z",
+          "reverted_at": "2026-10-11T10:00:00Z",
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Goods receipt postings",
+      "labels": [
+        "aev-points:3",
+        "pod-erp",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-10T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 28,
+          "author": "d-kim",
+          "merged_at": "2026-10-10T14:00:00Z",
+          "reverted_at": "2026-10-13T10:00:00Z",
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Quality notification sync",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-11T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 27,
+          "author": "e-haddad",
+          "merged_at": "2026-10-09T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 30,
+          "author": "e-haddad",
+          "merged_at": "2026-10-11T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Cost center mapping",
+      "labels": [
+        "aev-points:3",
+        "pod-erp",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-13T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 32,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-13T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Material master delta load",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-15T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 33,
+          "author": "a-novak",
+          "merged_at": "2026-10-13T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 35,
+          "author": "a-novak",
+          "merged_at": "2026-10-15T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "EDI 850 purchase order parser",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-17T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 34,
+          "author": "b-mensah",
+          "merged_at": "2026-10-15T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 37,
+          "author": "b-mensah",
+          "merged_at": "2026-10-17T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "EDI 856 ship notice parser",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-19T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 36,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-17T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 38,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-19T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "EDI 997 acknowledgements",
+      "labels": [
+        "aev-points:3",
+        "pod-edi",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-20T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 39,
+          "author": "d-kim",
+          "merged_at": "2026-10-20T14:00:00Z",
+          "reverted_at": "2026-10-23T10:00:00Z",
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "EDI partner onboarding tool",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-22T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 40,
+          "author": "e-haddad",
+          "merged_at": "2026-10-20T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        },
+        {
+          "number": 45,
+          "author": "e-haddad",
+          "merged_at": "2026-10-22T15:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Error queue and replay",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "mixed-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-24T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 42,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 50,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-24T15:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "EDI 810 invoice parser",
+      "labels": [
+        "aev-points:3",
+        "pod-edi",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-11-09T15:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 47,
+          "author": "a-novak",
+          "merged_at": "2026-10-23T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 52,
+          "author": "a-novak",
+          "merged_at": "2026-11-09T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Inventory snapshot feed",
+      "labels": [
+        "aev-points:3",
+        "pod-erp",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 43,
+          "author": "b-mensah",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Carrier status updates",
+      "labels": [
+        "aev-points:3",
+        "pod-edi",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 41,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-21T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Two-way purchase order change sync",
+      "labels": [
+        "aev-points:8",
+        "pod-erp",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 44,
+          "author": "d-kim",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Data quality dashboard",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 17,
+      "title": "EDI 940 warehouse order",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 18,
+      "title": "Partner certification tests",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 19,
+      "title": "Archive and retention job",
+      "labels": [
+        "aev-points:3",
+        "pod-erp",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 20,
+      "title": "Cutover rehearsal",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 21,
+      "title": "Master data de-duplication",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 49,
+          "author": "d-kim",
+          "merged_at": "2026-10-24T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Monitoring alerts for feeds",
+      "labels": [
+        "aev-points:3",
+        "pod-edi",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    }
+  ]
+}

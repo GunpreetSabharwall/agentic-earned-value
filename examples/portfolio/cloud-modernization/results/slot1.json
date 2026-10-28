@@ -1,0 +1,907 @@
+{
+  "schema": "aev-results/1",
+  "tool_version": "0.4.0",
+  "method_note": "0.1",
+  "repo": "cloud-modernization",
+  "as_of": "2026-11-10",
+  "config": {
+    "budget_at_completion": 307500.0,
+    "value_per_point": 2500.0,
+    "start_date": "2026-09-14",
+    "end_date": "2027-01-04",
+    "hourly_rate": 100.0,
+    "stabilization_window_days": 14,
+    "agent_accounts": [
+      "coding-agent"
+    ],
+    "agent_label": "aev-agent",
+    "currency_symbol": "$",
+    "teams": {
+      "Migration": "pod-migration",
+      "Platform": "pod-platform"
+    }
+  },
+  "summary": {
+    "bac": 307500.0,
+    "pv": 156495.54,
+    "ev": 162500.0,
+    "ac": 158345.0,
+    "cpi": 1.0262,
+    "spi": 1.0384,
+    "eac": 299637.46,
+    "health": "brightgreen",
+    "what_this_means": "For every $1 spent, the project has earned $1.03 of value; it is under budget and ahead of schedule. 4.4% of the work that was marked done did not stick and was taken back."
+  },
+  "classic": {
+    "ev": 170000.0,
+    "ac": 114920.0,
+    "cpi": 1.4793,
+    "spi": 1.0863,
+    "eac": 207870.0
+  },
+  "indicators": {
+    "rework_rate": 0.0441,
+    "agent_cost_share": 0.0279,
+    "review_load_ratio": 8.8136
+  },
+  "value": {
+    "gross_ev": 170000.0,
+    "clawback": 7500.0,
+    "ev": 162500.0,
+    "labelled_value": 307500.0
+  },
+  "cost": {
+    "build_hours": 1149.2,
+    "review_hours": 390.0,
+    "ac_build": 114920.0,
+    "ac_review": 39000.0,
+    "ac_agent": 4425.0,
+    "agent_by_category": {
+      "ci": 940.5,
+      "model": 3334.5,
+      "tools": 150.0
+    }
+  },
+  "by_class": {
+    "A": {
+      "items_accepted": 6,
+      "ev": 77500.0,
+      "ac": 74545.0,
+      "ac_build": 36720.0,
+      "ac_review": 34000.0,
+      "ac_agent": 3825.0,
+      "cpi": 1.0396
+    },
+    "H": {
+      "items_accepted": 4,
+      "ev": 60000.0,
+      "ac": 61600.0,
+      "ac_build": 61600.0,
+      "ac_review": 0.0,
+      "ac_agent": 0.0,
+      "cpi": 0.974
+    },
+    "M": {
+      "items_accepted": 2,
+      "ev": 25000.0,
+      "ac": 18450.0,
+      "ac_build": 13000.0,
+      "ac_review": 5000.0,
+      "ac_agent": 450.0,
+      "cpi": 1.355
+    },
+    "Unassigned": {
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 3750.0,
+      "ac_build": 3600.0,
+      "ac_review": 0.0,
+      "ac_agent": 150.0,
+      "cpi": 0.0
+    }
+  },
+  "by_team": [
+    {
+      "name": "Migration",
+      "label": "pod-migration",
+      "items_accepted": 7,
+      "ev": 97500.0,
+      "ac": 94205.0,
+      "cpi": 1.035,
+      "by_class": {
+        "A": {
+          "items_accepted": 4,
+          "ev": 52500.0,
+          "ac": 47580.0,
+          "ac_build": 23550.0,
+          "ac_review": 21600.0,
+          "ac_agent": 2430.0,
+          "cpi": 1.1034
+        },
+        "H": {
+          "items_accepted": 2,
+          "ev": 32500.0,
+          "ac": 37400.0,
+          "ac_build": 37400.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": 0.869
+        },
+        "M": {
+          "items_accepted": 1,
+          "ev": 12500.0,
+          "ac": 9225.0,
+          "ac_build": 6500.0,
+          "ac_review": 2500.0,
+          "ac_agent": 225.0,
+          "cpi": 1.355
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        }
+      }
+    },
+    {
+      "name": "Platform",
+      "label": "pod-platform",
+      "items_accepted": 5,
+      "ev": 65000.0,
+      "ac": 60390.0,
+      "cpi": 1.0763,
+      "by_class": {
+        "A": {
+          "items_accepted": 2,
+          "ev": 25000.0,
+          "ac": 26965.0,
+          "ac_build": 13170.0,
+          "ac_review": 12400.0,
+          "ac_agent": 1395.0,
+          "cpi": 0.9271
+        },
+        "H": {
+          "items_accepted": 2,
+          "ev": 27500.0,
+          "ac": 24200.0,
+          "ac_build": 24200.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": 1.1364
+        },
+        "M": {
+          "items_accepted": 1,
+          "ev": 12500.0,
+          "ac": 9225.0,
+          "ac_build": 6500.0,
+          "ac_review": 2500.0,
+          "ac_agent": 225.0,
+          "cpi": 1.355
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        }
+      }
+    },
+    {
+      "name": "No team",
+      "label": null,
+      "items_accepted": 0,
+      "ev": 0.0,
+      "ac": 3750.0,
+      "cpi": 0.0,
+      "by_class": {
+        "A": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "H": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "M": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 0.0,
+          "ac_build": 0.0,
+          "ac_review": 0.0,
+          "ac_agent": 0.0,
+          "cpi": null
+        },
+        "Unassigned": {
+          "items_accepted": 0,
+          "ev": 0.0,
+          "ac": 3750.0,
+          "ac_build": 3600.0,
+          "ac_review": 0.0,
+          "ac_agent": 150.0,
+          "cpi": 0.0
+        }
+      }
+    }
+  ],
+  "activity": {
+    "merged_prs": 28,
+    "agent_prs": 19,
+    "mixed_prs": 0,
+    "human_prs": 9,
+    "agent_pr_share": 0.6786,
+    "ai_assisted_pr_share": 0.6786,
+    "items_closed": 13,
+    "items_that_stuck": 12,
+    "agent_spend": 4425.0,
+    "tokens": 30010000
+  },
+  "items": [
+    {
+      "number": 1,
+      "title": "Inventory of 140 on-prem applications",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": "H",
+      "team": "Migration",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "human-work"
+      ],
+      "gross_ev": 12500.0,
+      "clawback": 0.0,
+      "ev": 12500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-09-23T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 24,
+          "class": "H",
+          "merged_at": "2026-09-23T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Landing zone and account structure",
+      "points": 8.0,
+      "value": 20000.0,
+      "authorship": "H",
+      "team": "Platform",
+      "labels": [
+        "aev-points:8",
+        "pod-platform",
+        "human-work"
+      ],
+      "gross_ev": 20000.0,
+      "clawback": 0.0,
+      "ev": 20000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-09-26T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 25,
+          "class": "H",
+          "merged_at": "2026-09-24T14:00:00Z"
+        },
+        {
+          "number": 27,
+          "class": "H",
+          "merged_at": "2026-09-26T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Migrate supplier portal to containers",
+      "points": 8.0,
+      "value": 20000.0,
+      "authorship": "A",
+      "team": "Migration",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "agent-work"
+      ],
+      "gross_ev": 20000.0,
+      "clawback": 0.0,
+      "ev": 20000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-09-28T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 26,
+          "class": "A",
+          "merged_at": "2026-09-24T14:00:00Z"
+        },
+        {
+          "number": 28,
+          "class": "A",
+          "merged_at": "2026-09-26T15:00:00Z"
+        },
+        {
+          "number": 29,
+          "class": "A",
+          "merged_at": "2026-09-28T16:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Migrate quality reporting service",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": "A",
+      "team": "Migration",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "agent-work"
+      ],
+      "gross_ev": 12500.0,
+      "clawback": 0.0,
+      "ev": 12500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-01T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 30,
+          "class": "A",
+          "merged_at": "2026-09-29T14:00:00Z"
+        },
+        {
+          "number": 31,
+          "class": "A",
+          "merged_at": "2026-10-01T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Migrate label printing service",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": "M",
+      "team": "Migration",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "mixed-work"
+      ],
+      "gross_ev": 12500.0,
+      "clawback": 0.0,
+      "ev": 12500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-04T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 32,
+          "class": "A",
+          "merged_at": "2026-10-02T14:00:00Z"
+        },
+        {
+          "number": 33,
+          "class": "H",
+          "merged_at": "2026-10-04T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Database migration: quality database",
+      "points": 8.0,
+      "value": 20000.0,
+      "authorship": "H",
+      "team": "Migration",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "human-work"
+      ],
+      "gross_ev": 20000.0,
+      "clawback": 0.0,
+      "ev": 20000.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-07T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 34,
+          "class": "H",
+          "merged_at": "2026-10-05T14:00:00Z"
+        },
+        {
+          "number": 36,
+          "class": "H",
+          "merged_at": "2026-10-07T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Migrate EDI gateway VMs",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": "A",
+      "team": "Migration",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "agent-work"
+      ],
+      "gross_ev": 12500.0,
+      "clawback": 0.0,
+      "ev": 12500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-09T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 35,
+          "class": "A",
+          "merged_at": "2026-10-07T14:00:00Z"
+        },
+        {
+          "number": 37,
+          "class": "A",
+          "merged_at": "2026-10-09T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Migrate shop-floor dashboard",
+      "points": 3.0,
+      "value": 7500.0,
+      "authorship": "A",
+      "team": "Migration",
+      "labels": [
+        "aev-points:3",
+        "pod-migration",
+        "agent-work"
+      ],
+      "gross_ev": 7500.0,
+      "clawback": 7500.0,
+      "ev": 0.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-12T17:00:00Z",
+          "clawed_back_at": "2026-10-15T10:00:00Z",
+          "reason": "PR #38 reverted"
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 38,
+          "class": "A",
+          "merged_at": "2026-10-12T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Terraform modules for networking",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 12500.0,
+      "clawback": 0.0,
+      "ev": 12500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-15T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 39,
+          "class": "A",
+          "merged_at": "2026-10-13T14:00:00Z"
+        },
+        {
+          "number": 41,
+          "class": "A",
+          "merged_at": "2026-10-15T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "CI/CD pipelines to cloud",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 12500.0,
+      "clawback": 0.0,
+      "ev": 12500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-18T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 42,
+          "class": "A",
+          "merged_at": "2026-10-16T14:00:00Z"
+        },
+        {
+          "number": 44,
+          "class": "A",
+          "merged_at": "2026-10-18T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Observability: logs and metrics",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": "M",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "mixed-work"
+      ],
+      "gross_ev": 12500.0,
+      "clawback": 0.0,
+      "ev": 12500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-20T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 43,
+          "class": "A",
+          "merged_at": "2026-10-18T14:00:00Z"
+        },
+        {
+          "number": 46,
+          "class": "H",
+          "merged_at": "2026-10-20T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Secrets management",
+      "points": 3.0,
+      "value": 7500.0,
+      "authorship": "H",
+      "team": "Platform",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "human-work"
+      ],
+      "gross_ev": 7500.0,
+      "clawback": 0.0,
+      "ev": 7500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-10-23T17:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 50,
+          "class": "H",
+          "merged_at": "2026-10-23T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Migrate warehouse scanner API",
+      "points": 3.0,
+      "value": 7500.0,
+      "authorship": "A",
+      "team": "Migration",
+      "labels": [
+        "aev-points:3",
+        "pod-migration",
+        "agent-work"
+      ],
+      "gross_ev": 7500.0,
+      "clawback": 0.0,
+      "ev": 7500.0,
+      "episodes": [
+        {
+          "accepted_at": "2026-11-09T15:00:00Z",
+          "clawed_back_at": null,
+          "reason": null
+        }
+      ],
+      "merged_prs": [
+        {
+          "number": 48,
+          "class": "A",
+          "merged_at": "2026-10-22T14:00:00Z"
+        },
+        {
+          "number": 53,
+          "class": "A",
+          "merged_at": "2026-11-09T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Autoscaling policies",
+      "points": 3.0,
+      "value": 7500.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 47,
+          "class": "A",
+          "merged_at": "2026-10-21T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Migrate notification service",
+      "points": 3.0,
+      "value": 7500.0,
+      "authorship": "A",
+      "team": "Migration",
+      "labels": [
+        "aev-points:3",
+        "pod-migration",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 45,
+          "class": "A",
+          "merged_at": "2026-10-20T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Migrate MES connector",
+      "points": 8.0,
+      "value": 20000.0,
+      "authorship": "H",
+      "team": "Migration",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 54,
+          "class": "H",
+          "merged_at": "2026-10-25T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Disaster recovery runbook",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": null,
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 18,
+      "title": "Cost tagging and FinOps reports",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": "A",
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": [
+        {
+          "number": 51,
+          "class": "A",
+          "merged_at": "2026-10-23T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Decommission data center racks",
+      "points": 8.0,
+      "value": 20000.0,
+      "authorship": null,
+      "team": "Migration",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 20,
+      "title": "Migrate ERP batch jobs",
+      "points": 8.0,
+      "value": 20000.0,
+      "authorship": null,
+      "team": "Migration",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 21,
+      "title": "Performance baseline after cutover",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": null,
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "human-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 22,
+      "title": "Security hardening of clusters",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": null,
+      "team": "Platform",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    },
+    {
+      "number": 23,
+      "title": "Migrate legacy FTP drop",
+      "points": 5.0,
+      "value": 12500.0,
+      "authorship": null,
+      "team": "Migration",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "agent-work"
+      ],
+      "gross_ev": 0.0,
+      "clawback": 0.0,
+      "ev": 0.0,
+      "episodes": [],
+      "merged_prs": []
+    }
+  ],
+  "warnings": []
+}

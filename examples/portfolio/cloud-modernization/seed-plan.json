@@ -1,0 +1,675 @@
+{
+  "repo_note": "Replay into an EMPTY GitHub repo; numbers then match this dataset.",
+  "initiative": "Cloud Modernization",
+  "story": "Plant and back-office apps moving to cloud, mixed human and agent work: review cost eats the agent savings.",
+  "slots": [
+    {
+      "slot": 1,
+      "pr": 53,
+      "issue": 13
+    },
+    {
+      "slot": 2,
+      "pr": 52,
+      "issue": 14
+    },
+    {
+      "slot": 3,
+      "pr": 49,
+      "issue": 15
+    }
+  ],
+  "steps": [
+    {
+      "step": "issue",
+      "number": 1,
+      "title": "Inventory of 140 on-prem applications",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "human-work"
+      ],
+      "body": "Team: Migration. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 2,
+      "title": "Landing zone and account structure",
+      "labels": [
+        "aev-points:8",
+        "pod-platform",
+        "human-work"
+      ],
+      "body": "Team: Platform. Size: 8 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 3,
+      "title": "Migrate supplier portal to containers",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "agent-work"
+      ],
+      "body": "Team: Migration. Size: 8 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 4,
+      "title": "Migrate quality reporting service",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "agent-work"
+      ],
+      "body": "Team: Migration. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 5,
+      "title": "Migrate label printing service",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "mixed-work"
+      ],
+      "body": "Team: Migration. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 6,
+      "title": "Database migration: quality database",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "human-work"
+      ],
+      "body": "Team: Migration. Size: 8 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 7,
+      "title": "Migrate EDI gateway VMs",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "agent-work"
+      ],
+      "body": "Team: Migration. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 8,
+      "title": "Migrate shop-floor dashboard",
+      "labels": [
+        "aev-points:3",
+        "pod-migration",
+        "agent-work"
+      ],
+      "body": "Team: Migration. Size: 3 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 9,
+      "title": "Terraform modules for networking",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 10,
+      "title": "CI/CD pipelines to cloud",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 11,
+      "title": "Observability: logs and metrics",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "mixed-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 12,
+      "title": "Secrets management",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "human-work"
+      ],
+      "body": "Team: Platform. Size: 3 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 13,
+      "title": "Migrate warehouse scanner API",
+      "labels": [
+        "aev-points:3",
+        "pod-migration",
+        "agent-work"
+      ],
+      "body": "Team: Migration. Size: 3 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 14,
+      "title": "Autoscaling policies",
+      "labels": [
+        "aev-points:3",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 3 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 15,
+      "title": "Migrate notification service",
+      "labels": [
+        "aev-points:3",
+        "pod-migration",
+        "agent-work"
+      ],
+      "body": "Team: Migration. Size: 3 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 16,
+      "title": "Migrate MES connector",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "human-work"
+      ],
+      "body": "Team: Migration. Size: 8 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 17,
+      "title": "Disaster recovery runbook",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "human-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 18,
+      "title": "Cost tagging and FinOps reports",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 19,
+      "title": "Decommission data center racks",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "human-work"
+      ],
+      "body": "Team: Migration. Size: 8 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 20,
+      "title": "Migrate ERP batch jobs",
+      "labels": [
+        "aev-points:8",
+        "pod-migration",
+        "agent-work"
+      ],
+      "body": "Team: Migration. Size: 8 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 21,
+      "title": "Performance baseline after cutover",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "human-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 22,
+      "title": "Security hardening of clusters",
+      "labels": [
+        "aev-points:5",
+        "pod-platform",
+        "agent-work"
+      ],
+      "body": "Team: Platform. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 23,
+      "title": "Migrate legacy FTP drop",
+      "labels": [
+        "aev-points:5",
+        "pod-migration",
+        "agent-work"
+      ],
+      "body": "Team: Migration. Size: 5 points. Cloud Modernization initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "pr",
+      "number": 24,
+      "issue": 1,
+      "title": "Inventory of 140 on-prem applications",
+      "link": "fixes",
+      "agent": false,
+      "developer": "b-mensah",
+      "path": "src/migration/inventory-of-140-on-prem-applications/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-23T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 25,
+      "issue": 2,
+      "title": "Landing zone and account structure (part 1 of 2)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "c-ortiz",
+      "path": "src/platform/landing-zone-and-account-structure/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-24T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 26,
+      "issue": 3,
+      "title": "Migrate supplier portal to containers (part 1 of 3)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/migration/migrate-supplier-portal-to-containers/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-24T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 27,
+      "issue": 2,
+      "title": "Landing zone and account structure (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "c-ortiz",
+      "path": "src/platform/landing-zone-and-account-structure/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-26T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 28,
+      "issue": 3,
+      "title": "Migrate supplier portal to containers (part 2 of 3)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/migration/migrate-supplier-portal-to-containers/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-26T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 29,
+      "issue": 3,
+      "title": "Migrate supplier portal to containers (part 3 of 3)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/migration/migrate-supplier-portal-to-containers/part-3.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-28T16:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 30,
+      "issue": 4,
+      "title": "Migrate quality reporting service (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/migration/migrate-quality-reporting-service/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-09-29T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 31,
+      "issue": 4,
+      "title": "Migrate quality reporting service (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/migration/migrate-quality-reporting-service/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-01T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 32,
+      "issue": 5,
+      "title": "Migrate label printing service (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "f-lindqvist",
+      "path": "src/migration/migrate-label-printing-service/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-02T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 33,
+      "issue": 5,
+      "title": "Migrate label printing service (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "f-lindqvist",
+      "path": "src/migration/migrate-label-printing-service/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-04T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 34,
+      "issue": 6,
+      "title": "Database migration: quality database (part 1 of 2)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "a-novak",
+      "path": "src/migration/database-migration-quality-database/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-05T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 35,
+      "issue": 7,
+      "title": "Migrate EDI gateway VMs (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/migration/migrate-edi-gateway-vms/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-07T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 36,
+      "issue": 6,
+      "title": "Database migration: quality database (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "a-novak",
+      "path": "src/migration/database-migration-quality-database/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-07T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 37,
+      "issue": 7,
+      "title": "Migrate EDI gateway VMs (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/migration/migrate-edi-gateway-vms/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-09T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 38,
+      "issue": 8,
+      "title": "Migrate shop-floor dashboard",
+      "link": "fixes",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/migration/migrate-shop-floor-dashboard/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-12T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 39,
+      "issue": 9,
+      "title": "Terraform modules for networking (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/platform/terraform-modules-for-networking/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-13T14:00:00Z"
+    },
+    {
+      "step": "revert",
+      "number": 40,
+      "reverts": 38,
+      "issue": 8,
+      "reason": "data loaded twice into the ERP",
+      "planned_merge": "2026-10-15T10:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 41,
+      "issue": 9,
+      "title": "Terraform modules for networking (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/platform/terraform-modules-for-networking/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-15T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 42,
+      "issue": 10,
+      "title": "CI/CD pipelines to cloud (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/platform/ci-cd-pipelines-to-cloud/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-16T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 43,
+      "issue": 11,
+      "title": "Observability: logs and metrics (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "f-lindqvist",
+      "path": "src/platform/observability-logs-and-metrics/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-18T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 44,
+      "issue": 10,
+      "title": "CI/CD pipelines to cloud (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/platform/ci-cd-pipelines-to-cloud/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-18T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 45,
+      "issue": 15,
+      "title": "Migrate notification service (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/migration/migrate-notification-service/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-20T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 46,
+      "issue": 11,
+      "title": "Observability: logs and metrics (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "f-lindqvist",
+      "path": "src/platform/observability-logs-and-metrics/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-20T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 47,
+      "issue": 14,
+      "title": "Autoscaling policies (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/platform/autoscaling-policies/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-21T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 48,
+      "issue": 13,
+      "title": "Migrate warehouse scanner API (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/migration/migrate-warehouse-scanner-api/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-22T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 49,
+      "issue": 15,
+      "title": "Migrate notification service (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/migration/migrate-notification-service/part-2.md",
+      "hold": true,
+      "slot": 3,
+      "planned_merge": "2026-10-22T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 50,
+      "issue": 12,
+      "title": "Secrets management",
+      "link": "fixes",
+      "agent": false,
+      "developer": "a-novak",
+      "path": "src/platform/secrets-management/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-23T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 51,
+      "issue": 18,
+      "title": "Cost tagging and FinOps reports",
+      "link": "part_of",
+      "agent": true,
+      "developer": "a-novak",
+      "path": "src/platform/cost-tagging-and-finops-reports/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-23T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 52,
+      "issue": 14,
+      "title": "Autoscaling policies (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/platform/autoscaling-policies/part-2.md",
+      "hold": true,
+      "slot": 2,
+      "planned_merge": "2026-10-23T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 53,
+      "issue": 13,
+      "title": "Migrate warehouse scanner API (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/migration/migrate-warehouse-scanner-api/part-2.md",
+      "hold": true,
+      "slot": 1,
+      "planned_merge": "2026-10-24T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 54,
+      "issue": 16,
+      "title": "Migrate MES connector",
+      "link": "part_of",
+      "agent": false,
+      "developer": "e-haddad",
+      "path": "src/migration/migrate-mes-connector/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-25T14:00:00Z"
+    }
+  ]
+}

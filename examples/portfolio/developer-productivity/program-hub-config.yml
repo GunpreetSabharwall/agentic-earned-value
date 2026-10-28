@@ -1,0 +1,35 @@
+# Developer Productivity: Lakeshore Components demo portfolio (fictional company).
+# Story: CI and developer tooling, mostly human, two blockers: late but efficient, a schedule problem not a cost problem.
+name: Developer Productivity
+slug: developer-productivity
+source_repo: GunpreetSabharwall/initiative-developer-productivity
+source_repo_url: https://github.com/GunpreetSabharwall/initiative-developer-productivity
+owner: "@GunpreetSabharwall"
+status: active
+week_start: 2026-09-21
+duration_weeks: 12
+showcase_date: 2026-12-14
+github_project_id: ""
+labels:
+  blocked: blocked
+  dependency: dependency
+  adr: adr-required
+sync_cadence: weekly
+pods:
+  - slug: ci
+    label: pod-ci
+    name: CI
+  - slug: devex
+    label: pod-devex
+    name: DevEx
+# Value signal (Feature 22): Program Hub runs AEV on source_repo. Costs are in aev/.
+aev:
+  enabled: true
+  mode: hub
+  budget_at_completion: 136500
+  value_per_point: 1500
+  hourly_rate: 100
+  stabilization_window_days: 14
+  agent_accounts:
+    - coding-agent
+  agent_label: aev-agent

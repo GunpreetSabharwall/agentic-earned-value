@@ -1,0 +1,35 @@
+# Data Integration: Lakeshore Components demo portfolio (fictional company).
+# Story: ERP and EDI data feeds, agent-heavy with repeated reverts: delivery looks green, value is red.
+name: Data Integration
+slug: data-integration
+source_repo: GunpreetSabharwall/initiative-data-integration
+source_repo_url: https://github.com/GunpreetSabharwall/initiative-data-integration
+owner: "@GunpreetSabharwall"
+status: active
+week_start: 2026-09-28
+duration_weeks: 12
+showcase_date: 2026-12-21
+github_project_id: ""
+labels:
+  blocked: blocked
+  dependency: dependency
+  adr: adr-required
+sync_cadence: weekly
+pods:
+  - slug: erp
+    label: pod-erp
+    name: ERP
+  - slug: edi
+    label: pod-edi
+    name: EDI
+# Value signal (Feature 22): Program Hub runs AEV on source_repo. Costs are in aev/.
+aev:
+  enabled: true
+  mode: hub
+  budget_at_completion: 194000
+  value_per_point: 2000
+  hourly_rate: 100
+  stabilization_window_days: 14
+  agent_accounts:
+    - coding-agent
+  agent_label: aev-agent

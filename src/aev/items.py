@@ -65,6 +65,10 @@ class WorkItem:
     value: float  # budgeted value BV_i = points x value_per_point
     authorship: Optional[str]  # "A", "H", "M", or None if no merged PR
     episodes: List[Episode] = field(default_factory=list)
+    labels: List[str] = field(default_factory=list)
+    # One entry per merged linked PR: {"number", "class", "merged_at"}.
+    # Used for the activity numbers (how busy the agents were).
+    merged_prs: List[dict] = field(default_factory=list)
 
     @property
     def gross_ev(self) -> float:
@@ -279,7 +283,8 @@ def build_work_items(
             if merged_at is not None and merged_at <= as_of:
                 merged_prs.append((pr, merged_at))
 
-        authorship = combine_classes(pr_class(pr, agent_accounts, agent_label) for pr, _ in merged_prs)
+        pr_classes = [pr_class(pr, agent_accounts, agent_label) for pr, _ in merged_prs]
+        authorship = combine_classes(pr_classes)
         for pr, _ in merged_prs:
             if pr.get("commits_truncated"):
                 warnings.append(
@@ -311,6 +316,11 @@ def build_work_items(
                 value=value,
                 authorship=authorship,
                 episodes=episodes,
+                labels=[str(label) for label in issue.get("labels", [])],
+                merged_prs=[
+                    {"number": pr.get("number"), "class": cls, "merged_at": merged_at}
+                    for (pr, merged_at), cls in zip(merged_prs, pr_classes)
+                ],
             )
         )
     items.sort(key=lambda i: i.number)

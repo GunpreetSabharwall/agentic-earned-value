@@ -1,0 +1,641 @@
+{
+  "repo_note": "Replay into an EMPTY GitHub repo; numbers then match this dataset.",
+  "initiative": "Data Integration",
+  "story": "ERP and EDI data feeds, agent-heavy with repeated reverts: delivery looks green, value is red.",
+  "slots": [
+    {
+      "slot": 1,
+      "pr": 52,
+      "issue": 12
+    },
+    {
+      "slot": 2,
+      "pr": 51,
+      "issue": 13
+    },
+    {
+      "slot": 3,
+      "pr": 48,
+      "issue": 14
+    }
+  ],
+  "steps": [
+    {
+      "step": "issue",
+      "number": 1,
+      "title": "Supplier master sync from SAP",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "body": "Team: ERP. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 2,
+      "title": "Purchase order feed",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "body": "Team: ERP. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 3,
+      "title": "Goods receipt postings",
+      "labels": [
+        "aev-points:3",
+        "pod-erp",
+        "agent-work"
+      ],
+      "body": "Team: ERP. Size: 3 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 4,
+      "title": "Quality notification sync",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "body": "Team: ERP. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 5,
+      "title": "Cost center mapping",
+      "labels": [
+        "aev-points:3",
+        "pod-erp",
+        "human-work"
+      ],
+      "body": "Team: ERP. Size: 3 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 6,
+      "title": "Material master delta load",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "body": "Team: ERP. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 7,
+      "title": "EDI 850 purchase order parser",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "agent-work"
+      ],
+      "body": "Team: EDI. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 8,
+      "title": "EDI 856 ship notice parser",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "agent-work"
+      ],
+      "body": "Team: EDI. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 9,
+      "title": "EDI 997 acknowledgements",
+      "labels": [
+        "aev-points:3",
+        "pod-edi",
+        "agent-work"
+      ],
+      "body": "Team: EDI. Size: 3 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 10,
+      "title": "EDI partner onboarding tool",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "human-work"
+      ],
+      "body": "Team: EDI. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 11,
+      "title": "Error queue and replay",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "mixed-work"
+      ],
+      "body": "Team: EDI. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 12,
+      "title": "EDI 810 invoice parser",
+      "labels": [
+        "aev-points:3",
+        "pod-edi",
+        "agent-work"
+      ],
+      "body": "Team: EDI. Size: 3 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 13,
+      "title": "Inventory snapshot feed",
+      "labels": [
+        "aev-points:3",
+        "pod-erp",
+        "agent-work"
+      ],
+      "body": "Team: ERP. Size: 3 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 14,
+      "title": "Carrier status updates",
+      "labels": [
+        "aev-points:3",
+        "pod-edi",
+        "agent-work"
+      ],
+      "body": "Team: EDI. Size: 3 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 15,
+      "title": "Two-way purchase order change sync",
+      "labels": [
+        "aev-points:8",
+        "pod-erp",
+        "agent-work"
+      ],
+      "body": "Team: ERP. Size: 8 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 16,
+      "title": "Data quality dashboard",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "human-work"
+      ],
+      "body": "Team: ERP. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 17,
+      "title": "EDI 940 warehouse order",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "agent-work"
+      ],
+      "body": "Team: EDI. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 18,
+      "title": "Partner certification tests",
+      "labels": [
+        "aev-points:5",
+        "pod-edi",
+        "human-work"
+      ],
+      "body": "Team: EDI. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 19,
+      "title": "Archive and retention job",
+      "labels": [
+        "aev-points:3",
+        "pod-erp",
+        "agent-work"
+      ],
+      "body": "Team: ERP. Size: 3 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 20,
+      "title": "Cutover rehearsal",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "human-work"
+      ],
+      "body": "Team: ERP. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 21,
+      "title": "Master data de-duplication",
+      "labels": [
+        "aev-points:5",
+        "pod-erp",
+        "agent-work"
+      ],
+      "body": "Team: ERP. Size: 5 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "issue",
+      "number": 22,
+      "title": "Monitoring alerts for feeds",
+      "labels": [
+        "aev-points:3",
+        "pod-edi",
+        "agent-work"
+      ],
+      "body": "Team: EDI. Size: 3 points. Data Integration initiative, Lakeshore Components (fictional demo)."
+    },
+    {
+      "step": "pr",
+      "number": 23,
+      "issue": 1,
+      "title": "Supplier master sync from SAP (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/erp/supplier-master-sync-from-sap/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-04T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 24,
+      "issue": 2,
+      "title": "Purchase order feed (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/erp/purchase-order-feed/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-06T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 25,
+      "issue": 1,
+      "title": "Supplier master sync from SAP (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/erp/supplier-master-sync-from-sap/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-06T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 26,
+      "issue": 2,
+      "title": "Purchase order feed (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/erp/purchase-order-feed/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-08T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 27,
+      "issue": 4,
+      "title": "Quality notification sync (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/erp/quality-notification-sync/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-09T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 28,
+      "issue": 3,
+      "title": "Goods receipt postings",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/erp/goods-receipt-postings/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-10T14:00:00Z"
+    },
+    {
+      "step": "revert",
+      "number": 29,
+      "reverts": 26,
+      "issue": 2,
+      "reason": "data loaded twice into the ERP",
+      "planned_merge": "2026-10-11T10:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 30,
+      "issue": 4,
+      "title": "Quality notification sync (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "e-haddad",
+      "path": "src/erp/quality-notification-sync/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-11T15:00:00Z"
+    },
+    {
+      "step": "revert",
+      "number": 31,
+      "reverts": 28,
+      "issue": 3,
+      "reason": "wrong unit of measure in postings",
+      "planned_merge": "2026-10-13T10:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 32,
+      "issue": 5,
+      "title": "Cost center mapping",
+      "link": "fixes",
+      "agent": false,
+      "developer": "f-lindqvist",
+      "path": "src/erp/cost-center-mapping/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-13T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 33,
+      "issue": 6,
+      "title": "Material master delta load (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "a-novak",
+      "path": "src/erp/material-master-delta-load/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-13T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 34,
+      "issue": 7,
+      "title": "EDI 850 purchase order parser (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/edi/edi-850-purchase-order-parser/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-15T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 35,
+      "issue": 6,
+      "title": "Material master delta load (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "a-novak",
+      "path": "src/erp/material-master-delta-load/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-15T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 36,
+      "issue": 8,
+      "title": "EDI 856 ship notice parser (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/edi/edi-856-ship-notice-parser/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-17T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 37,
+      "issue": 7,
+      "title": "EDI 850 purchase order parser (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/edi/edi-850-purchase-order-parser/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-17T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 38,
+      "issue": 8,
+      "title": "EDI 856 ship notice parser (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/edi/edi-856-ship-notice-parser/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-19T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 39,
+      "issue": 9,
+      "title": "EDI 997 acknowledgements",
+      "link": "fixes",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/edi/edi-997-acknowledgements/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-20T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 40,
+      "issue": 10,
+      "title": "EDI partner onboarding tool (part 1 of 2)",
+      "link": "part_of",
+      "agent": false,
+      "developer": "e-haddad",
+      "path": "src/edi/edi-partner-onboarding-tool/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-20T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 41,
+      "issue": 14,
+      "title": "Carrier status updates (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/edi/carrier-status-updates/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-21T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 42,
+      "issue": 11,
+      "title": "Error queue and replay (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "f-lindqvist",
+      "path": "src/edi/error-queue-and-replay/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-22T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 43,
+      "issue": 13,
+      "title": "Inventory snapshot feed (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/erp/inventory-snapshot-feed/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-22T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 44,
+      "issue": 15,
+      "title": "Two-way purchase order change sync",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/erp/two-way-purchase-order-change-sync/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-22T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 45,
+      "issue": 10,
+      "title": "EDI partner onboarding tool (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "e-haddad",
+      "path": "src/edi/edi-partner-onboarding-tool/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-22T15:00:00Z"
+    },
+    {
+      "step": "revert",
+      "number": 46,
+      "reverts": 39,
+      "issue": 9,
+      "reason": "acknowledgements sent to the wrong partner",
+      "planned_merge": "2026-10-23T10:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 47,
+      "issue": 12,
+      "title": "EDI 810 invoice parser (part 1 of 2)",
+      "link": "part_of",
+      "agent": true,
+      "developer": "a-novak",
+      "path": "src/edi/edi-810-invoice-parser/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-23T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 48,
+      "issue": 14,
+      "title": "Carrier status updates (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "c-ortiz",
+      "path": "src/edi/carrier-status-updates/part-2.md",
+      "hold": true,
+      "slot": 3,
+      "planned_merge": "2026-10-23T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 49,
+      "issue": 21,
+      "title": "Master data de-duplication",
+      "link": "part_of",
+      "agent": true,
+      "developer": "d-kim",
+      "path": "src/erp/master-data-de-duplication/part-1.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-24T14:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 50,
+      "issue": 11,
+      "title": "Error queue and replay (part 2 of 2)",
+      "link": "fixes",
+      "agent": false,
+      "developer": "f-lindqvist",
+      "path": "src/edi/error-queue-and-replay/part-2.md",
+      "hold": false,
+      "slot": null,
+      "planned_merge": "2026-10-24T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 51,
+      "issue": 13,
+      "title": "Inventory snapshot feed (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "b-mensah",
+      "path": "src/erp/inventory-snapshot-feed/part-2.md",
+      "hold": true,
+      "slot": 2,
+      "planned_merge": "2026-10-24T15:00:00Z"
+    },
+    {
+      "step": "pr",
+      "number": 52,
+      "issue": 12,
+      "title": "EDI 810 invoice parser (part 2 of 2)",
+      "link": "fixes",
+      "agent": true,
+      "developer": "a-novak",
+      "path": "src/edi/edi-810-invoice-parser/part-2.md",
+      "hold": true,
+      "slot": 1,
+      "planned_merge": "2026-10-25T15:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# AEV settings for the Lakeshore Components demo (fictional company).
+# Supplier Quality Portal modernization: $240,000 over 12 weeks.
+
+budget_at_completion: 240000
+value_per_point: 2000          # 120 points of work in total
+start_date: 2026-09-29
+end_date: 2026-12-22
+hourly_rate: 100
+stabilization_window_days: 14
+agent_accounts:
+  - coding-agent
+agent_label: aev-agent         # agent PRs are opened under a developer's account and labelled
+
+# Same labels as the Program Hub pods, so both tools agree on who is who.
+teams:
+  Portal: pod-portal
+  Integrations: pod-integrations

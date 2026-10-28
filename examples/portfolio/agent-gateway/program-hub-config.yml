@@ -1,0 +1,35 @@
+# Agent Gateway: Lakeshore Components demo portfolio (fictional company).
+# Story: Internal AI agent platform, mostly agent-written and well tested: agents clearly pay off.
+name: Agent Gateway
+slug: agent-gateway
+source_repo: GunpreetSabharwall/initiative-agent-gateway
+source_repo_url: https://github.com/GunpreetSabharwall/initiative-agent-gateway
+owner: "@GunpreetSabharwall"
+status: active
+week_start: 2026-09-21
+duration_weeks: 10
+showcase_date: 2026-11-30
+github_project_id: ""
+labels:
+  blocked: blocked
+  dependency: dependency
+  adr: adr-required
+sync_cadence: weekly
+pods:
+  - slug: platform
+    label: pod-platform
+    name: Platform
+  - slug: sdk
+    label: pod-sdk
+    name: SDK
+# Value signal (Feature 22): Program Hub runs AEV on source_repo. Costs are in aev/.
+aev:
+  enabled: true
+  mode: hub
+  budget_at_completion: 180000
+  value_per_point: 2000
+  hourly_rate: 100
+  stabilization_window_days: 14
+  agent_accounts:
+    - coding-agent
+  agent_label: aev-agent

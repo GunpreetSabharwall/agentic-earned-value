@@ -1,0 +1,416 @@
+{
+  "repo": "GunpreetSabharwall/initiative-developer-productivity",
+  "issues": [
+    {
+      "number": 1,
+      "title": "Build cache for the monorepo",
+      "labels": [
+        "aev-points:8",
+        "pod-ci",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-09-30T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 19,
+          "author": "b-mensah",
+          "merged_at": "2026-09-28T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        },
+        {
+          "number": 20,
+          "author": "b-mensah",
+          "merged_at": "2026-09-30T15:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Flaky test quarantine report",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-03T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 21,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-03T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Parallel test runners",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 32,
+          "author": "d-kim",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Merge queue rollout",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "mixed-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-07T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 22,
+          "author": "e-haddad",
+          "merged_at": "2026-10-05T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 23,
+          "author": "e-haddad",
+          "merged_at": "2026-10-07T15:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Golden path service template",
+      "labels": [
+        "aev-points:8",
+        "pod-devex",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-10T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 24,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-08T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        },
+        {
+          "number": 25,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-10T15:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Local dev containers",
+      "labels": [
+        "aev-points:5",
+        "pod-devex",
+        "human-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-13T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 26,
+          "author": "a-novak",
+          "merged_at": "2026-10-13T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "AI code review assistant pilot",
+      "labels": [
+        "aev-points:5",
+        "pod-devex",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-16T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 27,
+          "author": "b-mensah",
+          "merged_at": "2026-10-14T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 28,
+          "author": "b-mensah",
+          "merged_at": "2026-10-16T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Onboarding guide refresh",
+      "labels": [
+        "aev-points:3",
+        "pod-devex",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-20T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 29,
+          "author": "c-ortiz",
+          "merged_at": "2026-10-20T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "CI pipeline lint rules",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-10-23T17:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 35,
+          "author": "d-kim",
+          "merged_at": "2026-10-23T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Dependency update bot",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "events": [
+        {
+          "type": "closed",
+          "at": "2026-11-09T15:00:00Z",
+          "reason": "completed"
+        }
+      ],
+      "linked_prs": [
+        {
+          "number": 31,
+          "author": "e-haddad",
+          "merged_at": "2026-10-21T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        },
+        {
+          "number": 37,
+          "author": "e-haddad",
+          "merged_at": "2026-11-09T15:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Pull request size linter",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 30,
+          "author": "f-lindqvist",
+          "merged_at": "2026-10-20T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Docs search",
+      "labels": [
+        "aev-points:3",
+        "pod-devex",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 36,
+          "author": "a-novak",
+          "merged_at": "2026-10-23T14:00:00Z",
+          "reverted_at": null,
+          "labels": [
+            "aev-agent"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Remote build execution",
+      "labels": [
+        "aev-points:8",
+        "pod-ci",
+        "human-work",
+        "blocked"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 14,
+      "title": "Self-service preview environments",
+      "labels": [
+        "aev-points:8",
+        "pod-devex",
+        "human-work",
+        "blocked"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 15,
+      "title": "Test impact analysis",
+      "labels": [
+        "aev-points:5",
+        "pod-ci",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": [
+        {
+          "number": 33,
+          "author": "d-kim",
+          "merged_at": "2026-10-22T14:00:00Z",
+          "reverted_at": null,
+          "labels": []
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Developer portal",
+      "labels": [
+        "aev-points:8",
+        "pod-devex",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 17,
+      "title": "Inner-source catalog",
+      "labels": [
+        "aev-points:3",
+        "pod-devex",
+        "human-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    },
+    {
+      "number": 18,
+      "title": "Build time SLOs",
+      "labels": [
+        "aev-points:3",
+        "pod-ci",
+        "agent-work"
+      ],
+      "events": [],
+      "linked_prs": []
+    }
+  ]
+}
