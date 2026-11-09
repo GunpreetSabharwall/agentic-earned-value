@@ -182,7 +182,7 @@ In this example, agent-authored work is more cost-efficient even after rework an
 | AC_agent | Agent or model provider billing export, CI minutes |
 | AC_build, AC_review | Time tracking, or estimates from review activity (see limitations) |
 
-A reference implementation (GitHub Action) is planned at: [repo URL].
+A reference implementation (GitHub Action) is available at: https://github.com/GunpreetSabharwall/agentic-earned-value
 
 ---
 
