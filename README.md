@@ -242,3 +242,4 @@ See "Cite this repository" in the sidebar, or [CITATION.cff](CITATION.cff).
 ## License
 
 Method note and docs: CC BY 4.0. Code: Apache 2.0 (see [LICENSE](LICENSE)).
+📄 Practitioner white paper (v1.0): [doi:10.5281/zenodo.24089093](https://doi.org/10.5281/zenodo.24089093)
