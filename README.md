@@ -139,9 +139,9 @@ Link each pull request to its issue, for example by writing `Fixes #14` in the p
 
 Go to **Actions** → **AEV report** → **Run workflow**. After about a minute, `AEV-REPORT.md` appears at the top of your repository. After that it updates every Monday by itself.
 
-### Optional: show the CPI badge
+### Optional: show a CPI badge on your project's README
 
-Add this line to your README, replacing `OWNER/REPO` with your repository:
+After the first run, AEV writes `.aev/badge.json` in your repository. To display it, add this line to your project's README, replacing `OWNER/REPO` with your repository's name:
 
 ```markdown
 ![AEV CPI](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/OWNER/REPO/main/.aev/badge.json)
