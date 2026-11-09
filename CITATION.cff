@@ -5,9 +5,9 @@ authors:
   - family-names: "Sabharwall"
     given-names: "Gunpreet"
     orcid: "https://orcid.org/0009-0000-5434-7382"
-version: 0.1.0
+version: 0.1.1
 doi: 10.5281/zenodo.23071416
-date-released: 2026-MM-DD
+date-released: 2026-09-30
 license: CC-BY-4.0
 repository-code: "https://github.com/GunpreetSabharwall/agentic-earned-value"
 keywords:
