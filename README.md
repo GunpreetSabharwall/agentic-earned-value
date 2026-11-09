@@ -14,6 +14,7 @@ Classic EVM assumes people do the work. When AI agents write code, new costs (mo
 3. **Attribution:** efficiency by human, agent, or mixed work
 
 📄 Method note: [AEV-method-note-v0.1.md](AEV-method-note-v0.1.md)
+
 📄 Practitioner white paper (v1.0): [doi:10.5281/zenodo.24089093](https://doi.org/10.5281/zenodo.24089093)
 
 ## Status
